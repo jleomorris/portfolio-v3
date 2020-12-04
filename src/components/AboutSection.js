@@ -1,33 +1,70 @@
 import React from "react";
 import home1 from "../img/home1.png";
+//Styled
+import styled from "styled-components";
 
 const AboutSection = () => {
   return (
-    <div>
-      <div className="description">
+    <About>
+      <Description>
         <div className="title">
-          <div className="hide">
+          <Hide>
             <h1>James Morris,</h1>
-          </div>
-          <div className="hide">
+          </Hide>
+          <Hide>
             <h2>
               <span>Front end</span> developer
             </h2>
-          </div>
-          <div className="hide">
+          </Hide>
+          <Hide>
             <h2>MSc Comp Science graduate</h2>
-          </div>
+          </Hide>
         </div>
         <p>
           Actively seeking work, interested in development positions in
           London/within 20 miles of Southend on Sea, Essex
         </p>
         <button>Contact us</button>
-      </div>
-      <div className="image"></div>
-      <img src={home1} alt="gut with a camera" />
-    </div>
+      </Description>
+      <Image>
+        <img src={home1} alt="guy with a camera" />
+      </Image>
+    </About>
   );
 };
+
+//Styled components
+const About = styled.div`
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 10rem;
+  color: white;
+`;
+
+const Description = styled.div`
+  flex: 1;
+  padding-right: 5rem;
+
+  h2 {
+    font-weight: lighter;
+  }
+`;
+
+const Image = styled.div`
+  flex: 1;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+  }
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
+`;
 
 export default AboutSection;
