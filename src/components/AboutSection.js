@@ -7,20 +7,20 @@ const AboutSection = () => {
       <div className="description">
         <div className="title">
           <div className="hide">
-            <h1>We work to make</h1>
+            <h1>James Morris,</h1>
           </div>
           <div className="hide">
             <h2>
-              your <span>dreams</span> come
+              <span>Front end</span> developer
             </h2>
           </div>
           <div className="hide">
-            <h2>true.</h2>
+            <h2>MSc Comp Science graduate</h2>
           </div>
         </div>
         <p>
-          Contact us for any photography or videography ideas that you have. We
-          have professionals with amazing skills!
+          Actively seeking work, interested in development positions in
+          London/within 20 miles of Southend on Sea, Essex
         </p>
         <button>Contact us</button>
       </div>
