@@ -1,5 +1,6 @@
 import React from "react";
 import home1 from "../img/home1.png";
+import aboutImg from "../img/about.jpg";
 //Styled
 import styled from "styled-components";
 import { About, Description, Image, Hide } from "../styles";
@@ -28,7 +29,7 @@ const AboutSection = () => {
         <button>Contact us</button>
       </Description>
       <Image>
-        <img src={home1} alt="guy with a camera" />
+        <img src={aboutImg} alt="guy with a camera" />
       </Image>
     </About>
   );
