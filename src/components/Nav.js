@@ -35,8 +35,14 @@ const StyledNav = styled.nav`
   background-color: #282828;
 
   a {
-    color: white;
+    /* color: white; */
     text-decoration: none;
+    color: #888c91;
+    transition: 0.5s all ease;
+
+    &:hover {
+      color: white;
+    }
   }
 
   ul {
@@ -53,6 +59,8 @@ const StyledNav = styled.nav`
   li {
     padding-left: 10rem;
     position: relative;
+    letter-spacing: 0.6rem;
+    text-transform: uppercase;
   }
 `;
 
