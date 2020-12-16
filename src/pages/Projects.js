@@ -2,14 +2,21 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ProjectState } from "../projectState";
-
-console.log(ProjectState);
+// Animation
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 const Projects = () => {
   const [projects, setProjects] = useState(ProjectState);
 
   return (
-    <StyledProjects>
+    <StyledProjects
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      style={{ background: "#fff" }}
+    >
       {projects.map((project) => (
         <Project>
           <h2>{project.title}</h2>
@@ -26,7 +33,7 @@ const Projects = () => {
   );
 };
 
-const StyledProjects = styled.div`
+const StyledProjects = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;

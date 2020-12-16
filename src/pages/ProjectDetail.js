@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import { ProjectState } from "../projectState";
+// Animation
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
-const MovieDetail = () => {
+const ProjectDetail = () => {
   const history = useHistory();
   const currentUrl = history.location.pathname;
   const [projects, setProjects] = useState(ProjectState);
@@ -22,7 +25,12 @@ const MovieDetail = () => {
   return (
     <>
       {project && (
-        <Details>
+        <Details
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
           <Headline>
             <h2>{project.title}</h2>
             <img src={project.mainImage} alt={project.imageAlt} />
@@ -46,7 +54,7 @@ const MovieDetail = () => {
 };
 
 // Styled components
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
 const Headline = styled.div`
@@ -118,4 +126,4 @@ const Award = ({ title, description }) => {
   );
 };
 
-export default MovieDetail;
+export default ProjectDetail;
