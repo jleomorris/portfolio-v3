@@ -8,6 +8,8 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 // Router
 import { Switch, Route } from "react-router-dom";
+// Pages
+import MovieDetail from "./pages/ProjectDetail";
 
 function App() {
   return (
@@ -18,8 +20,11 @@ function App() {
         <Route path="/" exact>
           <AboutUs />
         </Route>
-        <Route path="/projects">
+        <Route path="/projects" exact>
           <Projects />
+        </Route>
+        <Route path="/projects/:id">
+          <MovieDetail />
         </Route>
         <Route path="/contact">
           <Contact />
