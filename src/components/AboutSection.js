@@ -2,31 +2,33 @@ import React from "react";
 import home1 from "../img/home1.png";
 import aboutImg from "../img/about.jpg";
 import bannerBackground from "../img/banner-full-size.jpg";
-//Styled
-import styled from "styled-components";
 import { About, Description, Image, Hide } from "../styles";
+// Styled Components
+import styled from "styled-components";
+// Framer Motion
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
     <StyledAbout>
       <div className="img-filter"></div>
       <Description>
-        <div className="title">
+        <motion.div>
           <Hide>
-            <h1>James Morris,</h1>
+            <motion.h1>James Morris,</motion.h1>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2>
               <span>Front end</span> developer
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>MSc Comp Science graduate</h2>
+            <motion.h2>MSc Comp Science graduate</motion.h2>
           </Hide>
-        </div>
+        </motion.div>
         <p>
-          Actively seeking work, interested in development positions in
-          London/within 20 miles of Southend on Sea, Essex
+          Actively seeking work, interested in front end development positions
+          in London/within 20 miles of Southend on Sea, Essex
         </p>
         <button>Contact</button>
       </Description>
