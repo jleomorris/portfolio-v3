@@ -7,6 +7,7 @@ import { About, Description, Image, Hide } from "../styles";
 import styled from "styled-components";
 // Framer Motion
 import { motion } from "framer-motion";
+import { titleAnimation, fade, photoAnimation } from "../animation";
 
 const AboutSection = () => {
   return (
@@ -15,25 +16,31 @@ const AboutSection = () => {
       <Description>
         <motion.div>
           <Hide>
-            <motion.h1>James Morris,</motion.h1>
+            <motion.h1 variants={titleAnimation}>James Morris,</motion.h1>
           </Hide>
           <Hide>
-            <motion.h2>
+            <motion.h2 variants={titleAnimation}>
               <span>Front end</span> developer
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2>MSc Comp Science graduate</motion.h2>
+            <motion.h2 variants={titleAnimation}>
+              MSc Comp Science graduate
+            </motion.h2>
           </Hide>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           Actively seeking work, interested in front end development positions
           in London/within 20 miles of Southend on Sea, Essex
-        </p>
-        <button>Contact</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact</motion.button>
       </Description>
       <Image>
-        <img src={aboutImg} alt="guy with a camera" />
+        <motion.img
+          src={aboutImg}
+          alt="guy with a camera"
+          variants={photoAnimation}
+        />
       </Image>
     </StyledAbout>
   );
