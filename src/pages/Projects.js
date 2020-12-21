@@ -4,7 +4,14 @@ import { Link } from "react-router-dom";
 import { ProjectState } from "../projectState";
 // Animation
 import { motion } from "framer-motion";
-import { pageAnimation } from "../animation";
+import {
+  sliderAnimation,
+  sliderContainer,
+  pageAnimation,
+  fade,
+  photoAnimation,
+  lineAnimation,
+} from "../animation";
 
 const Projects = () => {
   const [projects, setProjects] = useState(ProjectState);
@@ -15,17 +22,33 @@ const Projects = () => {
       initial="hidden"
       animate="show"
       exit="exit"
-      style={{ background: "#fff" }}
+      // style={{ background: "#fff" }}
     >
+      <motion.div variants={sliderContainer}>
+        <Frame1 variants={sliderAnimation}></Frame1>
+        <Frame2 variants={sliderAnimation}></Frame2>
+        <Frame3 variants={sliderAnimation}></Frame3>
+        <Frame4 variants={sliderAnimation}></Frame4>
+      </motion.div>
       {projects.map((project) => (
         <Project>
-          <h2>{project.title}</h2>
-          <div className="line"></div>
+          <motion.h2 variants={fade}>{project.title}</motion.h2>
+          <motion.div
+            variants={lineAnimation}
+            style={{ background: project.backgroundColor }}
+            className="line"
+          ></motion.div>
           <div className="image-container">
             <Link to={project.url}>
-              <img src={project.mainImage} alt={project.alt} />
+              <hide>
+                <motion.img
+                  variants={photoAnimation}
+                  src={project.mainImage}
+                  alt={project.alt}
+                />
+              </hide>
             </Link>
-            <p>{project.description}</p>
+            {/* <p>{project.description}</p> */}
           </div>
         </Project>
       ))}
@@ -48,11 +71,13 @@ const Project = styled.div`
 
   h2 {
     color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
   }
 
   .line {
-    height: 0.5rem;
-    background: #cccccc;
+    height: 0.2rem;
+    background: #23d997;
     margin-bottom: 3rem;
   }
 
@@ -78,8 +103,39 @@ const Project = styled.div`
     width: 100%;
     height: 70vh;
     object-fit: cover;
-    filter: brightness(0.5);
+    /* filter: brightness(0.5); */
   }
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
+`;
+
+// Frame animation
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100vh;
+  /* background: #fffebf; */
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+  z-index: 2;
+`;
+
+const Frame2 = styled(Frame1)`
+  background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+  /* background: #ff8efb; */
+`;
+
+const Frame3 = styled(Frame1)`
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  /* background: #8ed2ff; */
+`;
+
+const Frame4 = styled(Frame1)`
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  /* background: #8effa0; */
 `;
 
 export default Projects;
