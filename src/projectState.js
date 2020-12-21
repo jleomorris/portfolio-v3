@@ -6,6 +6,7 @@ import athlete2 from "./img/athlete2.png";
 import goodtimes2 from "./img/good-times2.jpg";
 import theracer2 from "./img/the-racer2.jpg";
 import boltMusicPlayer from "./img/bolt_music_player.PNG";
+import { Redirect } from "react-router-dom";
 
 export const ProjectState = () => {
   return [
@@ -17,6 +18,7 @@ export const ProjectState = () => {
       secondaryImage: athlete2,
       imageAlt: "bolt music player",
       url: "/projects/bolt-music-player",
+      backgroundColor: "#776189",
       awards: [
         {
           title: "Dark Mode",
@@ -38,6 +40,7 @@ export const ProjectState = () => {
       url: "/projects/confetti-todo-list",
       secondaryImage: goodtimes2,
       imageAlt: "confetti todo list",
+      backgroundColor: "#173451",
       awards: [
         {
           title: "Classic functionality",
@@ -63,6 +66,7 @@ export const ProjectState = () => {
       url: "/projects/sff-compatability-tool",
       secondaryImage: theracer2,
       imageAlt: "sff compatability tool",
+      backgroundColor: "#805E83",
       awards: [
         {
           title: "Filter compatible parts",
