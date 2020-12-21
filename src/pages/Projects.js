@@ -32,13 +32,22 @@ const Projects = () => {
       </motion.div>
       {projects.map((project) => (
         <Project>
-          <motion.h2 variants={fade}>{project.title}</motion.h2>
-          <motion.div
-            variants={lineAnimation}
-            style={{ background: project.backgroundColor }}
-            className="line"
-          ></motion.div>
           <div className="image-container">
+            {project.titleColor == "dark" ? (
+              <ProjectTitleDark variants={fade}>
+                {project.title}
+              </ProjectTitleDark>
+            ) : (
+              <ProjectTitleLight variants={fade}>
+                {project.title}
+              </ProjectTitleLight>
+            )}
+            {/* <ProjectTitleDark variants={fade}>{project.title}</ProjectTitleDark> */}
+            {/* <motion.div
+              variants={lineAnimation}
+              style={{ background: project.backgroundColor }}
+              className="line"
+            ></motion.div> */}
             <Link to={project.url}>
               <hide>
                 <motion.img
@@ -59,21 +68,22 @@ const Projects = () => {
 const StyledProjects = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
-  padding: 5rem 10rem;
+  /* padding: 5rem 10rem; */
 
-  h2 {
+  /* h2 {
     padding: 1rem 0rem;
-  }
+  } */
 `;
 
 const Project = styled.div`
-  padding-bottom: 10rem;
+  /* padding-bottom: 1rem; */
 
-  h2 {
+  /* h2 {
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-  }
+    position: absolute;
+  } */
 
   .line {
     height: 0.2rem;
@@ -109,6 +119,22 @@ const Project = styled.div`
 
 const Hide = styled.div`
   overflow: hidden;
+`;
+
+const ProjectTitleLight = styled(motion.h2)`
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  position: absolute;
+  padding: 1rem;
+`;
+
+const ProjectTitleDark = styled(motion.h2)`
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  position: absolute;
+  padding: 1rem;
 `;
 
 // Frame animation

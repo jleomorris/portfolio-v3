@@ -19,6 +19,7 @@ export const ProjectState = () => {
       imageAlt: "bolt music player",
       url: "/projects/bolt-music-player",
       backgroundColor: "#776189",
+      titleColor: "dark",
       awards: [
         {
           title: "Dark Mode",
@@ -41,6 +42,7 @@ export const ProjectState = () => {
       secondaryImage: goodtimes2,
       imageAlt: "confetti todo list",
       backgroundColor: "#173451",
+      titleColor: "light",
       awards: [
         {
           title: "Classic functionality",
@@ -67,6 +69,7 @@ export const ProjectState = () => {
       secondaryImage: theracer2,
       imageAlt: "sff compatability tool",
       backgroundColor: "#805E83",
+      titleColor: "light",
       awards: [
         {
           title: "Filter compatible parts",
