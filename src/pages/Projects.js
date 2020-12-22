@@ -33,21 +33,14 @@ const Projects = () => {
       {projects.map((project) => (
         <Project>
           <div className="image-container">
-            {project.titleColor == "dark" ? (
-              <ProjectTitleDark variants={fade}>
-                {project.title}
-              </ProjectTitleDark>
-            ) : (
-              <ProjectTitleLight variants={fade}>
-                {project.title}
-              </ProjectTitleLight>
-            )}
-            {/* <ProjectTitleDark variants={fade}>{project.title}</ProjectTitleDark> */}
-            {/* <motion.div
-              variants={lineAnimation}
-              style={{ background: project.backgroundColor }}
-              className="line"
-            ></motion.div> */}
+            <div className="title-container">
+              <ProjectTitle variants={fade}>{project.title}</ProjectTitle>
+              <motion.div
+                variants={lineAnimation}
+                style={{ background: project.backgroundColor }}
+                className="line"
+              ></motion.div>
+            </div>
             <Link to={project.url}>
               <hide>
                 <motion.img
@@ -86,13 +79,22 @@ const Project = styled.div`
   } */
 
   .line {
-    height: 0.2rem;
-    background: #23d997;
-    margin-bottom: 3rem;
+    height: 0.3rem;
+    /* background: #23d997; */
+    /* margin-bottom: 3rem; */
   }
 
   .image-container {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title-container {
+      position: absolute;
+      margin: 1rem;
+      z-index: 1;
+    }
 
     p {
       position: absolute;
@@ -113,7 +115,7 @@ const Project = styled.div`
     width: 100%;
     height: 70vh;
     object-fit: cover;
-    /* filter: brightness(0.5); */
+    filter: brightness(0.6);
   }
 `;
 
@@ -121,21 +123,27 @@ const Hide = styled.div`
   overflow: hidden;
 `;
 
-const ProjectTitleLight = styled(motion.h2)`
-  color: white;
+const ProjectTitle = styled(motion.h2)`
+  font-size: 2.5rem;
+  color: #00000000;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  position: absolute;
-  padding: 1rem;
+  padding: 1rem 4rem;
+  text-shadow: 4px 5px 4px #ababab;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
 `;
 
-const ProjectTitleDark = styled(motion.h2)`
-  color: black;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  position: absolute;
-  padding: 1rem;
-`;
+// const ProjectTitleDark = styled(motion.h2)`
+//   font-size: 2.5rem;
+//   color: #00000000;
+//   text-transform: uppercase;
+//   letter-spacing: 0.5rem;
+//   padding: 1rem 4rem;
+//   text-shadow: 4px 5px 4px #ababab;
+//   -webkit-text-stroke-width: 2px;
+//   -webkit-text-stroke-color: white;
+// `;
 
 // Frame animation
 const Frame1 = styled(motion.div)`

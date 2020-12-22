@@ -6,6 +6,8 @@ import athlete2 from "./img/athlete2.png";
 import goodtimes2 from "./img/good-times2.jpg";
 import theracer2 from "./img/the-racer2.jpg";
 import boltMusicPlayer from "./img/bolt_music_player.PNG";
+import sffCompatabilityTool from "./img/projects/sff_compatability_tool.jpg";
+import reactTodoList from "./img/projects/react_todo_list.jpg";
 import { Redirect } from "react-router-dom";
 
 export const ProjectState = () => {
@@ -18,7 +20,7 @@ export const ProjectState = () => {
       secondaryImage: athlete2,
       imageAlt: "bolt music player",
       url: "/projects/bolt-music-player",
-      backgroundColor: "#776189",
+      backgroundColor: "#d198ff",
       titleColor: "dark",
       awards: [
         {
@@ -37,11 +39,11 @@ export const ProjectState = () => {
     },
     {
       title: "Confetti Todo List",
-      mainImage: goodtimes,
+      mainImage: reactTodoList,
       url: "/projects/confetti-todo-list",
       secondaryImage: goodtimes2,
       imageAlt: "confetti todo list",
-      backgroundColor: "#173451",
+      backgroundColor: "#60b1fc",
       titleColor: "light",
       awards: [
         {
@@ -64,11 +66,11 @@ export const ProjectState = () => {
       title: "SFF Compatability Tool",
       description:
         "PC part compatability tool for small form factor PCs. Users can see what parts are compatile based on case and view an in depth part breakdown.",
-      mainImage: theracer,
+      mainImage: sffCompatabilityTool,
       url: "/projects/sff-compatability-tool",
       secondaryImage: theracer2,
       imageAlt: "sff compatability tool",
-      backgroundColor: "#805E83",
+      backgroundColor: "#fff16e",
       titleColor: "light",
       awards: [
         {
