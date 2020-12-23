@@ -1,13 +1,11 @@
 //Import Images
-import athlete from "./img/athlete-small.png";
-import goodtimes from "./img/goodtimes-small.png";
-import theracer from "./img/theracer-small.png";
-import athlete2 from "./img/athlete2.png";
-import goodtimes2 from "./img/good-times2.jpg";
-import theracer2 from "./img/the-racer2.jpg";
-import boltMusicPlayer from "./img/bolt_music_player.PNG";
-import sffCompatabilityTool from "./img/projects/sff_compatability_tool.jpg";
-import reactTodoList from "./img/projects/react_todo_list.jpg";
+// Images
+// Bolt music player
+import boltMusicPlayer from "./img/projects/bolt-music-player/bolt_music_player.PNG";
+// Sff compatability tool
+import sffCompatabilityTool from "./img/projects/sff-compatability-tool/sff_compatability_tool.jpg";
+// React todo list
+import reactTodoList from "./img/projects/react-todo-list/react_todo_list.jpg";
 import { Redirect } from "react-router-dom";
 
 export const ProjectState = () => {
@@ -16,49 +14,76 @@ export const ProjectState = () => {
       title: "Bolt Music Player",
       description:
         "Music player app, users can play song from library, sort via artist and title and enable dark mode. Allowed me to practice native React, function components, css animation, responsive design principles. ",
-      mainImage: boltMusicPlayer,
-      secondaryImage: athlete2,
-      imageAlt: "bolt music player",
+      images: [
+        {
+          src: boltMusicPlayer,
+          alt: "bolt music player",
+        },
+      ],
       url: "/projects/bolt-music-player",
       backgroundColor: "#d198ff",
-      titleColor: "dark",
-      awards: [
+      skillsDeveloped: [
+        "Native React",
+        "Function components",
+        "React Bootstrap",
+        "React Confetti Library",
+        "Local storage principles",
+      ],
+      features: [
         {
           title: "Dark Mode",
           description: "“Integrated dark mode present.”",
+          lineColor: "#d198ff",
         },
         {
           title: "Library",
           description: "“Library view can be toggled on and off.”",
+          lineColor: "#d198ff",
         },
         {
           title: "Open source songs",
           description: "“The latest chilled beats from https://chillhop.com”",
+          lineColor: "#d198ff",
         },
       ],
     },
     {
       title: "Confetti Todo List",
-      mainImage: reactTodoList,
+      description:
+        "Todo app, users can add new tasks, tick off, delete and undo delete. On completion of all tasks a confetti animation is trigerred. The background of the app is also random on each page refresh.",
+      images: [
+        {
+          src: reactTodoList,
+          alt: "todo list",
+        },
+      ],
       url: "/projects/confetti-todo-list",
-      secondaryImage: goodtimes2,
-      imageAlt: "confetti todo list",
       backgroundColor: "#60b1fc",
-      titleColor: "light",
-      awards: [
+      skillsDeveloped: [
+        "native React",
+        "function components",
+        "React Bootstrap",
+        "css animation",
+        "local storage principles",
+        "cool-images and confetti-js libraries",
+      ],
+      features: [
         {
           title: "Classic functionality",
           description: "Add, tick off, delete and undo tasks.",
+          lineColor: "#60b1fc",
         },
         {
           title: "Unique backgrounds",
           description:
             "Using the cool-images library a unique background on each render of the app keeps it from going stale.",
+          lineColor: "#60b1fc",
         },
         {
           title: "Confetti animation",
           description:
             "Using the confetti-js library a confetti animation runs to motivate the user when the task list is completed.",
+          lineColor: "#60b1fc",
         },
       ],
     },
@@ -66,13 +91,22 @@ export const ProjectState = () => {
       title: "SFF Compatability Tool",
       description:
         "PC part compatability tool for small form factor PCs. Users can see what parts are compatile based on case and view an in depth part breakdown.",
-      mainImage: sffCompatabilityTool,
+      images: [
+        {
+          src: sffCompatabilityTool,
+          alt: "sff compatability tool",
+        },
+      ],
       url: "/projects/sff-compatability-tool",
-      secondaryImage: theracer2,
-      imageAlt: "sff compatability tool",
       backgroundColor: "#fff16e",
-      titleColor: "light",
-      awards: [
+      skillsDeveloped: [
+        "native React",
+        "class components",
+        "React Bootstrap",
+        "JSON handling",
+        "js-tile library",
+      ],
+      features: [
         {
           title: "Filter compatible parts",
           description:
