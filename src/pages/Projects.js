@@ -45,7 +45,7 @@ const Projects = () => {
               <hide>
                 <motion.img
                   variants={photoAnimation}
-                  src={project.mainImage}
+                  src={project.images[0].src}
                   alt={project.alt}
                 />
               </hide>
@@ -125,10 +125,10 @@ const Hide = styled.div`
 
 const ProjectTitle = styled(motion.h2)`
   font-size: 2.5rem;
-  color: #00000000;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   padding: 1rem 4rem;
+  color: #00000000;
   text-shadow: 4px 5px 4px #ababab;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
