@@ -7,6 +7,16 @@ import sffCompatabilityTool from "./img/projects/sff-compatability-tool/sff_comp
 // React todo list
 import reactTodoList from "./img/projects/react-todo-list/react_todo_list.jpg";
 import { Redirect } from "react-router-dom";
+// Font Awesome
+import { faReact } from "@fortawesome/free-brands-svg-icons";
+import { faBootstrap } from "@fortawesome/free-brands-svg-icons";
+import { faCss3Alt } from "@fortawesome/free-brands-svg-icons";
+import { faPuzzlePiece } from "@fortawesome/free-solid-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faHdd } from "@fortawesome/free-solid-svg-icons";
+import { faImages } from "@fortawesome/free-solid-svg-icons";
+import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { faSquare } from "@fortawesome/free-regular-svg-icons";
 
 export const ProjectState = () => {
   return [
@@ -21,13 +31,15 @@ export const ProjectState = () => {
         },
       ],
       url: "/projects/bolt-music-player",
+      githubDirectoryUrl: "https://github.com/jleomorris/bolt-music-player",
+      githubPagesUrl: "https://jleomorris.github.io/bolt-music-player/",
       backgroundColor: "#d198ff",
+      skillIconColor: "#d198ff",
       skillsDeveloped: [
-        "Native React",
-        "Function components",
-        "React Bootstrap",
-        "React Confetti Library",
-        "Local storage principles",
+        { name: "Native React", icon: faReact },
+        { name: "Function components", icon: faPuzzlePiece },
+        { name: "React Bootstrap", icon: faBootstrap },
+        { name: "Css animation", icon: faCss3Alt },
       ],
       features: [
         {
@@ -58,15 +70,28 @@ export const ProjectState = () => {
         },
       ],
       url: "/projects/confetti-todo-list",
+      githubDirectoryUrl:
+        "https://github.com/jleomorris/React_todo_list_confetti",
+      githubPagesUrl: "https://jleomorris.github.io/React_todo_list_confetti/",
       backgroundColor: "#60b1fc",
+      skillIconColor: "#60b1fc",
       skillsDeveloped: [
-        "native React",
-        "function components",
-        "React Bootstrap",
-        "css animation",
-        "local storage principles",
-        "cool-images and confetti-js libraries",
+        { name: "Native React", icon: faReact },
+        { name: "Function components", icon: faPuzzlePiece },
+        { name: "React Bootstrap", icon: faBootstrap },
+        { name: "Css animation", icon: faCss3Alt },
+        { name: "Local storage principles", icon: faHdd },
+        { name: "Cool-images library", icon: faImages },
+        { name: "Confetti-js library", icon: faThumbsUp },
       ],
+      // skillsDeveloped: [
+      //   "native React",
+      //   "function components",
+      //   "React Bootstrap",
+      //   "css animation",
+      //   "local storage principles",
+      //   "cool-images and confetti-js libraries",
+      // ],
       features: [
         {
           title: "Classic functionality",
@@ -98,28 +123,35 @@ export const ProjectState = () => {
         },
       ],
       url: "/projects/sff-compatability-tool",
+      githubDirectoryUrl:
+        "https://github.com/jleomorris/sff_compatability_tool",
+      githubPagesUrl: "https://jleomorris.github.io/sff_compatability_tool",
       backgroundColor: "#fff16e",
+      skillIconColor: "#fff16e",
       skillsDeveloped: [
-        "native React",
-        "class components",
-        "React Bootstrap",
-        "JSON handling",
-        "js-tile library",
+        { name: "Native React", icon: faReact },
+        { name: "Class components", icon: faPuzzlePiece },
+        { name: "React Bootstrap", icon: faBootstrap },
+        { name: "JSON", icon: faCode },
+        { name: "React-Tilt library", icon: faSquare },
       ],
       features: [
         {
           title: "Filter compatible parts",
           description:
             "Click on a case and compatible CPU coolers, PSUs and GPUs will be automatically filtered.",
+          lineColor: "#fff16e",
         },
         {
           title: "Reverse filter",
           description: "Hover over the eye icon to highlight compatible cases.",
+          lineColor: "#fff16e",
         },
         {
           title: "Breakdown",
           description:
             "After selecting a case, cooler, GPU and PSU a breakdown will be shown displaying a detailed spec. You can also scroll through other compatible parts.",
+          lineColor: "#fff16e",
         },
       ],
     },
