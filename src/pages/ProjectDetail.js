@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link, Redirect } from "react-router-dom";
 import { ProjectState } from "../projectState";
 // Animation
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
+// Font Awesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const ProjectDetail = () => {
   const history = useHistory();
@@ -32,18 +36,37 @@ const ProjectDetail = () => {
           exit="exit"
         >
           <Headline>
-            <h2>{project.title}</h2>
-            <div className="description-container">
-              <h3>Description</h3>
-              <p>{project.description}</p>
+            <div className="github-container">
+              <a href={project.githubDirectoryUrl} target="_blank">
+                <button>
+                  <FontAwesomeIcon icon={faCode} />
+                  Code
+                </button>
+              </a>
+              <a href={project.githubPagesUrl} target="_blank">
+                <button>
+                  <FontAwesomeIcon icon={faGithub} />
+                  Demo
+                </button>
+              </a>
             </div>
-            <div className="skills-container">
-              <h3>Skills developed</h3>
-              <ul>
-                {project.skillsDeveloped.map((project) => (
-                  <li>{project}</li>
+            <h2>{project.title}</h2>
+            <div className="description-skills-container">
+              <div className="description-container">
+                <h3>Description</h3>
+                <p>{project.description}</p>
+              </div>
+              <div className="skills-container">
+                <h3>Skills developed</h3>
+                {project.skillsDeveloped.map((skill) => (
+                  <div className="skill" key={skill.name}>
+                    <FontAwesomeIcon icon={skill.icon} />
+                    <p style={{ color: project.skillIconColor }}>
+                      {skill.name}
+                    </p>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </Headline>
           <Features>
@@ -58,7 +81,7 @@ const ProjectDetail = () => {
           </Features>
           <ImageDisplay>
             {project.images.map((image) => (
-              <img src={image.src} alt={image.alt} />
+              <img src={image.src} alt={image.alt} key={image.src} />
             ))}
           </ImageDisplay>
         </Details>
@@ -76,23 +99,86 @@ const Headline = styled.div`
   padding-top: 5vh;
   position: relative;
 
-  .description-container {
-    position: relative;
-    width: 60%;
-    margin: 10rem auto;
-    min-height: 30vh;
-  }
-
-  .skills-container {
-    position: relative;
-    padding: 3rem 5rem;
-    border: 1px solid white;
+  .github-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10rem auto;
-    min-height: 30vh;
-    width: 50%;
+
+    button {
+      border: 1px solid white;
+      margin-left: 1rem;
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+
+      svg {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .description-skills-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    padding: 8rem 5rem;
+
+    .description-container {
+      position: relative;
+      width: 40%;
+      min-height: 30vh;
+      border: 1px solid white;
+
+      p {
+        margin: 8rem auto;
+        padding: 3rem 5rem;
+      }
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+      padding: 4rem 2rem;
+      border: 1px solid white;
+      min-height: 30vh;
+      width: 40%;
+
+      .skill {
+        display: flex;
+        position: relative;
+        margin: 2rem;
+
+        svg {
+          color: rgba(255, 255, 255, 0.3);
+          font-size: 6rem;
+        }
+
+        p {
+          text-shadow: 3px 3px 4px #505050;
+          text-align: center;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          top: 50%;
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+      }
+    }
   }
 
   h3 {
@@ -109,11 +195,6 @@ const Headline = styled.div`
   }
 
   h2 {
-    /* position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -10%); */
-    /* border: 1px solid white; */
     padding: 1rem 3rem;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
@@ -129,20 +210,13 @@ const Headline = styled.div`
     object-fit: cover;
     margin-top: 3rem;
   }
-
-  p {
-    border: 1px solid white;
-    /* margin: 8rem auto; */
-    /* width: 60%; */
-    padding: 3rem 5rem;
-  }
 `;
 
 const Features = styled.div`
   min-height: 60vh;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   margin: 5rem 10rem;
 `;
 
@@ -158,7 +232,6 @@ const StyledFeature = styled.div`
 
   .line {
     width: 100%;
-    /* background: #23d997; */
     height: 0.5rem;
     margin: 1rem 0rem;
   }
