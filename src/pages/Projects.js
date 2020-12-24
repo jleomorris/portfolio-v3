@@ -12,6 +12,10 @@ import {
   photoAnimation,
   lineAnimation,
 } from "../animation";
+// Font Awesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Projects = () => {
   const [projects, setProjects] = useState(ProjectState);
@@ -22,7 +26,6 @@ const Projects = () => {
       initial="hidden"
       animate="show"
       exit="exit"
-      // style={{ background: "#fff" }}
     >
       <motion.div variants={sliderContainer}>
         <Frame1 variants={sliderAnimation}></Frame1>
@@ -31,26 +34,28 @@ const Projects = () => {
         <Frame4 variants={sliderAnimation}></Frame4>
       </motion.div>
       {projects.map((project) => (
-        <Project>
+        <Project key={project.title}>
           <div className="image-container">
             <div className="title-container">
               <ProjectTitle variants={fade}>{project.title}</ProjectTitle>
-              <motion.div
-                variants={lineAnimation}
-                style={{ background: project.backgroundColor }}
-                className="line"
-              ></motion.div>
             </div>
-            <Link to={project.url}>
-              <hide>
+            <Hide>
+              <motion.div variants={pageAnimation} className="github-container">
+                <a href={project.githubDirectoryUrl} target="_blank">
+                  <FontAwesomeIcon icon={faCode} />
+                </a>
+                <a href={project.githubPagesUrl} target="_blank">
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+              </motion.div>
+              <Link to={project.url}>
                 <motion.img
                   variants={photoAnimation}
                   src={project.images[0].src}
                   alt={project.alt}
                 />
-              </hide>
-            </Link>
-            {/* <p>{project.description}</p> */}
+              </Link>
+            </Hide>
           </div>
         </Project>
       ))}
@@ -59,41 +64,31 @@ const Projects = () => {
 };
 
 const StyledProjects = styled(motion.div)`
-  min-height: 100vh;
+  min-height: 80vh;
   overflow: hidden;
-  /* padding: 5rem 10rem; */
-
-  /* h2 {
-    padding: 1rem 0rem;
-  } */
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const Project = styled.div`
-  /* padding-bottom: 1rem; */
-
-  /* h2 {
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    position: absolute;
-  } */
-
-  .line {
-    height: 0.3rem;
-    /* background: #23d997; */
-    /* margin-bottom: 3rem; */
-  }
+  width: 20%;
+  overflow: hidden;
 
   .image-container {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 
     .title-container {
       position: absolute;
-      margin: 1rem;
+      margin-bottom: 10rem;
       z-index: 1;
+      transform: rotate(-90deg);
+
+      h2 {
+        padding-bottom: 1rem;
+      }
     }
 
     p {
@@ -113,7 +108,7 @@ const Project = styled.div`
 
   img {
     width: 100%;
-    height: 70vh;
+    height: 90vh;
     object-fit: cover;
     filter: brightness(0.6);
   }
@@ -121,6 +116,28 @@ const Project = styled.div`
 
 const Hide = styled.div`
   overflow: hidden;
+  position: relative;
+
+  .github-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      font-size: 3rem;
+      margin: 1rem;
+      color: #888c91;
+      transition: 0.5s all ease;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
 `;
 
 const ProjectTitle = styled(motion.h2)`
@@ -134,17 +151,6 @@ const ProjectTitle = styled(motion.h2)`
   -webkit-text-stroke-color: white;
 `;
 
-// const ProjectTitleDark = styled(motion.h2)`
-//   font-size: 2.5rem;
-//   color: #00000000;
-//   text-transform: uppercase;
-//   letter-spacing: 0.5rem;
-//   padding: 1rem 4rem;
-//   text-shadow: 4px 5px 4px #ababab;
-//   -webkit-text-stroke-width: 2px;
-//   -webkit-text-stroke-color: white;
-// `;
-
 // Frame animation
 const Frame1 = styled(motion.div)`
   position: fixed;
@@ -152,24 +158,20 @@ const Frame1 = styled(motion.div)`
   top: 10%;
   width: 100%;
   height: 100vh;
-  /* background: #fffebf; */
   background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
   z-index: 2;
 `;
 
 const Frame2 = styled(Frame1)`
   background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
-  /* background: #ff8efb; */
 `;
 
 const Frame3 = styled(Frame1)`
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-  /* background: #8ed2ff; */
 `;
 
 const Frame4 = styled(Frame1)`
   background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
-  /* background: #8effa0; */
 `;
 
 export default Projects;
