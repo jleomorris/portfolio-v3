@@ -15,10 +15,15 @@ import {
 // Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 
 const Projects = () => {
   const [projects, setProjects] = useState(ProjectState);
+
+  useEffect(() => {
+    // debugger;
+    console.log(projects);
+  }, []);
 
   return (
     <StyledProjects
@@ -40,25 +45,41 @@ const Projects = () => {
               <ProjectTitle variants={fade}>{project.title}</ProjectTitle>
             </div>
             <Hide>
+              {project.isReact && (
+                <motion.div className="react-icon" variants={pageAnimation}>
+                  <FontAwesomeIcon icon={faReact} />
+                </motion.div>
+              )}
               <motion.div variants={pageAnimation} className="github-container">
-                <a href={project.githubDirectoryUrl} target="_blank">
+                <a
+                  href={project.githubDirectoryUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FontAwesomeIcon icon={faCode} />
                 </a>
-                <a href={project.githubPagesUrl} target="_blank">
+                <a
+                  href={project.githubPagesUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FontAwesomeIcon icon={faGithub} />
                 </a>
               </motion.div>
               <Link to={project.url}>
                 <motion.img
                   variants={photoAnimation}
-                  src={project.images[0].src}
-                  alt={project.alt}
+                  src={project.banner.src}
+                  alt={project.banner.alt}
                 />
               </Link>
             </Hide>
           </div>
         </Project>
       ))}
+      <div className="flexible-message">
+        <h2>Click on a project banner or Github link to view more.</h2>
+      </div>
     </StyledProjects>
   );
 };
@@ -68,6 +89,26 @@ const StyledProjects = styled(motion.div)`
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+
+  .flexible-message {
+    flex: 1;
+    background: #070707;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    h2 {
+      width: 50%;
+      font-size: 1.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      padding: 1rem;
+      color: #00000000;
+      text-shadow: 4px 5px 4px #ababab;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: white;
+    }
+  }
 `;
 
 const Project = styled.div`
@@ -117,6 +158,16 @@ const Project = styled.div`
 const Hide = styled.div`
   overflow: hidden;
   position: relative;
+
+  .fa-react {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    z-index: 1;
+    color: #00c0ff;
+    margin: 0.5rem;
+  }
 
   .github-container {
     position: absolute;
