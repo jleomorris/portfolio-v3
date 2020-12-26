@@ -37,13 +37,17 @@ const ProjectDetail = () => {
         >
           <Headline>
             <div className="github-container">
-              <a href={project.githubDirectoryUrl} target="_blank">
+              <a
+                href={project.githubDirectoryUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <button>
                   <FontAwesomeIcon icon={faCode} />
                   Code
                 </button>
               </a>
-              <a href={project.githubPagesUrl} target="_blank">
+              <a href={project.githubPagesUrl} target="_blank" rel="noreferrer">
                 <button>
                   <FontAwesomeIcon icon={faGithub} />
                   Demo
