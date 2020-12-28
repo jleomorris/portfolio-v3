@@ -4,15 +4,25 @@ import home2 from "../img/home2.png";
 // Styles
 import { About, Description, Image, Hide } from "../styles";
 import styled from "styled-components";
+import { scrollRevealLeft } from "../animation";
+import { useScroll } from "./useScroll";
+import { motion } from "framer-motion";
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
+
   return (
     <Services>
       <Description>
         <h2>
           <span>Always improving</span> my skills
         </h2>
-        <Cards>
+        <Cards
+          variants={scrollRevealLeft}
+          animate={controls}
+          initial="hidden"
+          ref={element}
+        >
           <Card>
             <div className="icon">
               <img src={teamwork} alt="teamwork icon" />
@@ -41,11 +51,39 @@ const ServicesSection = () => {
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
+          <Card>
+            <div className="icon">
+              <img src={teamwork} alt="teamwork icon" />
+              <h3>Always willing to learn new skills</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </Card>
+          <Card>
+            <div className="icon">
+              <img src={teamwork} alt="teamwork icon" />
+              <h3>Always willing to learn new skills</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </Card>
+          <Card>
+            <div className="icon">
+              <img src={teamwork} alt="teamwork icon" />
+              <h3>Always willing to learn new skills</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </Card>
+          <Card>
+            <div className="icon">
+              <img src={teamwork} alt="teamwork icon" />
+              <h3>Always willing to learn new skills</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </Card>
         </Cards>
       </Description>
-      <Image>
+      {/* <Image>
         <img src={home2} alt="home icon" />
-      </Image>
+      </Image> */}
     </Services>
   );
 };
@@ -61,7 +99,7 @@ const Services = styled(About)`
   }
 `;
 
-const Cards = styled.div`
+const Cards = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
 `;
