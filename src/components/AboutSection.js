@@ -1,5 +1,4 @@
 import React from "react";
-import home1 from "../img/home1.png";
 import aboutImg from "../img/about.jpg";
 import bannerBackground from "../img/banner-full-size.jpg";
 import { About, Description, Image, Hide } from "../styles";
@@ -32,8 +31,8 @@ const AboutSection = () => {
           </Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Actively seeking work, interested in front end development positions
-          in London/within 20 miles of Southend on Sea, Essex
+          Actively seeking work, interested in React developer positions in
+          London/within 20 miles of Southend on Sea, Essex
         </motion.p>
         <motion.button variants={fade}>Contact</motion.button>
       </Description>
