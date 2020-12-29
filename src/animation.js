@@ -82,3 +82,13 @@ export const scrollRevealLeft = {
     transition: { duration: 1, ease: "easeOut" },
   },
 };
+
+export const rotatingAnimation = {
+  hidden: { scale: 0.8, opacity: 0, rotate: 40 },
+  show: {
+    scale: 1,
+    opacity: 1,
+    rotate: 0,
+    transition: { duration: 1, ease: "easeOut" },
+  },
+};
