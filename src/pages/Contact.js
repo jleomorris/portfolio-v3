@@ -1,4 +1,5 @@
 import React from "react";
+import cv from "./CV_2020.pdf";
 // Animation
 import { motion } from "framer-motion";
 import { pageAnimation, titleAnimation, rotatingAnimation } from "../animation";
@@ -50,7 +51,8 @@ const Contact = () => {
             </a>
           </motion.div>
           <motion.div variants={rotatingAnimation} className="contact-card">
-            <a target="_blank" href=".\CV_2020.pdf">
+            {/* <a target="_blank" href=".\CV_2020.pdf"> */}
+            <a target="_blank" href={cv}>
               <h2 style={{ marginBottom: "-1.5rem" }}>CV</h2>
               <FontAwesomeIcon icon={faFile} />
               <h3></h3>
@@ -58,25 +60,6 @@ const Contact = () => {
           </motion.div>
         </CardContainer>
       </Hide>
-      {/* <div>
-        <Hide>
-          <Social variants={titleAnimation}>
-            <Circle />
-            <h2>Send us a message</h2>
-          </Social>
-        </Hide>
-        <Hide>
-          <Social variants={titleAnimation}>
-            <Circle />
-            <h2>Send us a message</h2>
-          </Social>
-        </Hide>
-        <Social variants={titleAnimation}>
-          <Circle />
-          <h2>Send us a message</h2>
-        </Social>
-        <Hide></Hide>
-      </div> */}
     </StyledContact>
   );
 };
