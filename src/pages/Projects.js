@@ -16,6 +16,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
+// Components
+import ScrollToTop from "../components/ScrollToTop";
 
 const Projects = () => {
   const [projects, setProjects] = useState(ProjectState);
@@ -80,6 +82,7 @@ const Projects = () => {
       <div className="flexible-message">
         <h2>Click on a project banner or Github link to view more.</h2>
       </div>
+      <ScrollToTop />
     </StyledProjects>
   );
 };
