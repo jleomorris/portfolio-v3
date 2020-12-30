@@ -14,7 +14,8 @@ export const About = styled(motion.div)`
     padding: 2rem 2rem;
     text-align: center;
 
-    .answer {
+    .answer,
+    .title-container {
       text-align: left;
     }
   }

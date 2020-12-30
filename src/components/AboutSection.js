@@ -32,7 +32,7 @@ const AboutSection = () => {
         </motion.div>
         <motion.p variants={fade}>
           Actively seeking work, interested in React developer positions in
-          London/within 20 miles of Southend on Sea, Essex
+          central London/within 20 miles of Southend on Sea, Essex
         </motion.p>
         <motion.button variants={fade}>Contact</motion.button>
       </Description>
