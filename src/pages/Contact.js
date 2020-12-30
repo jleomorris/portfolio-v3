@@ -30,15 +30,15 @@ const Contact = () => {
             <a href="mailTo:james-morris2010@hotmail.co.uk">
               <h2>Email</h2>
               <FontAwesomeIcon icon={faEnvelope} />
-              <h3>james-morris2010hotmail.co.uk</h3>
             </a>
+            <h3>james-morris2010hotmail.co.uk</h3>
           </motion.div>
           <motion.div variants={rotatingAnimation} className="contact-card">
             <a target="_blank" href="https://github.com/jleomorris">
               <h2>Github</h2>
               <FontAwesomeIcon icon={faGithub} />
-              <h3>https://www.github.com/jleomorris</h3>
             </a>
+            <h3>https://www.github.com/jleomorris</h3>
           </motion.div>
           <motion.div variants={rotatingAnimation} className="contact-card">
             <a
@@ -47,16 +47,16 @@ const Contact = () => {
             >
               <h2>LinkedIn</h2>
               <FontAwesomeIcon icon={faLinkedin} />
-              <h3>https://www.linkedin.com/in/james-morris-62a66b166/</h3>
             </a>
+            <h3>https://www.linkedin.com/in/james-morris-62a66b166/</h3>
           </motion.div>
           <motion.div variants={rotatingAnimation} className="contact-card">
             {/* <a target="_blank" href=".\CV_2020.pdf"> */}
             <a target="_blank" href={cv}>
               <h2 style={{ marginBottom: "-1.5rem" }}>CV</h2>
               <FontAwesomeIcon icon={faFile} />
-              <h3></h3>
             </a>
+            <h3></h3>
           </motion.div>
         </CardContainer>
       </Hide>
@@ -107,6 +107,12 @@ const CardContainer = styled(motion.div)`
     /* border: 2px solid white; */
     margin: 2rem;
 
+    h3 {
+      text-align: center;
+      /* word-break: break-all; */
+      font-weight: 100;
+    }
+
     a {
       text-decoration: none;
       display: flex;
@@ -131,12 +137,6 @@ const CardContainer = styled(motion.div)`
         /* text-shadow: 4px 5px 4px #ababab; */
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: white;
-      }
-
-      h3 {
-        text-align: center;
-        word-break: break-all;
-        font-weight: 100;
       }
 
       .fa-envelope {

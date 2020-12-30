@@ -32,7 +32,11 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 10rem;
-  background-color: #282828;
+  /* background-color: #282828; */
+  background: #070707;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
   a {
     /* color: white; */

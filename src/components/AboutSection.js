@@ -40,7 +40,7 @@ const AboutSection = () => {
       <Image>
         <motion.img
           src={aboutImg}
-          alt="guy with a camera"
+          alt="personal photo"
           variants={photoAnimation}
         />
       </Image>

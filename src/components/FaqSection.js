@@ -115,7 +115,7 @@ const Faq = styled(About)`
   }
 
   .answer {
-    padding: 2rem 0rem;
+    padding-top: 2rem;
 
     p {
       padding: 1rem 0rem;

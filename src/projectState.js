@@ -1,6 +1,5 @@
-//Import Images
 // Images
-//Kumi's kitchen
+// Kumi's kitchen
 import kumisKitchenBanner from "./img/projects/kumis-kitchen/banner.PNG";
 import kumisKitchen from "./img/projects/kumis-kitchen/main.PNG";
 import kumisKitchen2 from "./img/projects/kumis-kitchen/main2.PNG";

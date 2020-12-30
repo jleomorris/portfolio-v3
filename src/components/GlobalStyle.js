@@ -8,8 +8,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: #1b1b1b;
+    /* background: #1b1b1b; */
+    background: radial-gradient(#525252, #131313);
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
   }
 
   button {
@@ -17,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.1.rem;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 3px solid #23d997;
+    border: 3px solid #d9ce23;;
     background: transparent;
     color: white;
     transition: all 0.5s ease;
@@ -25,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 
 
     &:hover {
-      background-color: #23d997;
+      background-color: #d9ce23;
       color: white;
     }
   }
@@ -50,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
 
   span {
     font-weight: bold;
-    color: #23d997;
+    color: #d9ce23;
   }
 
   p {
