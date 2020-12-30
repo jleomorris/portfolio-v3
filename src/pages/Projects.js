@@ -116,6 +116,20 @@ const StyledProjects = styled(motion.div)`
       -webkit-text-stroke-color: white;
     }
   }
+
+  @media (max-width: 800px) {
+    .github-container {
+      flex-direction: column;
+    }
+
+    .title-container {
+      margin-bottom: 12rem !important;
+
+      h2 {
+        width: 165%;
+      }
+    }
+  }
 `;
 
 const Project = styled.div`

@@ -121,34 +121,29 @@ const CardContainer = styled(motion.div)`
       flex-direction: column;
 
       h2 {
-        /* color: white; */
         margin-bottom: -3.5rem;
         text-shadow: 2px 2px 20px black;
         z-index: 1;
-        /* text-transform: uppercase; */
-        /* letter-spacing: 0.2rem; */
         font-size: 3rem;
-        text-transform: uppercase;
         -webkit-letter-spacing: 0.4rem;
         -moz-letter-spacing: 0.4rem;
         -ms-letter-spacing: 0.4rem;
         letter-spacing: 0.4rem;
         color: #00000000;
-        /* text-shadow: 4px 5px 4px #ababab; */
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: white;
       }
 
       .fa-envelope {
-        color: #ffffff;
+        color: #ffffff85;
       }
 
       .fa-github {
-        color: #cb68cb;
+        color: #cb68cbb8;
       }
 
       .fa-linkedin {
-        color: #0366d6;
+        color: #0366d6a3;
       }
 
       .fa-file {

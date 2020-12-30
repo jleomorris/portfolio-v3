@@ -138,6 +138,11 @@ const Headline = styled.div`
     width: 100%;
     padding: 8rem 5rem;
 
+    @media (max-width: 1500px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .description-container {
       position: relative;
       width: 40%;
@@ -147,6 +152,11 @@ const Headline = styled.div`
       p {
         margin: 8rem auto;
         padding: 3rem 5rem;
+      }
+
+      @media (max-width: 1500px) {
+        margin: 4rem;
+        width: 90%;
       }
     }
 
@@ -160,6 +170,11 @@ const Headline = styled.div`
       border: 1px solid white;
       min-height: 30vh;
       width: 40%;
+
+      @media (max-width: 1500px) {
+        margin: 4rem;
+        width: 90%;
+      }
 
       .skill {
         display: flex;
@@ -206,6 +221,10 @@ const Headline = styled.div`
     text-shadow: 4px 5px 4px #ababab;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
+
+    @media (max-width: 800px) {
+      margin-top: 4rem;
+    }
   }
 
   img {
@@ -222,9 +241,19 @@ const Features = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   margin: 5rem 10rem;
+
+  @media (max-width: 1500px) {
+    display: block;
+    margin: 2rem 2rem;
+  }
 `;
 
 const StyledFeature = styled.div`
+  @media (max-width: 1500px) {
+    width: 70%;
+    margin: 5rem auto;
+  }
+
   padding: 5rem;
   h3 {
     font-size: 2rem;

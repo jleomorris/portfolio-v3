@@ -102,11 +102,22 @@ const Services = styled(About)`
 const Cards = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 1300px) {
+    justify-content: center;
+    /* margin-right: 0; */
+  }
 `;
 
 const Card = styled.div`
   flex-basis: 20rem;
   margin-right: 3rem;
+
+  @media (max-width: 600px) {
+    /* justify-content: center; */
+    margin-right: 0;
+    /* opacity: 0; */
+  }
 
   .icon {
     display: flex;

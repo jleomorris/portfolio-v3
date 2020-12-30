@@ -66,6 +66,29 @@ const StyledNav = styled.nav`
     letter-spacing: 0.6rem;
     text-transform: uppercase;
   }
+
+  // Media Queries
+
+  @media (max-width: 1300px) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+
+    #logo {
+      display: inline-block;
+      margin: 2rem;
+      font-size: 2.5rem;
+    }
+
+    ul {
+      padding: 2rem;
+      justify-content: space-around;
+      width: 100%;
+
+      li {
+        padding: 0;
+      }
+    }
+  }
 `;
 
 export default Nav;
