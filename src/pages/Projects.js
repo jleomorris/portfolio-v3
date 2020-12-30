@@ -8,6 +8,7 @@ import {
   sliderAnimation,
   sliderContainer,
   pageAnimation,
+  projectBannerAnimation,
   fade,
   photoAnimation,
   lineAnimation,
@@ -29,7 +30,7 @@ const Projects = () => {
 
   return (
     <StyledProjects
-      variants={pageAnimation}
+      variants={projectBannerAnimation}
       initial="hidden"
       animate="show"
       exit="exit"
@@ -79,9 +80,12 @@ const Projects = () => {
           </div>
         </Project>
       ))}
-      <div className="flexible-message">
+      <motion.div
+        variants={projectBannerAnimation}
+        className="flexible-message"
+      >
         <h2>Click on a project banner or Github link to view more.</h2>
-      </div>
+      </motion.div>
       <ScrollToTop />
     </StyledProjects>
   );
