@@ -9,6 +9,8 @@ import { pageAnimation } from "../animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+// Components
+import Footer from "../components/Footer";
 
 const ProjectDetail = () => {
   const history = useHistory();
@@ -90,6 +92,7 @@ const ProjectDetail = () => {
           </ImageDisplay>
         </Details>
       )}
+      <Footer />
     </>
   );
 };
@@ -141,6 +144,7 @@ const Headline = styled.div`
     @media (max-width: 1500px) {
       flex-direction: column;
       align-items: center;
+      padding: 5rem 5rem;
     }
 
     .description-container {
@@ -251,7 +255,7 @@ const Features = styled.div`
 const StyledFeature = styled.div`
   @media (max-width: 1500px) {
     width: 70%;
-    margin: 5rem auto;
+    margin: 0rem auto;
   }
 
   padding: 5rem;
@@ -272,11 +276,20 @@ const StyledFeature = styled.div`
 
 const ImageDisplay = styled.div`
   min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+    width: 80%;
+    margin-bottom: 3rem;
+    /* height: 100vh; */
+    /* object-fit: cover; */
+
+    @media (max-width: 1500px) {
+      width: 100%;
+    }
   }
 `;
 

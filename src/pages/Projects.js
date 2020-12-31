@@ -19,6 +19,7 @@ import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 // Components
 import ScrollToTop from "../components/ScrollToTop";
+import Footer from "../components/Footer";
 
 const Projects = () => {
   const [projects, setProjects] = useState(ProjectState);
@@ -29,65 +30,71 @@ const Projects = () => {
   }, []);
 
   return (
-    <StyledProjects
-      variants={projectBannerAnimation}
-      initial="hidden"
-      animate="show"
-      exit="exit"
-    >
-      <motion.div variants={sliderContainer}>
-        <Frame1 variants={sliderAnimation}></Frame1>
-        <Frame2 variants={sliderAnimation}></Frame2>
-        <Frame3 variants={sliderAnimation}></Frame3>
-        <Frame4 variants={sliderAnimation}></Frame4>
-      </motion.div>
-      {projects.map((project) => (
-        <Project key={project.title}>
-          <div className="image-container">
-            <div className="title-container">
-              <ProjectTitle variants={fade}>{project.title}</ProjectTitle>
-            </div>
-            <Hide>
-              {project.isReact && (
-                <motion.div className="react-icon" variants={pageAnimation}>
-                  <FontAwesomeIcon icon={faReact} />
-                </motion.div>
-              )}
-              <motion.div variants={pageAnimation} className="github-container">
-                <a
-                  href={project.githubDirectoryUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon icon={faCode} />
-                </a>
-                <a
-                  href={project.githubPagesUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-              </motion.div>
-              <Link to={project.url}>
-                <motion.img
-                  variants={photoAnimation}
-                  src={project.banner.src}
-                  alt={project.banner.alt}
-                />
-              </Link>
-            </Hide>
-          </div>
-        </Project>
-      ))}
-      <motion.div
+    <>
+      <StyledProjects
         variants={projectBannerAnimation}
-        className="flexible-message"
+        initial="hidden"
+        animate="show"
+        exit="exit"
       >
-        <h2>Click on a project banner or Github link to view more.</h2>
-      </motion.div>
-      <ScrollToTop />
-    </StyledProjects>
+        <motion.div variants={sliderContainer}>
+          <Frame1 variants={sliderAnimation}></Frame1>
+          <Frame2 variants={sliderAnimation}></Frame2>
+          <Frame3 variants={sliderAnimation}></Frame3>
+          <Frame4 variants={sliderAnimation}></Frame4>
+        </motion.div>
+        {projects.map((project) => (
+          <Project key={project.title}>
+            <div className="image-container">
+              <div className="title-container">
+                <ProjectTitle variants={fade}>{project.title}</ProjectTitle>
+              </div>
+              <Hide>
+                {project.isReact && (
+                  <motion.div className="react-icon" variants={pageAnimation}>
+                    <FontAwesomeIcon icon={faReact} />
+                  </motion.div>
+                )}
+                <motion.div
+                  variants={pageAnimation}
+                  className="github-container"
+                >
+                  <a
+                    href={project.githubDirectoryUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faCode} />
+                  </a>
+                  <a
+                    href={project.githubPagesUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                </motion.div>
+                <Link to={project.url}>
+                  <motion.img
+                    variants={photoAnimation}
+                    src={project.banner.src}
+                    alt={project.banner.alt}
+                  />
+                </Link>
+              </Hide>
+            </div>
+          </Project>
+        ))}
+        <motion.div
+          variants={projectBannerAnimation}
+          className="flexible-message"
+        >
+          <h2>Click on a project banner or Github link to view more.</h2>
+        </motion.div>
+        <ScrollToTop />
+      </StyledProjects>
+      <Footer />
+    </>
   );
 };
 

@@ -8,59 +8,66 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+// Components
+import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Contact = () => {
   return (
-    <StyledContact
-      variants={pageAnimation}
-      initial="hidden"
-      animate="show"
-      exit="exit"
-    >
-      <Title>
+    <>
+      <StyledContact
+        variants={pageAnimation}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+      >
+        <Title>
+          <Hide>
+            <motion.h2 variants={titleAnimation}>Get in touch</motion.h2>
+          </Hide>
+        </Title>
         <Hide>
-          <motion.h2 variants={titleAnimation}>Get in touch</motion.h2>
+          <CardContainer
+          // variants={titleAnimation}
+          >
+            <motion.div variants={rotatingAnimation} className="contact-card">
+              <a href="mailTo:james-morris2010@hotmail.co.uk">
+                <h2>Email</h2>
+                <FontAwesomeIcon icon={faEnvelope} />
+              </a>
+              <h3>james-morris2010hotmail.co.uk</h3>
+            </motion.div>
+            <motion.div variants={rotatingAnimation} className="contact-card">
+              <a target="_blank" href="https://github.com/jleomorris">
+                <h2>Github</h2>
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+              <h3>https://www.github.com/jleomorris</h3>
+            </motion.div>
+            <motion.div variants={rotatingAnimation} className="contact-card">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/james-morris-62a66b166/"
+              >
+                <h2>LinkedIn</h2>
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <h3>https://www.linkedin.com/in/james-morris-62a66b166/</h3>
+            </motion.div>
+            <motion.div variants={rotatingAnimation} className="contact-card">
+              {/* <a target="_blank" href=".\CV_2020.pdf"> */}
+              <a target="_blank" href={cv}>
+                <h2 style={{ marginBottom: "-1.5rem" }}>CV</h2>
+                <FontAwesomeIcon icon={faFile} />
+              </a>
+              <h3></h3>
+            </motion.div>
+          </CardContainer>
         </Hide>
-      </Title>
-      <Hide>
-        <CardContainer
-        // variants={titleAnimation}
-        >
-          <motion.div variants={rotatingAnimation} className="contact-card">
-            <a href="mailTo:james-morris2010@hotmail.co.uk">
-              <h2>Email</h2>
-              <FontAwesomeIcon icon={faEnvelope} />
-            </a>
-            <h3>james-morris2010hotmail.co.uk</h3>
-          </motion.div>
-          <motion.div variants={rotatingAnimation} className="contact-card">
-            <a target="_blank" href="https://github.com/jleomorris">
-              <h2>Github</h2>
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <h3>https://www.github.com/jleomorris</h3>
-          </motion.div>
-          <motion.div variants={rotatingAnimation} className="contact-card">
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/james-morris-62a66b166/"
-            >
-              <h2>LinkedIn</h2>
-              <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-            <h3>https://www.linkedin.com/in/james-morris-62a66b166/</h3>
-          </motion.div>
-          <motion.div variants={rotatingAnimation} className="contact-card">
-            {/* <a target="_blank" href=".\CV_2020.pdf"> */}
-            <a target="_blank" href={cv}>
-              <h2 style={{ marginBottom: "-1.5rem" }}>CV</h2>
-              <FontAwesomeIcon icon={faFile} />
-            </a>
-            <h3></h3>
-          </motion.div>
-        </CardContainer>
-      </Hide>
-    </StyledContact>
+        <ScrollToTop />
+      </StyledContact>
+      <Footer />
+    </>
   );
 };
 

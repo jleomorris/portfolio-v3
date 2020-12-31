@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 import ScrollToTop from "../components/ScrollToTop";
 // Components
+import Footer from "../components/Footer";
 
 const AboutUs = () => {
   return (
@@ -20,6 +21,7 @@ const AboutUs = () => {
       <AboutSection />
       <ServicesSection />
       <FaqSection />
+      <Footer />
       <ScrollToTop />
     </motion.div>
   );
