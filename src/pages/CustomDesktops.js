@@ -1,6 +1,16 @@
 import React from "react";
+// Styled components
 import styled from "styled-components";
+// Animation
 import { motion } from "framer-motion";
+import {
+  pageAnimation,
+  photoAnimation,
+  scrollRevealLeft,
+  scrollRevealRight,
+  titleAnimation,
+  rotatingAnimation,
+} from "../animation";
 // Images
 import kolink10 from "../img/custom-desktops/kolink10.png";
 import kolink6 from "../img/custom-desktops/kolink6.png";
@@ -8,34 +18,51 @@ import kolink2 from "../img/custom-desktops/kolink2.png";
 import kolink1 from "../img/custom-desktops/kolink1.png";
 // Components
 import Footer from "../components/Footer";
+import { useScroll } from "../components/useScroll";
 
 const CustomDesktops = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
+  const [element3, controls3] = useScroll();
+  const [element4, controls4] = useScroll();
+  const [element5, controls5] = useScroll();
+
   return (
     <>
-      <StyledCustomDesktops className="intro">
+      <StyledCustomDesktops
+        className="intro"
+        variants={pageAnimation}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+      >
         <h1>Kolink Rocket v4</h1>
         <p>
           Completed in 2019, this is my eighth desktop build to date. It was my
           first M-ITX, and involved custom modifications drafted in the 3D
           modelling tool Blender.
         </p>
-        <ul>
-          <li>Kolink Rocket M-ITX case</li>
-          <li>Aorus B450 Pro Wifi ITX</li>
-          <li>AMD Ryzen 5 3600</li>
-          <li>Asetek 645LT 92mm AIO</li>
-          <li>16gb Vulcan T-Force 3000mhz ddr4 RAM</li>
-          <li>Nvidia Geforce 1080ti FE</li>
-          <li>1.5tb Silicon Power NVME m2 SSD</li>
-          <li>Corsair SF600 PSU(with included sleeved cables)</li>
-          <li>1 x 92mm, 2 x 120m BeQuiet fans, Deepcool</li>
-          <li>4 hub fan controller</li>
-        </ul>
+        <motion.ul variants={pageAnimation}>
+          <motion.li>Kolink Rocket M-ITX case</motion.li>
+          <motion.li>Aorus B450 Pro Wifi ITX</motion.li>
+          <motion.li>AMD Ryzen 5 3600</motion.li>
+          <motion.li>Asetek 645LT 92mm AIO</motion.li>
+          <motion.li>16gb Vulcan T-Force 3000mhz ddr4 RAM</motion.li>
+          <motion.li>Nvidia Geforce 1080ti FE</motion.li>
+          <motion.li>1.5tb Simotion.licon Power NVME m2 SSD</motion.li>
+          <motion.li>Corsair SF600 PSU(with included sleeved cables)</motion.li>
+          <motion.li>1 x 92mm, 2 x 120m BeQuiet fans, Deepcool</motion.li>
+          <motion.li>4 hub fan controller</motion.li>
+        </motion.ul>
         <div className="features-card-default">
-          <img
+          <motion.img
             src={kolink10}
             alt="kolink rocket"
             className="features-card-image"
+            variants={scrollRevealRight}
+            initial="hidden"
+            animate={controls}
+            ref={element}
           />
           <div className="features-card-info">
             <h2>Custom handles</h2>
@@ -54,10 +81,14 @@ const CustomDesktops = () => {
           </div>
         </div>
         <div className="features-card-default">
-          <img
+          <motion.img
             src={kolink6}
             alt="kolink rocket"
             className="features-card-image-flipped"
+            variants={scrollRevealLeft}
+            initial="hidden"
+            animate={controls2}
+            ref={element2}
           />
           <div className="features-card-info-flipped">
             <h2>Custom legs</h2>
@@ -80,10 +111,14 @@ const CustomDesktops = () => {
           </div>
         </div>
         <div className="features-card-default">
-          <img
+          <motion.img
             src={kolink2}
             alt="kolink rocket"
             className="features-card-image"
+            variants={scrollRevealRight}
+            initial="hidden"
+            animate={controls3}
+            ref={element3}
           />
           <div className="features-card-info">
             <h2>Custom fans</h2>
@@ -100,11 +135,15 @@ const CustomDesktops = () => {
           </div>
         </div>
         <div className="features-card-default">
-          <img
+          <motion.img
             src={kolink1}
             alt="kolink rocket"
             className="features-card-image-flipped"
             style={{ maxWidth: "60%" }}
+            variants={scrollRevealLeft}
+            initial="hidden"
+            animate={controls4}
+            ref={element4}
           />
           <div className="features-card-info-flipped">
             <h2>Solid construction</h2>
@@ -118,10 +157,14 @@ const CustomDesktops = () => {
           </div>
         </div>
         <div className="features-card-default">
-          <img
+          <motion.img
             src={kolink2}
             alt="kolink rocket"
             className="features-card-image"
+            variants={scrollRevealRight}
+            initial="hidden"
+            animate={controls5}
+            ref={element5}
           />
           <div className="features-card-info">
             <h2>Sandwich style layout</h2>
@@ -151,7 +194,7 @@ const StyledCustomDesktops = styled(motion.div)`
     color: white;
     text-shadow: 2px 2px 10px black;
     text-align: center;
-    margin-top: 8rem;
+    margin: 8rem 2rem 2rem 2rem;
   }
 
   p {
@@ -162,7 +205,7 @@ const StyledCustomDesktops = styled(motion.div)`
   ul {
     font-size: 1.5rem;
     color: white;
-    margin-bottom: 10rem;
+    margin: 2rem 2rem 2rem 10rem;
 
     li {
       line-height: 2rem;
@@ -230,6 +273,10 @@ const StyledCustomDesktops = styled(motion.div)`
         font-weight: 600;
         letter-spacing: 0.2rem;
         background: #1a1a1a;
+
+        @media (max-width: 1300px) {
+          transform: translate(30px, -50px);
+        }
       }
 
       p {
@@ -272,6 +319,10 @@ const StyledCustomDesktops = styled(motion.div)`
         font-weight: 600;
         letter-spacing: 0.2rem;
         background: #1a1a1a;
+
+        @media (max-width: 1300px) {
+          transform: translate(-30px, -50px);
+        }
       }
 
       p {
