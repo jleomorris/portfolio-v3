@@ -10,13 +10,14 @@ import ScrollToTop from "../components/ScrollToTop";
 // Components
 import Footer from "../components/Footer";
 
-const AboutUs = () => {
+const AboutUs = ({ isNavOpen }) => {
   return (
     <motion.div
       variants={pageAnimation}
       initial="hidden"
       animate="show"
       exit="exit"
+      className={isNavOpen ? "blur" : ""}
     >
       <AboutSection />
       <ServicesSection />

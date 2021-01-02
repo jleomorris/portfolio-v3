@@ -21,7 +21,7 @@ import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
 
-const Projects = () => {
+const Projects = ({ isNavOpen }) => {
   const [projects, setProjects] = useState(ProjectState);
 
   useEffect(() => {
@@ -36,6 +36,7 @@ const Projects = () => {
         initial="hidden"
         animate="show"
         exit="exit"
+        className={isNavOpen ? "blur" : ""}
       >
         <motion.div variants={sliderContainer}>
           <Frame1 variants={sliderAnimation}></Frame1>

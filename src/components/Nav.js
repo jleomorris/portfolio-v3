@@ -1,37 +1,47 @@
 import React from "react";
-import styled from "styled-components";
 import { Link, BrowserRouter } from "react-router-dom";
+// Font Awesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+// Styled components
+import styled from "styled-components";
 
-const Nav = () => {
+const Nav = ({ isNavOpen, setIsNavOpen }) => {
   return (
     // <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <StyledNav>
-      <h1>
-        {/* <Link id="logo" to="/"> */}
-        <Link id="logo" to={`${process.env.PUBLIC_URL}/`}>
-          Jleo
-        </Link>
-      </h1>
-      <ul>
-        <li>
-          {/* <Link to="/">About</Link> */}
-          <Link to={`${process.env.PUBLIC_URL}/`}>About</Link>
-        </li>
-        <li>
-          {/* <Link to="/projects">Projects</Link> */}
-          <Link to={`${process.env.PUBLIC_URL}/projects`}>Projects</Link>
-        </li>
-        <li>
-          {/* <Link to="/custom-desktops">Custom desktops</Link> */}
-          <Link to={`${process.env.PUBLIC_URL}/custom-desktops`}>
-            Custom desktops
-          </Link>
-        </li>
-        <li>
-          {/* <Link to="/contact">Contact </Link> */}
-          <Link to={`${process.env.PUBLIC_URL}/contact`}>Contact</Link>{" "}
-        </li>
-      </ul>
+    <StyledNav className={isNavOpen ? "height100" : ""}>
+      {/* <Link id="logo" to="/"> */}
+      <Link id="logo" to={`${process.env.PUBLIC_URL}/`}>
+        <h1 className={isNavOpen ? "rotate90" : ""}>Jleo</h1>
+      </Link>
+      <StyledFontAwesomeIcon
+        icon={isNavOpen ? faTimes : faBars}
+        onClick={() => setIsNavOpen(!isNavOpen)}
+      />
+      {isNavOpen && (
+        <div className="nav-links">
+          <ul>
+            <li>
+              {/* <Link to="/">About</Link> */}
+              <Link to={`${process.env.PUBLIC_URL}/`}>About</Link>
+            </li>
+            <li>
+              {/* <Link to="/projects">Projects</Link> */}
+              <Link to={`${process.env.PUBLIC_URL}/projects`}>Projects</Link>
+            </li>
+            <li>
+              {/* <Link to="/custom-desktops">Custom desktops</Link> */}
+              <Link to={`${process.env.PUBLIC_URL}/custom-desktops`}>
+                Custom desktops
+              </Link>
+            </li>
+            <li>
+              {/* <Link to="/contact">Contact </Link> */}
+              <Link to={`${process.env.PUBLIC_URL}/contact`}>Contact</Link>{" "}
+            </li>
+          </ul>
+        </div>
+      )}
     </StyledNav>
     //{" "}
     // </BrowserRouter>
@@ -39,17 +49,16 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
-  min-height: 10vh;
+  height: 10vh;
   display: flex;
-  margin: auto;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 1rem 10rem;
-  /* background-color: #282828; */
   background: #070707;
   position: sticky;
   top: 0;
   z-index: 10;
+  transition: all 0.5s ease;
+  /* border: 2px solid green; */
 
   a {
     /* color: white; */
@@ -62,11 +71,15 @@ const StyledNav = styled.nav`
     }
   }
 
-  ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+  h1 {
+    color: white;
+    letter-spacing: 0.2rem;
+    font-size: 4rem;
+    font-family: "Lobster", cursive;
+    font-weight: lighter;
+    /* border: 2px solid orange; */
+    margin-right: 2rem;
+    transition: 0.5s all ease;
   }
 
   #logo {
@@ -75,36 +88,96 @@ const StyledNav = styled.nav`
     font-weight: lighter;
   }
 
-  li {
-    padding-left: 10rem;
-    position: relative;
-    letter-spacing: 0.6rem;
-    text-transform: uppercase;
-    margin: 1rem 0;
-  }
+  .nav-links {
+    transition: all 0.5s ease;
+    align-items: center;
+    padding: 1rem;
+    /* background: #070707; */
+    /* border: 2px solid orange; */
+    /* display: flex; */
 
-  // Media Queries
-
-  @media (max-width: 1300px) {
-    flex-direction: column;
-    padding: 2rem 1rem;
-
-    #logo {
-      display: inline-block;
+    svg {
+      font-size: 3rem;
+      position: absolute;
       margin: 2rem;
-      font-size: 2.5rem;
+      top: 0;
+      right: 0;
+      color: white;
+      cursor: pointer;
+      /* z-index: 10; */
+    }
+
+    a {
+      /* color: white; */
+      text-decoration: none;
+      color: #888c91;
+      transition: 0.5s all ease;
+
+      &:hover {
+        color: white;
+      }
     }
 
     ul {
-      padding: 2rem;
-      justify-content: space-around;
-      width: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
 
-      li {
-        padding: 0;
+    #logo {
+      font-size: 1.5rem;
+      font-family: "Lobster", cursive;
+      font-weight: lighter;
+    }
+
+    li {
+      /* padding-left: 10rem; */
+      position: relative;
+      letter-spacing: 0.6rem;
+      text-transform: uppercase;
+      margin: 3rem 0;
+      font-size: 6rem;
+
+      a {
+        font-size: 2rem;
       }
     }
+
+    // Media Queries
+    @media (max-width: 1300px) {
+      /* flex-direction: column; */
+      padding: 2rem 1rem;
+
+      #logo {
+        display: inline-block;
+        margin: 2rem;
+        font-size: 2.5rem;
+      }
+
+      /* ul {
+        padding: 2rem;
+        justify-content: space-around;
+        width: 100%;
+
+        li {
+          padding: 0;
+        }
+      } */
+    }
   }
+`;
+
+const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  margin: 2rem;
+  cursor: pointer;
 `;
 
 export default Nav;

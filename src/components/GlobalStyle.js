@@ -61,6 +61,20 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.4rem;
     line-height: 150%;
   }
+
+  // Conditional classes
+
+  .blur {
+    filter: blur(8px);
+  }
+
+  .rotate90 {
+    transform: rotate(-90deg);
+  }
+
+  .height100 {
+    height: 100vh;
+  }
   
 // Media Queries
 

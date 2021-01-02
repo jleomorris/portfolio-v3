@@ -25,7 +25,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTools } from "@fortawesome/free-solid-svg-icons";
 
-const CustomDesktops = () => {
+const CustomDesktops = ({ isNavOpen }) => {
   const [element, controls] = useScroll();
   const [element_1, controls_1] = useScroll();
   const [element_2, controls_2] = useScroll();
@@ -49,6 +49,7 @@ const CustomDesktops = () => {
         initial="hidden"
         animate="show"
         exit="exit"
+        className={isNavOpen ? "blur" : ""}
       >
         <div className="title-container">
           <h1>Kolink Rocket v4</h1>

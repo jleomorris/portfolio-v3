@@ -12,7 +12,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 
-const Contact = () => {
+const Contact = ({ isNavOpen }) => {
   return (
     <>
       <StyledContact
@@ -20,6 +20,7 @@ const Contact = () => {
         initial="hidden"
         animate="show"
         exit="exit"
+        className={isNavOpen ? "blur" : ""}
       >
         <Title>
           <Hide>

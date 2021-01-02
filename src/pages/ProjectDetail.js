@@ -12,17 +12,14 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 // Components
 import Footer from "../components/Footer";
 
-const ProjectDetail = () => {
+const ProjectDetail = ({ isNavOpen }) => {
   const history = useHistory();
   const currentUrl = history.location.pathname;
   const [projects, setProjects] = useState(ProjectState);
   const [project, setProject] = useState(null);
 
   // useEffect
-
   useEffect(() => {
-    // debugger;
-
     const currentProject = projects.filter(
       (project) => `/portfolio-v3${project.url}` === currentUrl
     );
@@ -38,6 +35,7 @@ const ProjectDetail = () => {
           initial="hidden"
           animate="show"
           exit="exit"
+          className={isNavOpen ? "blur" : ""}
         >
           <Headline>
             <div className="github-container">
