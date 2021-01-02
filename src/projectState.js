@@ -1,20 +1,38 @@
 // Images
 // Kumi's kitchen
-import kumisKitchenBanner from "./img/projects/kumis-kitchen/banner.PNG";
-import kumisKitchen from "./img/projects/kumis-kitchen/main.PNG";
-import kumisKitchen2 from "./img/projects/kumis-kitchen/main2.PNG";
+import kumisKitchenBanner from "./img/projects/kumis-kitchen/banner.jpg";
+import kumisKitchen from "./img/projects/kumis-kitchen/main.jpg";
+import kumisKitchen2 from "./img/projects/kumis-kitchen/main2.jpg";
 // Bolt music player
-import boltMusicPlayer from "./img/projects/bolt-music-player/bolt_music_player.PNG";
+import boltMusicPlayer from "./img/projects/bolt-music-player/bolt_music_player.jpg";
+import boltMusicPlayer2 from "./img/projects/bolt-music-player/dark_2.jpg";
+import boltMusicPlayer3 from "./img/projects/bolt-music-player/mobile.jpg";
 // Sff compatability tool
-import sffCompatabilityTool from "./img/projects/sff-compatability-tool/sff_compatability_tool.jpg";
+import sffCompatabilityToolBanner from "./img/projects/sff-compatability-tool/sff_compatability_tool.jpg";
+import sffCompatabilityTool from "./img/projects/sff-compatability-tool/main.jpg";
+import sffCompatabilityTool2 from "./img/projects/sff-compatability-tool/main2.jpg";
+import sffCompatabilityTool3 from "./img/projects/sff-compatability-tool/main3.jpg";
+import sffCompatabilityTool4 from "./img/projects/sff-compatability-tool/main4.jpg";
 // React todo list
-import reactTodoList from "./img/projects/react-todo-list/react_todo_list.jpg";
+import reactTodoListBanner from "./img/projects/react-todo-list/banner.jpg";
+import reactTodoList from "./img/projects/react-todo-list/main.jpg";
+import reactTodoList2 from "./img/projects/react-todo-list/main2.jpg";
 // Portfolio v2
+import portfolioV2Banner from "./img/projects/portfolio-v2/banner.jpg";
 import portfolioV2 from "./img/projects/portfolio-v2/main.jpg";
+import portfolioV22 from "./img/projects/portfolio-v2/main2.jpg";
+import portfolioV23 from "./img/projects/portfolio-v2/main3.jpg";
+import portfolioV24 from "./img/projects/portfolio-v2/main4.jpg";
+import portfolioV25 from "./img/projects/portfolio-v2/main5.jpg";
 // Rgb guessing game
+import rgbGuessingGameBanner from "./img/projects/rgb-guessing-game/banner.jpg";
 import rgbGuessingGame from "./img/projects/rgb-guessing-game/main.jpg";
+import rgbGuessingGame2 from "./img/projects/rgb-guessing-game/main2.jpg";
 // Patatap clone
+import patatapCloneBanner from "./img/projects/patatap-clone/banner.jpg";
 import patatapClone from "./img/projects/patatap-clone/main.jpg";
+import patatapClone2 from "./img/projects/patatap-clone/main2.jpg";
+import patatapClone3 from "./img/projects/patatap-clone/mobile.jpg";
 // Font Awesome
 import {
   faReact,
@@ -101,6 +119,14 @@ export const ProjectState = () => {
           src: boltMusicPlayer,
           alt: "bolt music player",
         },
+        {
+          src: boltMusicPlayer2,
+          alt: "song playing",
+        },
+        {
+          src: boltMusicPlayer3,
+          alt: "mobile views",
+        },
       ],
       url: "/projects/bolt-music-player",
       githubDirectoryUrl: "https://github.com/jleomorris/bolt-music-player",
@@ -137,13 +163,25 @@ export const ProjectState = () => {
       description:
         "PC part compatability tool for small form factor PCs. Users can see what parts are compatile based on case and view an in depth part breakdown.",
       banner: {
-        src: sffCompatabilityTool,
-        alt: "sff compatability tool banner",
+        src: sffCompatabilityToolBanner,
+        alt: "banner",
       },
       images: [
         {
           src: sffCompatabilityTool,
-          alt: "sff compatability tool",
+          alt: "about",
+        },
+        {
+          src: sffCompatabilityTool2,
+          alt: "features",
+        },
+        {
+          src: sffCompatabilityTool3,
+          alt: "tool",
+        },
+        {
+          src: sffCompatabilityTool4,
+          alt: "breakdown",
         },
       ],
       url: "/projects/sff-compatability-tool",
@@ -189,11 +227,15 @@ export const ProjectState = () => {
       isReact: true,
       description:
         "Todo app, users can add new tasks, tick off, delete and undo delete. On completion of all tasks a confetti animation is trigerred. The background of the app is also random on each page refresh.",
-      banner: { src: reactTodoList, alt: "confetti todo list banner" },
+      banner: { src: reactTodoListBanner, alt: "confetti todo list banner" },
       images: [
         {
           src: reactTodoList,
-          alt: "todo list",
+          alt: "main interface",
+        },
+        {
+          src: reactTodoList2,
+          alt: "confetti raining down",
         },
       ],
       url: "/projects/confetti-todo-list",
@@ -235,11 +277,31 @@ export const ProjectState = () => {
       title: "Portfolio v2",
       description:
         "Redesign of my orignal portfolio website. Completed as I wanted to redesign my portfolio without using Bootstrap and jQuery libraries.",
-      banner: { src: portfolioV2, alt: "portfolio version 2 banner" },
+      banner: { src: portfolioV2Banner, alt: "banner" },
       images: [
         {
+          src: portfolioV2Banner,
+          alt: "banner",
+        },
+        {
           src: portfolioV2,
-          alt: "portfolio version 2",
+          alt: "about",
+        },
+        {
+          src: portfolioV22,
+          alt: "skills",
+        },
+        {
+          src: portfolioV23,
+          alt: "projects carousel",
+        },
+        {
+          src: portfolioV24,
+          alt: "custom desktop",
+        },
+        {
+          src: portfolioV25,
+          alt: "custom desktop",
         },
       ],
       url: "/projects/portfolio-v2",
@@ -279,11 +341,19 @@ export const ProjectState = () => {
       isReact: false,
       description:
         "A clone of Patatap, allows the user to play sounds using their keyboard. This was one of the first apps I worked on to develop my understanding of event listeners, functions, canvas and JS libraries.",
-      banner: { src: patatapClone, alt: "patatap clone banner" },
+      banner: { src: patatapCloneBanner, alt: "banner" },
       images: [
         {
           src: patatapClone,
           alt: "patatap clone",
+        },
+        {
+          src: patatapClone2,
+          alt: "keys pressed",
+        },
+        {
+          src: patatapClone3,
+          alt: "mobile",
         },
       ],
       url: "/projects/patatap-clone",
@@ -324,11 +394,15 @@ export const ProjectState = () => {
       isReact: false,
       description:
         "Game where the aim is to guess the correct colored tile based on the RGB value shown. An easy and hard difficulty are in place. This was one of the first apps I worked on to develop my understanding of event listeners and functions.",
-      banner: { src: rgbGuessingGame, alt: "rgb guessing game banner" },
+      banner: { src: rgbGuessingGameBanner, alt: "banner" },
       images: [
         {
           src: rgbGuessingGame,
-          alt: "rgb guessing game",
+          alt: "hard mode",
+        },
+        {
+          src: rgbGuessingGame2,
+          alt: "easy mode",
         },
       ],
       url: "/projects/rgb-guessing-game",
