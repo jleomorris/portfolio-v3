@@ -54,14 +54,11 @@ const FaqSection = () => {
                 My desire to work within the computing industry first stemmed
                 from the moment I learnt how to build my first PC. Examples of
                 my built systems can be seen on the{" "}
-                <Link to="/custom-desktops">custom desktops</Link> page. My fine
+                <Link to="/custom-desktops">Custom desktops</Link> page. My fine
                 attention to detail can be seen in the desktops I produce, and
                 this is the same level of focus and creativity I bring when
-                working on projects.
-              </p>
-              <p>
-                Examples of websites and apps I've developed can be seen in
-                projects.
+                working on projects (examples can be seen on the the{" "}
+                <Link to="/projects">Projects</Link> page.).
               </p>
             </div>
           </Toggle>
@@ -119,6 +116,12 @@ const Faq = styled(About)`
 
     p {
       padding: 1rem 0rem;
+
+      a {
+        text-decoration: none;
+        color: #d9ce23;
+        font-size: 1.4rem;
+      }
     }
   }
 `;
