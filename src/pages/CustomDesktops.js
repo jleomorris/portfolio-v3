@@ -16,16 +16,30 @@ import kolink10 from "../img/custom-desktops/kolink10.png";
 import kolink6 from "../img/custom-desktops/kolink6.png";
 import kolink2 from "../img/custom-desktops/kolink2.png";
 import kolink1 from "../img/custom-desktops/kolink1.png";
+import kolink5 from "../img/custom-desktops/kolink5.png";
 // Components
 import Footer from "../components/Footer";
 import { useScroll } from "../components/useScroll";
+import ScrollToTop from "../components/ScrollToTop";
+// Font Awesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTools } from "@fortawesome/free-solid-svg-icons";
 
 const CustomDesktops = () => {
   const [element, controls] = useScroll();
+  const [element_1, controls_1] = useScroll();
+  const [element_2, controls_2] = useScroll();
   const [element2, controls2] = useScroll();
+  const [element2_1, controls2_1] = useScroll();
+  const [element2_2, controls2_2] = useScroll();
+  const [element2_3, controls2_3] = useScroll();
   const [element3, controls3] = useScroll();
+  const [element3_1, controls3_1] = useScroll();
+  const [element3_2, controls3_2] = useScroll();
   const [element4, controls4] = useScroll();
+  const [element4_1, controls4_1] = useScroll();
   const [element5, controls5] = useScroll();
+  const [element5_1, controls5_1] = useScroll();
 
   return (
     <>
@@ -36,11 +50,22 @@ const CustomDesktops = () => {
         animate="show"
         exit="exit"
       >
-        <h1>Kolink Rocket v4</h1>
+        <div className="title-container">
+          <h1>Kolink Rocket v4</h1>
+          <FontAwesomeIcon
+            icon={faTools}
+            // style={{
+            //   display: "inline-block",
+            //   margin: "0rem 0.5rem",
+            //   fontSize: "1rem",
+            // }}
+          />
+        </div>
         <p>
-          Completed in 2019, this is my eighth desktop build to date. It was my
-          first M-ITX, and involved custom modifications drafted in the 3D
-          modelling tool Blender.
+          I began building desktops in 2015 and have built 8 to custom rigs to
+          date. This is my latest build, it was my first Mini-ITX (M-ITX)
+          variant, and involved custom modifications drafted in the 3D modelling
+          tool Blender.
         </p>
         <motion.ul variants={pageAnimation}>
           <motion.li>Kolink Rocket M-ITX case</motion.li>
@@ -66,18 +91,28 @@ const CustomDesktops = () => {
           />
           <div className="features-card-info">
             <h2>Custom handles</h2>
-            <p>
+            <motion.p
+              variants={photoAnimation}
+              initial="hidden"
+              animate={controls_1}
+              ref={element_1}
+            >
               At 12.5 x 32.5 x 32.8cm, 9.6 litre volume (shoebox size) and 5kg -
               this case is travel ready. The added handles increase portability
               and make it easier for those who travel and need their SFF to
               accompany them.
-            </p>
+            </motion.p>
             <hr></hr>
-            <p>
+            <motion.p
+              variants={photoAnimation}
+              initial="hidden"
+              animate={controls_2}
+              ref={element_2}
+            >
               Holes drilled through top panel with a drill press, brushed
               stainless steel 10cm D handles attached ~ 1 inch from the edges of
               the case.
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="features-card-default">
@@ -92,22 +127,38 @@ const CustomDesktops = () => {
           />
           <div className="features-card-info-flipped">
             <h2>Custom legs</h2>
-            <p>
+            <motion.p
+              variants={photoAnimation}
+              initial="hidden"
+              animate={controls2_1}
+              ref={element2_1}
+            >
               Legs and tinted acrylic plexi side panels added to hide the
               exhaust fans, improve breathability of the case and provide a more
               stealth look.
-            </p>
+            </motion.p>
             <hr></hr>
-            <p>
+            <motion.p
+              variants={photoAnimation}
+              initial="hidden"
+              animate={controls2_2}
+              ref={element2_2}
+            >
               2mm thick aluminium square tubing (4cm x 2cm x 2cm), 18 x 18mm
               square plastic ends inserted at both ends, drilled on top and
               bolted through underside panel of case.
-            </p>
-            <p>
+            </motion.p>
+            <hr></hr>
+            <motion.p
+              variants={photoAnimation}
+              initial="hidden"
+              animate={controls2_3}
+              ref={element2_3}
+            >
               3mm grey tinted Acrylic plexi (3mm rounded corners) cut to sizes:
               2 x (27.5cm x 3cm), 1 x (9cm x 3cm). Attached with 3M double
               coated tape.
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="features-card-default">
@@ -122,16 +173,26 @@ const CustomDesktops = () => {
           />
           <div className="features-card-info">
             <h2>Custom fans</h2>
-            <p>
+            <motion.p
+              variants={photoAnimation}
+              initial="hidden"
+              animate={controls3_1}
+              ref={element3_1}
+            >
               Exhaust options were limited in the original design so 80mm holes
               were added to the underside of the case to accomodate two 80mm
               BeQuiet! Pure wings fans.
-            </p>
+            </motion.p>
             <hr></hr>
-            <p>
+            <motion.p
+              variants={photoAnimation}
+              initial="hidden"
+              animate={controls3_2}
+              ref={element3_2}
+            >
               The fan exhausts were cut using a 80mm Draper holesaw and a
               further hole for cable management was cut using a coping saw.
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="features-card-default">
@@ -147,18 +208,23 @@ const CustomDesktops = () => {
           />
           <div className="features-card-info-flipped">
             <h2>Solid construction</h2>
-            <p>
+            <motion.p
+              variants={photoAnimation}
+              initial="hidden"
+              animate={controls4_1}
+              ref={element4_1}
+            >
               The titanium-grey anodised aluminium panels and minimalist design
               give the case a premium feel and look. The 2mm thick panels ensure
               your case can handle the day to day wear and tear it may
               encounter. Perforated holes each side mean the CPU and GPU can
               constantly take in cool air.
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="features-card-default">
           <motion.img
-            src={kolink2}
+            src={kolink5}
             alt="kolink rocket"
             className="features-card-image"
             variants={scrollRevealRight}
@@ -168,15 +234,21 @@ const CustomDesktops = () => {
           />
           <div className="features-card-info">
             <h2>Sandwich style layout</h2>
-            <p>
+            <motion.p
+              variants={photoAnimation}
+              initial="hidden"
+              animate={controls5_1}
+              ref={element5_1}
+            >
               This smart and optimised layout is the most efficient use of space
               and allows the case to support up to 31cm dual slot GPUS, mini-ITX
               motherboards, SFX/SFX-L PSUs and 2 x 2.5" SSDs
-            </p>
+            </motion.p>
           </div>
         </div>
       </StyledCustomDesktops>
       <Footer />
+      <ScrollToTop />
     </>
   );
 };
@@ -188,27 +260,60 @@ const StyledCustomDesktops = styled(motion.div)`
   align-items: center;
   /* padding: 8rem; */
 
-  h1 {
-    font-size: 8rem;
-    font-weight: lighter;
-    color: white;
-    text-shadow: 2px 2px 10px black;
-    text-align: center;
+  .title-container {
+    position: relative;
     margin: 8rem 2rem 2rem 2rem;
+
+    h1 {
+      font-size: 8rem;
+      font-weight: 900;
+      color: white;
+      text-shadow: 2px 2px 10px black;
+      text-align: center;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: #ffffff4d;
+      border: 2px solid #ffffff4d;
+      padding: 3rem;
+      border-radius: 50%;
+      font-size: 18rem;
+      transform: translate(-50%, -50%);
+    }
   }
 
   p {
     width: 50%;
     font-size: 1.5rem;
+    padding: 6rem 0rem;
+    text-align: center;
+
+    @media (max-width: 800px) {
+      width: 80%;
+    }
   }
 
   ul {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: white;
-    margin: 2rem 2rem 2rem 10rem;
+    margin: 6rem 2rem 6rem 2rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media (max-width: 600px) {
+      justify-content: flex-start;
+    }
 
     li {
       line-height: 2rem;
+      margin: 1rem 3rem;
+      list-style: circle;
     }
   }
 
@@ -262,7 +367,7 @@ const StyledCustomDesktops = styled(motion.div)`
         position: absolute;
         top: 0;
         right: 0;
-        border: 5px solid #5d9716;
+        border: 5px solid #d9ce23;
         padding: 1rem 1.5rem;
         transform: translate(30px, -70px);
         letter-spacing: 1rem;
@@ -283,6 +388,7 @@ const StyledCustomDesktops = styled(motion.div)`
         text-align: left;
         margin: 0;
         width: 100%;
+        padding: 2rem;
         /* font-size: 3rem; */
       }
     }
@@ -308,7 +414,7 @@ const StyledCustomDesktops = styled(motion.div)`
         position: absolute;
         top: 0;
         left: 0;
-        border: 5px solid #5d9716;
+        border: 5px solid #d9ce23;
         padding: 1rem 1.5rem;
         transform: translate(-30px, -70px);
         letter-spacing: 1rem;
@@ -329,6 +435,7 @@ const StyledCustomDesktops = styled(motion.div)`
         text-align: right;
         margin: 0;
         width: 100%;
+        padding: 2rem;
         /* font-size: 3rem; */
       }
     }
