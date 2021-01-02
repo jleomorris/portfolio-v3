@@ -15,6 +15,9 @@ const Nav = () => {
           <Link to="/">About</Link>
         </li>
         <li>
+          <Link to="/custom-desktops">Custom desktops</Link>
+        </li>
+        <li>
           <Link to="/projects">Projects</Link>
         </li>
         <li>
@@ -50,8 +53,10 @@ const StyledNav = styled.nav`
   }
 
   ul {
-    display: flex;
     list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   #logo {
@@ -65,6 +70,7 @@ const StyledNav = styled.nav`
     position: relative;
     letter-spacing: 0.6rem;
     text-transform: uppercase;
+    margin: 1rem 0;
   }
 
   // Media Queries

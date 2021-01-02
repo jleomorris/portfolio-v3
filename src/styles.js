@@ -44,6 +44,7 @@ export const Description = styled.div`
     button {
       margin: 2rem 0rem 5rem 0rem;
     }
+  }
 `;
 
 export const Image = styled.div`

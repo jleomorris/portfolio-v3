@@ -106,7 +106,6 @@ const StyledProjects = styled(motion.div)`
 
   .flexible-message {
     flex: 1;
-    background: #070707;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
