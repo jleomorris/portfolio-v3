@@ -2,10 +2,13 @@ import React from "react";
 import AboutSection from "./components/AboutSection";
 // Global style
 import GlobalStyle from "./components/GlobalStyle";
-import AboutUs from "./pages/AboutUs";
+// Components
 import Nav from "./components/Nav";
-import Contact from "./pages/Contact";
+// Pages
+import AboutUs from "./pages/AboutUs";
 import Projects from "./pages/Projects";
+import CustomDesktops from "./pages/CustomDesktops";
+import Contact from "./pages/Contact";
 // Router
 import { Switch, Route, useLocation } from "react-router-dom";
 // Pages
@@ -23,6 +26,9 @@ function App() {
         <Switch location={location} key={location.pathname}>
           <Route path="/" exact>
             <AboutUs />
+          </Route>
+          <Route path="/custom-desktops">
+            <CustomDesktops />
           </Route>
           <Route path="/projects" exact>
             <Projects />
