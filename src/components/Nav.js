@@ -15,10 +15,10 @@ const Nav = () => {
           <Link to="/">About</Link>
         </li>
         <li>
-          <Link to="/custom-desktops">Custom desktops</Link>
+          <Link to="/projects">Projects</Link>
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
+          <Link to="/custom-desktops">Custom desktops</Link>
         </li>
         <li>
           <Link to="/contact">Contact </Link>
