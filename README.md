@@ -1,7 +1,7 @@
 # portfolio-v3
 
 ## Links
-* https://jleomorris.github.io/bolt-music-player
+* https://jleomorris.github.io/portfolio-v3
 
 ## Description
 <p>This is the third revision of my portfolio. It was developed using create-react-app and function components. Styled components are used, as well as the animation library Framer Motion.</p>
