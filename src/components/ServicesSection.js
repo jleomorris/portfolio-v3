@@ -45,7 +45,7 @@ const ServicesSection = () => {
         <h2>
           <span>Always improving</span>
         </h2>
-        <p class="skill-title">Soft skills</p>
+        <p className="skill-title">Soft skills</p>
         <Cards
           variants={scrollRevealLeft}
           animate={controls}
@@ -94,7 +94,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
         </Cards>
-        <p class="skill-title">Technical skills</p>
+        <p className="skill-title">Technical skills</p>
         <Cards
           variants={scrollRevealRight}
           animate={controls2}
@@ -214,7 +214,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
         </Cards>
-        <p class="skill-title">React skills</p>
+        <p className="skill-title">React skills</p>
         <Cards
           variants={scrollRevealRight}
           animate={controls3}

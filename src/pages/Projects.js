@@ -74,7 +74,7 @@ const Projects = () => {
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </motion.div>
-                <Link to={project.url}>
+                <Link to={`${process.env.PUBLIC_URL}${project.url}`}>
                   <motion.img
                     variants={photoAnimation}
                     src={project.banner.src}

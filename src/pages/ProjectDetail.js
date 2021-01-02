@@ -21,8 +21,10 @@ const ProjectDetail = () => {
   // useEffect
 
   useEffect(() => {
+    // debugger;
+
     const currentProject = projects.filter(
-      (project) => project.url === currentUrl
+      (project) => `/portfolio-v3${project.url}` === currentUrl
     );
     // debugger;
     setProject(currentProject[0]);

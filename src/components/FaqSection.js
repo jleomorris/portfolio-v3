@@ -54,11 +54,14 @@ const FaqSection = () => {
                 My desire to work within the computing industry first stemmed
                 from the moment I learnt how to build my first PC. Examples of
                 my built systems can be seen on the{" "}
-                <Link to="/custom-desktops">Custom desktops</Link> page. My fine
-                attention to detail can be seen in the desktops I produce, and
-                this is the same level of focus and creativity I bring when
-                working on projects (examples can be seen on the the{" "}
-                <Link to="/projects">Projects</Link> page.).
+                <Link to={`${process.env.PUBLIC_URL}/custom-desktops`}>
+                  Custom desktops
+                </Link>{" "}
+                page. My fine attention to detail can be seen in the desktops I
+                produce, and this is the same level of focus and creativity I
+                bring when working on projects (examples can be seen on the the{" "}
+                <Link to={`${process.env.PUBLIC_URL}/projects`}>Projects</Link>{" "}
+                page.).
               </p>
             </div>
           </Toggle>
@@ -76,7 +79,8 @@ const FaqSection = () => {
             <div className="answer">
               <p>
                 My contact details can be found on the{" "}
-                <Link to="/contact">Contact</Link> page.
+                <Link to={`${process.env.PUBLIC_URL}/contact`}>Contact</Link>{" "}
+                page.
               </p>
             </div>
           </Toggle>
