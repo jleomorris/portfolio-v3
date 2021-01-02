@@ -65,15 +65,15 @@ const GlobalStyle = createGlobalStyle`
   // Conditional classes
 
   .blur {
-    filter: blur(8px);
+    filter: blur(8px) !important;
   }
 
   .rotate90 {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) !important;
   }
 
   .height100 {
-    height: 100vh;
+    height: 100vh !important;
   }
   
 // Media Queries
