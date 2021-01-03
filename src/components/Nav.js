@@ -1,12 +1,15 @@
 import React from "react";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link, BrowserRouter, useLocation } from "react-router-dom";
 // Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 // Styled components
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Nav = ({ isNavOpen, setIsNavOpen }) => {
+  const { pathname } = useLocation();
+
   return (
     // <BrowserRouter basename={process.env.PUBLIC_URL}>
     <StyledNav className={isNavOpen ? "height100" : ""}>
@@ -22,28 +25,62 @@ const Nav = ({ isNavOpen, setIsNavOpen }) => {
         <div className="nav-links">
           <ul>
             <li>
-              {/* <Link to="/">About</Link> */}
               <Link to={`${process.env.PUBLIC_URL}/`}>
                 <p>About</p>
               </Link>
+              <StyledLine
+                transition={{ duration: 0.74 }}
+                initial={{ width: "0%" }}
+                animate={{
+                  width:
+                    pathname === `${process.env.PUBLIC_URL}/` ? "100%" : "0%",
+                }}
+              />
             </li>
             <li>
-              {/* <Link to="/projects">Projects</Link> */}
               <Link to={`${process.env.PUBLIC_URL}/projects`}>
                 <p>Projects</p>
               </Link>
+              <StyledLine
+                transition={{ duration: 0.74 }}
+                initial={{ width: "0%" }}
+                animate={{
+                  width:
+                    pathname === `${process.env.PUBLIC_URL}/projects`
+                      ? "100%"
+                      : "0%",
+                }}
+              />
             </li>
             <li>
-              {/* <Link to="/custom-desktops">Custom desktops</Link> */}
               <Link to={`${process.env.PUBLIC_URL}/custom-desktops`}>
                 <p>Custom desktops</p>
               </Link>
+              <StyledLine
+                transition={{ duration: 0.74 }}
+                initial={{ width: "0%" }}
+                animate={{
+                  width:
+                    pathname === `${process.env.PUBLIC_URL}/custom-desktops`
+                      ? "100%"
+                      : "0%",
+                }}
+              />
             </li>
             <li>
-              {/* <Link to="/contact">Contact </Link> */}
               <Link to={`${process.env.PUBLIC_URL}/contact`}>
                 <p>Contact</p>
-              </Link>{" "}
+              </Link>
+              <StyledLine
+                transition={{ duration: 0.74 }}
+                initial={{ width: "0%" }}
+                animate={{
+                  width:
+                    pathname === `${process.env.PUBLIC_URL}/contact`
+                      ? "100%"
+                      : "0%",
+                }}
+              />
             </li>
           </ul>
         </div>
@@ -64,10 +101,8 @@ const StyledNav = styled.nav`
   top: 0;
   z-index: 10;
   transition: all 0.5s ease;
-  /* border: 2px solid green; */
 
   a {
-    /* color: white; */
     text-decoration: none;
     color: #888c91;
     transition: 0.5s all ease;
@@ -83,7 +118,6 @@ const StyledNav = styled.nav`
     font-size: 4rem;
     font-family: "Lobster", cursive;
     font-weight: lighter;
-    /* border: 2px solid orange; */
     margin-right: 2rem;
     transition: 0.5s all ease;
   }
@@ -98,9 +132,6 @@ const StyledNav = styled.nav`
     transition: all 0.5s ease;
     align-items: center;
     padding: 1rem;
-    /* background: #070707; */
-    /* border: 2px solid orange; */
-    /* display: flex; */
 
     svg {
       font-size: 3rem;
@@ -110,11 +141,9 @@ const StyledNav = styled.nav`
       right: 0;
       color: white;
       cursor: pointer;
-      /* z-index: 10; */
     }
 
     a {
-      /* color: white; */
       text-decoration: none;
       color: #888c91;
       transition: 0.5s all ease;
@@ -139,12 +168,12 @@ const StyledNav = styled.nav`
     }
 
     li {
-      /* padding-left: 10rem; */
       position: relative;
       letter-spacing: 0.6rem;
       text-transform: uppercase;
       margin: 3rem 0;
       font-size: 6rem;
+      width: fit-content;
 
       @media (max-width: 800px) {
         margin: 0;
@@ -153,14 +182,13 @@ const StyledNav = styled.nav`
       a {
         p {
           padding: 0;
-          margin: 1rem;
+          margin: 1rem 0rem;
         }
       }
     }
 
     // Media Queries
     @media (max-width: 1300px) {
-      /* flex-direction: column; */
       padding: 2rem 1rem;
 
       #logo {
@@ -181,6 +209,15 @@ const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
   z-index: 10;
   margin: 2rem;
   cursor: pointer;
+`;
+
+const StyledLine = styled(motion.div)`
+  height: 0.1rem;
+  background: white;
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 `;
 
 export default Nav;
