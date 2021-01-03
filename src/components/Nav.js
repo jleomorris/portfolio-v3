@@ -176,13 +176,13 @@ const StyledNav = styled.nav`
       width: fit-content;
 
       @media (max-width: 800px) {
-        margin: 0;
+        margin: 1rem 0 0 0;
       }
 
       a {
         p {
           padding: 0;
-          margin: 1rem 0rem;
+          margin: 0.5rem 0rem;
         }
       }
     }
