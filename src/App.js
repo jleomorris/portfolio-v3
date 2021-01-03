@@ -1,5 +1,4 @@
 import { React, useState, useEffect } from "react";
-import AboutSection from "./components/AboutSection";
 // Global style
 import GlobalStyle from "./components/GlobalStyle";
 // Components
@@ -22,12 +21,11 @@ function App() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
-    // alert("hi");
     setIsNavOpen(false);
   }, [location]);
 
   return (
-    <div className="App">
+    <div className="App" style={{ overflow: "hidden" }}>
       {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
       <GlobalStyle />
       <Nav isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
