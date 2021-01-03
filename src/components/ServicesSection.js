@@ -295,6 +295,7 @@ const Card = styled.div`
 
   @media (max-width: 800px) {
     margin: 2rem 0rem;
+    flex-basis: 10rem;
   }
 
   .icon {
@@ -305,6 +306,10 @@ const Card = styled.div`
     svg {
       color: #d9ce23;
       font-size: 6rem;
+
+      @media (max-width: 800px) {
+        font-size: 3rem;
+      }
     }
 
     h3 {
@@ -314,6 +319,11 @@ const Card = styled.div`
       color: white;
       padding: 1rem;
       border-radius: 20px;
+
+      @media (max-width: 800px) {
+        font-size: 0.8rem;
+        margin-top: 0rem;
+      }
     }
   }
 `;

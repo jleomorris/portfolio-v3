@@ -169,6 +169,10 @@ const Project = styled.div`
       z-index: 1;
       transform: rotate(-90deg);
 
+      a {
+        text-decoration: none;
+      }
+
       h2 {
         padding-bottom: 1rem;
       }
