@@ -23,21 +23,27 @@ const Nav = ({ isNavOpen, setIsNavOpen }) => {
           <ul>
             <li>
               {/* <Link to="/">About</Link> */}
-              <Link to={`${process.env.PUBLIC_URL}/`}>About</Link>
+              <Link to={`${process.env.PUBLIC_URL}/`}>
+                <p>About</p>
+              </Link>
             </li>
             <li>
               {/* <Link to="/projects">Projects</Link> */}
-              <Link to={`${process.env.PUBLIC_URL}/projects`}>Projects</Link>
+              <Link to={`${process.env.PUBLIC_URL}/projects`}>
+                <p>Projects</p>
+              </Link>
             </li>
             <li>
               {/* <Link to="/custom-desktops">Custom desktops</Link> */}
               <Link to={`${process.env.PUBLIC_URL}/custom-desktops`}>
-                Custom desktops
+                <p>Custom desktops</p>
               </Link>
             </li>
             <li>
               {/* <Link to="/contact">Contact </Link> */}
-              <Link to={`${process.env.PUBLIC_URL}/contact`}>Contact</Link>{" "}
+              <Link to={`${process.env.PUBLIC_URL}/contact`}>
+                <p>Contact</p>
+              </Link>{" "}
             </li>
           </ul>
         </div>
@@ -145,7 +151,10 @@ const StyledNav = styled.nav`
       }
 
       a {
-        font-size: 2rem;
+        p {
+          padding: 0;
+          margin: 1rem;
+        }
       }
     }
 
