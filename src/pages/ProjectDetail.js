@@ -156,10 +156,17 @@ const Headline = styled.div`
       width: 40%;
       min-height: 30vh;
       border: 1px solid white;
+      display: flex;
+      align-items: center;
 
       p {
         margin: 8rem auto;
         padding: 3rem 5rem;
+
+        @media (max-width: 800px) {
+          margin: 0;
+          padding: 3rem;
+        }
       }
 
       @media (max-width: 1500px) {
@@ -182,6 +189,10 @@ const Headline = styled.div`
       @media (max-width: 1500px) {
         margin: 4rem;
         width: 90%;
+      }
+
+      @media (max-width: 800px) {
+        padding: 2rem;
       }
 
       .skill {
@@ -230,7 +241,7 @@ const Headline = styled.div`
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
 
-    @media (max-width: 800px) {
+    @media (max-width: 1500px) {
       margin-top: 4rem;
     }
   }
