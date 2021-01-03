@@ -282,20 +282,25 @@ const Cards = styled(motion.div)`
   @media (max-width: 1300px) {
     justify-content: space-evenly;
   }
+
+  @media (max-width: 800px) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 `;
 
 const Card = styled.div`
   flex-basis: 15rem;
-  margin: 4rem 0rem;
+  margin: 4rem 1rem;
 
-  @media (max-width: 600px) {
-    margin-right: 0;
-    /* opacity: 0; */
+  @media (max-width: 800px) {
+    margin: 2rem 0rem;
   }
 
   .icon {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     svg {
       color: #d9ce23;

@@ -140,6 +140,10 @@ const StyledNav = styled.nav`
       margin: 3rem 0;
       font-size: 6rem;
 
+      @media (max-width: 800px) {
+        margin: 0;
+      }
+
       a {
         font-size: 2rem;
       }
@@ -155,16 +159,6 @@ const StyledNav = styled.nav`
         margin: 2rem;
         font-size: 2.5rem;
       }
-
-      /* ul {
-        padding: 2rem;
-        justify-content: space-around;
-        width: 100%;
-
-        li {
-          padding: 0;
-        }
-      } */
     }
   }
 `;
