@@ -34,7 +34,9 @@ const AboutSection = () => {
           Actively seeking work, interested in Junior React developer positions
           in central London/within 20 miles of Southend on Sea, Essex
         </motion.p>
-        <motion.button variants={fade}>Contact</motion.button>
+        <a href="mailTo:james-morris2010@hotmail.co.uk">
+          <motion.button variants={fade}>Contact</motion.button>
+        </a>
       </Description>
       <Wave />
       <Image>
