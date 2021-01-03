@@ -48,7 +48,9 @@ const Projects = ({ isNavOpen }) => {
           <Project key={project.title}>
             <div className="image-container">
               <div className="title-container">
-                <ProjectTitle variants={fade}>{project.title}</ProjectTitle>
+                <Link to={`${process.env.PUBLIC_URL}${project.url}`}>
+                  <ProjectTitle variants={fade}>{project.title}</ProjectTitle>
+                </Link>
               </div>
               <Hide>
                 {project.isReact && (
@@ -125,15 +127,19 @@ const StyledProjects = styled(motion.div)`
   }
 
   @media (max-width: 800px) {
-    .github-container {
+    /* .github-container {
       flex-direction: column;
-    }
+    } */
 
     .title-container {
       margin-bottom: 12rem !important;
 
       h2 {
         width: 165%;
+
+        @media (max-width: 800px) {
+          width: 80%;
+        }
       }
     }
   }
@@ -142,6 +148,14 @@ const StyledProjects = styled(motion.div)`
 const Project = styled.div`
   width: 20%;
   overflow: hidden;
+
+  @media (max-width: 1200px) {
+    width: 25%;
+  }
+
+  @media (max-width: 800px) {
+    width: 33.3%;
+  }
 
   .image-container {
     position: relative;
@@ -180,6 +194,10 @@ const Project = styled.div`
     height: 90vh;
     object-fit: cover;
     filter: brightness(0.6);
+
+    @media (max-width: 800px) {
+      height: 50vh;
+    }
   }
 `;
 
@@ -228,6 +246,10 @@ const ProjectTitle = styled(motion.h2)`
   text-shadow: 4px 5px 4px #ababab;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
+
+  @media (max-width: 800px) {
+    font-size: 1rem;
+  }
 `;
 
 // Frame animation
