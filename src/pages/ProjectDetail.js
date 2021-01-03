@@ -114,6 +114,10 @@ const Headline = styled.div`
     justify-content: center;
     align-items: center;
 
+    a {
+      text-decoration: none;
+    }
+
     button {
       border: 1px solid white;
       margin-left: 1rem;
