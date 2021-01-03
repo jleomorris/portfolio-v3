@@ -7,7 +7,7 @@ import Toggle from "./Toggle";
 // Framer motion
 import { AnimateSharedLayout, motion } from "framer-motion";
 import { useScroll } from "./useScroll";
-import { scrollRevealLeft } from "../animation";
+import { scrollRevealRight } from "../animation";
 
 const FaqSection = () => {
   const [element, controls] = useScroll();
@@ -19,7 +19,7 @@ const FaqSection = () => {
       </h2>
       <AnimateSharedLayout>
         <motion.div
-          variants={scrollRevealLeft}
+          variants={scrollRevealRight}
           initial="hidden"
           animate={controls}
           ref={element}

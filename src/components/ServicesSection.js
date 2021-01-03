@@ -216,7 +216,7 @@ const ServicesSection = () => {
         </Cards>
         <p className="skill-title">React skills</p>
         <Cards
-          variants={scrollRevealRight}
+          variants={scrollRevealLeft}
           animate={controls3}
           initial="hidden"
           ref={element3}
