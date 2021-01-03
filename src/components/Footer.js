@@ -52,7 +52,9 @@ const Footer = () => {
 const StyledFooter = styled.div`
   background: #070707;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
   padding: 1rem 8rem;
 
   @media (max-width: 800px) {
@@ -91,7 +93,7 @@ const StyledFooter = styled.div`
       width: 30%;
       text-align: center;
       color: white;
-      margin: 1rem;
+      margin: 1rem 2rem;
     }
   }
 `;

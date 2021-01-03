@@ -25,7 +25,7 @@ function App() {
   }, [location]);
 
   return (
-    <div className="App" style={{ overflow: "hidden" }}>
+    <div className="App">
       {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
       <GlobalStyle />
       <Nav isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />

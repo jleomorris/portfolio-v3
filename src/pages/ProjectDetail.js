@@ -148,7 +148,11 @@ const Headline = styled.div`
     @media (max-width: 1500px) {
       flex-direction: column;
       align-items: center;
-      padding: 5rem 5rem;
+      padding: 5rem;
+    }
+
+    @media (max-width: 800px) {
+      padding: 0rem 2rem;
     }
 
     .description-container {
@@ -165,7 +169,7 @@ const Headline = styled.div`
 
         @media (max-width: 800px) {
           margin: 0;
-          padding: 3rem;
+          padding: 2rem;
         }
       }
 
@@ -203,6 +207,10 @@ const Headline = styled.div`
         svg {
           color: rgba(255, 255, 255, 0.3);
           font-size: 6rem;
+
+          @media (max-width: 800px) {
+            font-size: 3rem;
+          }
         }
 
         p {
@@ -214,6 +222,10 @@ const Headline = styled.div`
           top: 50%;
           font-size: 1.5rem;
           font-weight: 600;
+
+          @media (max-width: 800px) {
+            font-size: 1rem;
+          }
         }
       }
     }
@@ -268,12 +280,17 @@ const Features = styled.div`
 `;
 
 const StyledFeature = styled.div`
+  padding: 5rem;
+
   @media (max-width: 1500px) {
     width: 70%;
     margin: 0rem auto;
   }
 
-  padding: 5rem;
+  @media (max-width: 800px) {
+    padding: 1rem;
+  }
+
   h3 {
     font-size: 2rem;
   }

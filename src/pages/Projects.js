@@ -233,9 +233,11 @@ const Hide = styled.div`
       margin: 1rem;
       color: #888c91;
       transition: 0.5s all ease;
+      color: white;
 
-      &:hover {
-        color: white;
+      @media (max-width: 800px) {
+        margin: 0.5rem;
+        font-size: 2rem;
       }
     }
   }

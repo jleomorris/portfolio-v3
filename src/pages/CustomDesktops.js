@@ -53,17 +53,10 @@ const CustomDesktops = ({ isNavOpen }) => {
       >
         <div className="title-container">
           <h1>Kolink Rocket v4</h1>
-          <FontAwesomeIcon
-            icon={faTools}
-            // style={{
-            //   display: "inline-block",
-            //   margin: "0rem 0.5rem",
-            //   fontSize: "1rem",
-            // }}
-          />
+          <FontAwesomeIcon icon={faTools} />
         </div>
         <p>
-          I began building desktops in 2015 and have built 8 to custom rigs to
+          I began building desktops in 2015 and have built 8 custom rigs to
           date. This is my latest build, it was my first Mini-ITX (M-ITX)
           variant, and involved custom modifications drafted in the 3D modelling
           tool Blender.
@@ -75,7 +68,7 @@ const CustomDesktops = ({ isNavOpen }) => {
           <motion.li>Asetek 645LT 92mm AIO</motion.li>
           <motion.li>16gb Vulcan T-Force 3000mhz ddr4 RAM</motion.li>
           <motion.li>Nvidia Geforce 1080ti FE</motion.li>
-          <motion.li>1.5tb Simotion.licon Power NVME m2 SSD</motion.li>
+          <motion.li>1.5tb Silicon Power NVME m2 SSD</motion.li>
           <motion.li>Corsair SF600 PSU(with included sleeved cables)</motion.li>
           <motion.li>1 x 92mm, 2 x 120m BeQuiet fans, Deepcool</motion.li>
           <motion.li>4 hub fan controller</motion.li>
@@ -259,7 +252,7 @@ const StyledCustomDesktops = styled(motion.div)`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* padding: 8rem; */
+  overflow-x: hidden;
 
   .title-container {
     position: relative;
@@ -271,6 +264,10 @@ const StyledCustomDesktops = styled(motion.div)`
       color: white;
       text-shadow: 2px 2px 10px black;
       text-align: center;
+
+      @media (max-width: 800px) {
+        font-size: 6rem;
+      }
     }
 
     svg {
@@ -294,21 +291,23 @@ const StyledCustomDesktops = styled(motion.div)`
 
     @media (max-width: 800px) {
       width: 80%;
+      padding: 3rem 0rem;
     }
   }
 
   ul {
     font-size: 1.25rem;
     color: white;
-    margin: 6rem 2rem 6rem 2rem;
+    margin: 6rem 2rem;
     width: 80%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       justify-content: flex-start;
+      margin: 3rem 1rem;
     }
 
     li {

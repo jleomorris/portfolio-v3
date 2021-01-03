@@ -73,7 +73,6 @@ const Contact = ({ isNavOpen }) => {
 };
 
 const StyledContact = styled(motion.div)`
-  /* padding: 5rem 10rem; */
   color: #353535;
   min-height: 90vh;
   display: flex;
@@ -81,6 +80,7 @@ const StyledContact = styled(motion.div)`
   align-items: center;
   flex-direction: column;
   padding-top: 5vh;
+  overflow-x: hidden;
 `;
 
 const Title = styled.div`
@@ -161,7 +161,10 @@ const CardContainer = styled(motion.div)`
 
       svg {
         font-size: 16rem;
-        /* color: white; */
+
+        @media (max-width: 800px) {
+          font-size: 8rem;
+        }
       }
     }
   }
