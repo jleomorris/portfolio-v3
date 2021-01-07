@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 // Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faUndoAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 // Components
 import Footer from "../components/Footer";
@@ -39,6 +39,12 @@ const ProjectDetail = ({ isNavOpen }) => {
         >
           <Headline>
             <div className="github-container">
+              <Link to={`${process.env.PUBLIC_URL}/projects`}>
+                <button>
+                  <FontAwesomeIcon icon={faUndoAlt} />
+                  <span className="button-name">Projects</span>
+                </button>
+              </Link>
               <a
                 href={project.githubDirectoryUrl}
                 target="_blank"
@@ -46,13 +52,13 @@ const ProjectDetail = ({ isNavOpen }) => {
               >
                 <button>
                   <FontAwesomeIcon icon={faCode} />
-                  Code
+                  <span className="button-name">Code</span>
                 </button>
               </a>
               <a href={project.githubPagesUrl} target="_blank" rel="noreferrer">
                 <button>
                   <FontAwesomeIcon icon={faGithub} />
-                  Demo
+                  <span className="button-name">Demo</span>
                 </button>
               </a>
             </div>
@@ -114,6 +120,16 @@ const Headline = styled.div`
     justify-content: center;
     align-items: center;
 
+    .button-name {
+      color: white;
+    }
+
+    @media (max-width: 800px) {
+      .button-name {
+        display: none;
+      }
+    }
+
     a {
       text-decoration: none;
     }
@@ -129,11 +145,18 @@ const Headline = styled.div`
       &:hover {
         background-color: white;
         color: black;
+        .button-name {
+          color: black;
+        }
       }
 
       svg {
         font-size: 2rem;
         margin-right: 1rem;
+
+        @media (max-width: 800px) {
+          margin-right: 0rem;
+        }
       }
     }
   }

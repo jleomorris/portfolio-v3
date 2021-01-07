@@ -225,6 +225,14 @@ const ServicesSection = () => {
             <div className="icon">
               <FontAwesomeIcon icon={faReact} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
+              <h3>Styled Components</h3>
+            </div>
+            {/* <p>Lorem ipsum dolor sit amet.</p> */}
+          </Card>
+          <Card>
+            <div className="icon">
+              <FontAwesomeIcon icon={faReact} />
+              {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>Router</h3>
             </div>
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
@@ -322,7 +330,7 @@ const Card = styled.div`
 
       @media (max-width: 800px) {
         font-size: 0.8rem;
-        margin-top: 0rem;
+        margin-top: 2rem;
       }
     }
   }
