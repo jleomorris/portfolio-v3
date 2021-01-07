@@ -3,7 +3,7 @@ import home2 from "../img/home2.png";
 // Styles
 import { About, Description, Image, Hide } from "../styles";
 import styled from "styled-components";
-import { scrollRevealLeft, scrollRevealRight } from "../animation";
+import { titleAnimation } from "../animation";
 import { useScroll } from "./useScroll";
 // Framer motion
 import { motion } from "framer-motion";
@@ -47,7 +47,7 @@ const ServicesSection = () => {
         </h2>
         <p className="skill-title">Soft skills</p>
         <Cards
-          variants={scrollRevealLeft}
+          variants={titleAnimation}
           animate={controls}
           initial="hidden"
           ref={element}
@@ -96,7 +96,7 @@ const ServicesSection = () => {
         </Cards>
         <p className="skill-title">Technical skills</p>
         <Cards
-          variants={scrollRevealRight}
+          variants={titleAnimation}
           animate={controls2}
           initial="hidden"
           ref={element2}
@@ -216,7 +216,7 @@ const ServicesSection = () => {
         </Cards>
         <p className="skill-title">React skills</p>
         <Cards
-          variants={scrollRevealLeft}
+          variants={titleAnimation}
           animate={controls3}
           initial="hidden"
           ref={element3}

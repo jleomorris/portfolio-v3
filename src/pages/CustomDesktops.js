@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import {
   pageAnimation,
-  photoAnimation,
   scrollRevealLeft,
   scrollRevealRight,
   titleAnimation,
@@ -86,7 +85,7 @@ const CustomDesktops = ({ isNavOpen }) => {
           <div className="features-card-info">
             <h2>Custom handles</h2>
             <motion.p
-              variants={photoAnimation}
+              variants={titleAnimation}
               initial="hidden"
               animate={controls_1}
               ref={element_1}
@@ -98,7 +97,7 @@ const CustomDesktops = ({ isNavOpen }) => {
             </motion.p>
             <hr></hr>
             <motion.p
-              variants={photoAnimation}
+              variants={titleAnimation}
               initial="hidden"
               animate={controls_2}
               ref={element_2}
@@ -122,7 +121,7 @@ const CustomDesktops = ({ isNavOpen }) => {
           <div className="features-card-info-flipped">
             <h2>Custom legs</h2>
             <motion.p
-              variants={photoAnimation}
+              variants={titleAnimation}
               initial="hidden"
               animate={controls2_1}
               ref={element2_1}
@@ -133,7 +132,7 @@ const CustomDesktops = ({ isNavOpen }) => {
             </motion.p>
             <hr></hr>
             <motion.p
-              variants={photoAnimation}
+              variants={titleAnimation}
               initial="hidden"
               animate={controls2_2}
               ref={element2_2}
@@ -144,7 +143,7 @@ const CustomDesktops = ({ isNavOpen }) => {
             </motion.p>
             <hr></hr>
             <motion.p
-              variants={photoAnimation}
+              variants={titleAnimation}
               initial="hidden"
               animate={controls2_3}
               ref={element2_3}
@@ -168,7 +167,7 @@ const CustomDesktops = ({ isNavOpen }) => {
           <div className="features-card-info">
             <h2>Custom fans</h2>
             <motion.p
-              variants={photoAnimation}
+              variants={titleAnimation}
               initial="hidden"
               animate={controls3_1}
               ref={element3_1}
@@ -179,7 +178,7 @@ const CustomDesktops = ({ isNavOpen }) => {
             </motion.p>
             <hr></hr>
             <motion.p
-              variants={photoAnimation}
+              variants={titleAnimation}
               initial="hidden"
               animate={controls3_2}
               ref={element3_2}
@@ -203,7 +202,7 @@ const CustomDesktops = ({ isNavOpen }) => {
           <div className="features-card-info-flipped">
             <h2>Solid construction</h2>
             <motion.p
-              variants={photoAnimation}
+              variants={titleAnimation}
               initial="hidden"
               animate={controls4_1}
               ref={element4_1}
@@ -229,7 +228,7 @@ const CustomDesktops = ({ isNavOpen }) => {
           <div className="features-card-info">
             <h2>Sandwich style layout</h2>
             <motion.p
-              variants={photoAnimation}
+              variants={titleAnimation}
               initial="hidden"
               animate={controls5_1}
               ref={element5_1}
