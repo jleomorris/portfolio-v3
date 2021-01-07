@@ -36,7 +36,7 @@ const Contact = ({ isNavOpen }) => {
                 <h2>Email</h2>
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
-              <h3>james-morris2010hotmail.co.uk</h3>
+              <h3>james-morris2010@hotmail.co.uk</h3>
             </motion.div>
             <motion.div variants={rotatingAnimation} className="contact-card">
               <a target="_blank" href="https://github.com/jleomorris">
@@ -58,8 +58,8 @@ const Contact = ({ isNavOpen }) => {
             <motion.div variants={rotatingAnimation} className="contact-card">
               {/* <a target="_blank" href=".\CV_2020.pdf"> */}
               <a target="_blank" href={cv}>
-                <h2 style={{ marginBottom: "-1.5rem" }}>CV</h2>
-                <FontAwesomeIcon icon={faFile} />
+                <h2 style={{ marginBottom: "-2.5rem" }}>CV</h2>
+                <FontAwesomeIcon icon={faFile} style={{ fontSize: "15rem" }} />
               </a>
               <h3></h3>
             </motion.div>

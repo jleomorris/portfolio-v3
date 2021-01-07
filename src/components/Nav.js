@@ -133,6 +133,10 @@ const StyledNav = styled.nav`
     align-items: center;
     padding: 1rem;
 
+    @media (max-width: 800px) {
+      padding: 2rem 4rem 1rem 1rem;
+    }
+
     svg {
       font-size: 3rem;
       position: absolute;
@@ -189,7 +193,7 @@ const StyledNav = styled.nav`
 
     // Media Queries
     @media (max-width: 1300px) {
-      padding: 2rem 1rem;
+      /* padding: 2rem 1rem; */
 
       #logo {
         display: inline-block;
