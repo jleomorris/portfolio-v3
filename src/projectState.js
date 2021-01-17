@@ -62,7 +62,7 @@ export const ProjectState = () => {
       title: "Kumi's kitchen",
       isReact: true,
       description:
-        "An ingredients app, users can search using an ingredient and see full ingredient lists for recipes. Results are gathered using Edamam's food API.",
+        "A recipe app, users can search for recipe ingredient lists by food - results are gathered using Edamam's food API. Developed to increase my experience of ReactJS and the gathering and manipulating of API data.",
       banner: { src: kumisKitchenBanner, alt: "Kumi's kitchen banner" },
       images: [
         {
@@ -88,22 +88,22 @@ export const ProjectState = () => {
       features: [
         {
           title: "React",
-          description: "“React used for UI.”",
-          lineColor: "#FD99AB",
-        },
-        {
-          title: "Edamam API",
-          description: "“Used to gather receipe data based on user search”",
+          description: "App built in ReactJS using modern hooks",
           lineColor: "#FD99AB",
         },
         {
           title: "Ingredient search",
-          description: "“Search for recipes via ingredient.”",
+          description: "Search for recipes via ingredient",
           lineColor: "#FD99AB",
         },
         {
-          title: "Framer motion",
-          description: "“Framer motion library used to animate components.”",
+          title: "Edamam API",
+          description: "Used to gather recipe data based on user search",
+          lineColor: "#FD99AB",
+        },
+        {
+          title: "Framer Motion",
+          description: "Framer Motion library used to animate components",
           lineColor: "#FD99AB",
         },
       ],
@@ -112,7 +112,7 @@ export const ProjectState = () => {
       title: "Bolt Music Player",
       isReact: true,
       description:
-        "Music player app, users can play song from library, sort via artist and title and enable dark mode. Allowed me to practice React, function components, css animation, responsive design principles. ",
+        "A music player app, users can play a song from the library, sort via artist and title and enable dark mode.  Developed to increase my experience of ReactJS and modern hooks.",
       banner: { src: boltMusicPlayer, alt: "bolt music player banner" },
       images: [
         {
@@ -141,18 +141,23 @@ export const ProjectState = () => {
       ],
       features: [
         {
+          title: "React",
+          description: "App built in ReactJS using modern hooks",
+          lineColor: "#d198ff",
+        },
+        {
           title: "Dark Mode",
-          description: "“Integrated dark mode present.”",
+          description: "Integrated dark mode present",
           lineColor: "#d198ff",
         },
         {
           title: "Library",
-          description: "“Library view can be toggled on and off.”",
+          description: "Library view can be toggled on and off",
           lineColor: "#d198ff",
         },
         {
           title: "Open source songs",
-          description: "“The latest chilled beats from https://chillhop.com”",
+          description: "The latest chilled beats from https://chillhop.co",
           lineColor: "#d198ff",
         },
       ],
@@ -161,7 +166,7 @@ export const ProjectState = () => {
       title: "SFF Compatability Tool",
       isReact: true,
       description:
-        "PC part compatability tool for small form factor PCs. Users can see what parts are compatile based on case and view an in depth part breakdown.",
+        "A PC part compatability tool for small form factor PCs. Users can see what parts are compatible based on case and view an in depth part breakdown.  Developed to increase my experience of ReactJS, class components and lifecycle methods.",
       banner: {
         src: sffCompatabilityToolBanner,
         alt: "banner",
@@ -199,25 +204,25 @@ export const ProjectState = () => {
       ],
       features: [
         {
-          title: "Filter compatible parts",
+          title: "React",
+          description: "App built in ReactJS using class components",
+          lineColor: "#fff16e",
+        },
+        {
+          title: "Filter",
           description:
-            "Click on a case and compatible CPU coolers, PSUs and GPUs will be automatically filtered.",
+            "Select a case and only compatible CPU coolers, PSUs and GPUs will remain visible",
           lineColor: "#fff16e",
         },
         {
           title: "Reverse filter",
-          description: "Hover over the eye icon to highlight compatible cases.",
+          description: "Hover over the eye icon to highlight compatible cases",
           lineColor: "#fff16e",
         },
         {
           title: "Breakdown",
           description:
-            "After selecting a case, cooler, GPU and PSU a breakdown will be shown displaying a detailed spec. You can also scroll through other compatible parts.",
-          lineColor: "#fff16e",
-        },
-        {
-          title: "React tilt",
-          description: "Library used to apply tilt animation to PC part tiles.",
+            "After selecting a case, cooler, GPU and PSU a breakdown will be shown displaying a detailed spec. You can also scroll through other compatible parts",
           lineColor: "#fff16e",
         },
       ],
@@ -226,7 +231,7 @@ export const ProjectState = () => {
       title: "Confetti Todo List",
       isReact: true,
       description:
-        "Todo app, users can add new tasks, tick off, delete and undo delete. On completion of all tasks a confetti animation is trigerred. The background of the app is also random on each page refresh.",
+        " A Todo app, users can add new tasks, tick off, delete and undo delete. On completion of all tasks a confetti animation is trigerred, the background of the app is also random on each page render.  Developed to increase my experience of ReactJS, modern hooks and local storage principles.",
       banner: { src: reactTodoListBanner, alt: "confetti todo list banner" },
       images: [
         {
@@ -255,20 +260,25 @@ export const ProjectState = () => {
       ],
       features: [
         {
+          title: "React",
+          description: "App built in ReactJS using class components",
+          lineColor: "#60b1fc",
+        },
+        {
           title: "Classic functionality",
-          description: "Add, tick off, delete and undo tasks.",
+          description: "Add, tick off, delete and undo deletion of tasks",
           lineColor: "#60b1fc",
         },
         {
           title: "Unique backgrounds",
           description:
-            "Using the cool-images library a unique background on each render of the app keeps it from going stale.",
+            "Using the cool-images library a unique background on each render of the app keeps things from going stale",
           lineColor: "#60b1fc",
         },
         {
           title: "Confetti animation",
           description:
-            "Using the confetti-js library a confetti animation runs to motivate the user when the task list is completed.",
+            "Using the confetti-js library a confetti animation motivates the user when their task list is complete",
           lineColor: "#60b1fc",
         },
       ],
@@ -276,7 +286,7 @@ export const ProjectState = () => {
     {
       title: "Portfolio v2",
       description:
-        "Redesign of my orignal portfolio website. Completed as I wanted to redesign my portfolio without using Bootstrap and jQuery libraries.",
+        "Redesign of my orignal portfolio website. Completed as I wanted to redesign my portfolio without relying on Bootstrap and jQuery. Allowed me to practice css grid and responsive design principles.",
       banner: { src: portfolioV2Banner, alt: "banner" },
       images: [
         {
@@ -320,18 +330,18 @@ export const ProjectState = () => {
       features: [
         {
           title: "CSS Grid",
-          description: "Used to ensure the app was responsive.",
+          description: "Used for layout and responsiveness",
           lineColor: "#92ff00",
         },
         {
           title: "Photoshop",
-          description: "Photoshop used to edit the main images.",
+          description: "Used for ediingt of main images",
           lineColor: "#92ff00",
         },
         {
           title: "Font Awesome",
           description:
-            "Font Awesome icons used for skills and about section icons to provide consistency.",
+            "Font Awesome icons used for skills and about section icons to provide consistency",
           lineColor: "#92ff00",
         },
       ],
@@ -372,19 +382,19 @@ export const ProjectState = () => {
         {
           title: "Paper.js",
           description:
-            "This library was used to create the circular animations that are rendered on keypresses.",
+            "This library was used to create the circular animations that are rendered on keypresses",
           lineColor: "#fd3a82",
         },
         {
           title: "Howler.js",
           description:
-            "This library was used to organize and play the audio files that are played on keypresses.",
+            "This library was used to organize and play the audio files that are played on keypresses",
           lineColor: "#fd3a82",
         },
         {
           title: "Bootstrap",
           description:
-            "Boostrap grid used to ensure correct responsive behaviour.",
+            "Boostrap grid used to ensure correct responsive behaviour",
           lineColor: "#fd3a82",
         },
       ],
@@ -417,13 +427,13 @@ export const ProjectState = () => {
       features: [
         {
           title: "Vanilla JS",
-          description: "Used to provide the logic for the game.",
+          description: "Used to provide the logic for the game",
           lineColor: "#4682B4",
         },
         {
           title: "Conditional statements",
           description:
-            "Used within the logic to direct the game based on the user's actions.",
+            "Used within the logic to direct the game based on the user's actions",
           lineColor: "#4682B4",
         },
       ],
