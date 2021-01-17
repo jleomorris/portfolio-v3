@@ -199,6 +199,14 @@ const ServicesSection = () => {
           </Card>
           <Card>
             <div className="icon">
+              {/* <img src={teamwork} alt="teamwork icon" /> */}
+              <FontAwesomeIcon icon={faEdit} />
+              <h3>Figma</h3>
+            </div>
+            {/* <p>Lorem ipsum dolor sit amet.</p> */}
+          </Card>
+          <Card>
+            <div className="icon">
               <FontAwesomeIcon icon={faAws} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>AWS</h3>

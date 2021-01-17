@@ -208,6 +208,7 @@ const Project = styled.div`
 const Hide = styled.div`
   overflow: hidden;
   position: relative;
+  width: 100%;
 
   .fa-react {
     position: absolute;

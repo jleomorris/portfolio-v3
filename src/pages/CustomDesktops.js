@@ -252,6 +252,7 @@ const StyledCustomDesktops = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  overflow-y: hidden;
 
   .title-container {
     position: relative;

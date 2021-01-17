@@ -64,7 +64,7 @@ const StyledAbout = styled(About)`
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #00000066;
+    background-color: rgba(0, 0, 0, 0.1);
     z-index: -1;
   }
 `;
