@@ -54,7 +54,7 @@ export const Image = styled.div`
 
   img {
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     object-fit: contain;
   }
 `;

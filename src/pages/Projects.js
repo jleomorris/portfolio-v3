@@ -198,6 +198,7 @@ const Project = styled.div`
     height: 90vh;
     object-fit: cover;
     filter: brightness(0.6);
+    display: block;
 
     @media (max-width: 800px) {
       height: 50vh;
