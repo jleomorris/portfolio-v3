@@ -4,9 +4,8 @@
 * https://jleomorris.github.io/portfolio-v3
 
 ## Description
-<p>This is the third revision of my portfolio. It was developed using create-react-app and function components. Styled components are used, as well as the animation library Framer Motion.</p>
-
-<p>All songs are from https://chillhop.com/.</p>
+<p>This is the third revision of my portfolio. I wanted to redevelop my exisiting portfolio in React, and improve design and UX by adding animation.</p>
+<p>It was developed using create-react-app and function components. Styled components (design), Framer Motion (animation) and React Router (routing) is used.</p>
 
 ## Prerequisites
 <ul>
@@ -18,6 +17,7 @@
  <li>Font Awesome</li>
   <li>Framer Motion</li>
   <li>Styled Components</li>
+  <li>React Router</li>
 </ul>
 
 ## Installation
