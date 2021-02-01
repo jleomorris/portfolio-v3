@@ -1,4 +1,16 @@
 // Images
+// Last life
+import lastLifeBanner from "./img/projects/last-life/banner.jpg";
+import lastLife from "./img/projects/last-life/main.jpg";
+import lastLife2 from "./img/projects/last-life/main2.jpg";
+import lastLife3 from "./img/projects/last-life/main3.jpg";
+import lastLife4 from "./img/projects/last-life/main4.jpg";
+import lastLife5 from "./img/projects/last-life/mobile_study.jpg";
+// Image editor
+import imageEditorBanner from "./img/projects/image-editor/banner.jpg";
+import imageEditor from "./img/projects/image-editor/main.jpg";
+import imageEditor2 from "./img/projects/image-editor/main2.jpg";
+import imageEditor3 from "./img/projects/image-editor/mobile_study.jpg";
 // Kumi's kitchen
 import kumisKitchenBanner from "./img/projects/kumis-kitchen/banner.jpg";
 import kumisKitchen from "./img/projects/kumis-kitchen/main.jpg";
@@ -59,6 +71,71 @@ import { faSquare } from "@fortawesome/free-regular-svg-icons";
 export const ProjectState = () => {
   return [
     {
+      title: "Last life",
+      isReact: true,
+      description:
+        "Game detail look up app, users can view popular, new and upcoming games and search for a game. Card size can be changed (S/M/L) and the amount of games viewable for each section can also be changed. Developed to increase my experience of ReactJS, Redux, Framer Motion and the gathering and manipulating of API data with Axios. ",
+      banner: { src: lastLifeBanner, alt: "Last life banner" },
+      images: [
+        {
+          src: lastLife,
+          alt: "Last life",
+        },
+        {
+          src: lastLife2,
+          alt: "Last life",
+        },
+        {
+          src: lastLife3,
+          alt: "Last life",
+        },
+        {
+          src: lastLife4,
+          alt: "Last life",
+        },
+        {
+          src: lastLife5,
+          alt: "Last life",
+        },
+      ],
+      url: "/projects/last-life",
+      githubDirectoryUrl: "https://github.com/jleomorris/last-life",
+      githubPagesUrl: "https://jleomorris.github.io/last-life",
+      backgroundColor: "#55fcff",
+      skillIconColor: "#55fcff",
+      skillsDeveloped: [
+        { name: "React", icon: faReact },
+        { name: "Redux", icon: faReact },
+        { name: "Axios", icon: faReact },
+        { name: "Function components", icon: faPuzzlePiece },
+        { name: "Framer motion", icon: faArrowsAlt },
+        { name: "Styled components", icon: faCss3Alt },
+      ],
+      features: [
+        {
+          title: "Popular, new, upcoming games",
+          description: "View a variety of game types",
+          lineColor: "#55fcff",
+        },
+        {
+          title: "Game search",
+          description: "Search for any game's details",
+          lineColor: "#55fcff",
+        },
+        {
+          title: "Game details",
+          description:
+            "View Metacritic rating, URLs, tags, description, platforms, screenshots, video for any game",
+          lineColor: "#55fcff",
+        },
+        {
+          title: "RAWG API",
+          description: "Data pulled from same API used for Discord",
+          lineColor: "#55fcff",
+        },
+      ],
+    },
+    {
       title: "Kumi's kitchen",
       isReact: true,
       description:
@@ -105,6 +182,54 @@ export const ProjectState = () => {
           title: "Framer Motion",
           description: "Framer Motion library used to animate components",
           lineColor: "#FD99AB",
+        },
+      ],
+    },
+    {
+      title: "Image Editor",
+      isReact: true,
+      description:
+        "An image editor app, users can select an image and adjust its properties through filters or by selecting a preset. Developed to increase my understanding of using inputs to adjust state and css filters.",
+      banner: { src: imageEditorBanner, alt: "Image editor banner" },
+      images: [
+        {
+          src: imageEditor,
+          alt: "Image editor",
+        },
+        {
+          src: imageEditor2,
+          alt: "Image editor",
+        },
+        {
+          src: imageEditor3,
+          alt: "Image editor",
+        },
+      ],
+      url: "/projects/image-editor",
+      githubDirectoryUrl: "https://github.com/jleomorris/image-editor",
+      githubPagesUrl: "https://jleomorris.github.io/image-editor",
+      backgroundColor: "#ff8b55",
+      skillIconColor: "#ff8b55",
+      skillsDeveloped: [
+        { name: "React", icon: faReact },
+        { name: "Function components", icon: faPuzzlePiece },
+        { name: "CSS filters", icon: faCss3Alt },
+      ],
+      features: [
+        {
+          title: "React",
+          description: "App built in ReactJS using modern hooks",
+          lineColor: "#ff8b55",
+        },
+        {
+          title: "Css Filters",
+          description: "Filters applied through use of CSS filters",
+          lineColor: "#ff8b55",
+        },
+        {
+          title: "Presets",
+          description: "Presets available to save time",
+          lineColor: "#ff8b55",
         },
       ],
     },
