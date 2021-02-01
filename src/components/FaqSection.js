@@ -24,7 +24,7 @@ const FaqSection = () => {
           animate={controls}
           ref={element}
         >
-          <Toggle title="What relevant experience do I have?">
+          <Toggle title="What front end experience do I have?">
             <div className="answer">
               <p>
                 From Sept 2019 to Sept 2020 I completed a one year internship at
@@ -43,25 +43,34 @@ const FaqSection = () => {
               </p>
             </div>
           </Toggle>
-          <Toggle title="When can I start new employment?">
+          {/* <Toggle title="When can I start new employment?">
             <div className="answer">
               <p>Notice period for my current employment is 2 months.</p>
             </div>
-          </Toggle>
+          </Toggle> */}
           <Toggle title="What motivates me?">
             <div className="answer">
               <p>
-                My desire to work within the computing industry first stemmed
-                from the moment I learnt how to build my first PC. Examples of
-                my built systems can be seen on the{" "}
+                My desire to work within the computing industry stemmed from the
+                moment I learnt how to build my first PC (examples of my built
+                systems can be seen on the{" "}
                 <Link to={`${process.env.PUBLIC_URL}/custom-desktops`}>
-                  Custom desktops
+                  Custom Desktops
                 </Link>{" "}
-                page. My fine attention to detail can be seen in the desktops I
+                page). My fine attention to detail can be seen in the desktops I
                 produce, and this is the same level of focus and creativity I
                 bring when working on projects (examples can be seen on the the{" "}
                 <Link to={`${process.env.PUBLIC_URL}/projects`}>Projects</Link>{" "}
-                page.).
+                page).
+              </p>
+              <p>
+                I'm driven and motivated to become as strong a developer as I
+                can be. I like to maintain a high rate of learning and am always
+                exposing myself to new frameworks, libraries and technologies.
+                At present I am focusing on the ins and outs of React, at some
+                point in the future I'd like to develop my back end skills as
+                I'd like to eventually pursue a career as a full stack
+                developer.
               </p>
             </div>
           </Toggle>

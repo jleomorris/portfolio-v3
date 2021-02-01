@@ -31,8 +31,7 @@ const AboutSection = () => {
           </Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Actively seeking work, interested in Junior React developer positions
-          in central London/within 20 miles of Southend on Sea, Essex
+          Front End Developer and IT Technician at Saffron Interactive, London.
         </motion.p>
         <a href="mailTo:james-morris2010@hotmail.co.uk">
           <motion.button variants={fade}>Contact</motion.button>
