@@ -21,7 +21,7 @@ const AboutSection = () => {
           </Hide>
           <Hide>
             <motion.h2 variants={titleAnimation}>
-              <span>Front end</span> developer
+              <span>Front End</span> Developer
             </motion.h2>
           </Hide>
           <Hide>
@@ -63,7 +63,7 @@ const StyledAbout = styled(About)`
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
   }
 `;
