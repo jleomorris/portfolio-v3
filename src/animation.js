@@ -8,7 +8,7 @@ export const pageAnimation = {
     y: 0,
     transition: {
       duration: 0.5,
-      when: "beforeChildren",
+      when: 'beforeChildren',
       staggerChildren: 0.25,
     },
   },
@@ -30,8 +30,8 @@ export const projectBannerAnimation = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
-      when: "beforeChildren",
+      duration: 0.1,
+      when: 'beforeChildren',
       staggerChildren: 0.1,
     },
   },
@@ -48,7 +48,7 @@ export const titleAnimation = {
   hidden: { y: 200 },
   show: {
     y: 0,
-    transition: { duration: 0.75, ease: "easeOut" },
+    transition: { duration: 0.75, ease: 'easeOut' },
   },
 };
 
@@ -56,7 +56,7 @@ export const fade = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { duration: 0.75, ease: "easeOut" },
+    transition: { duration: 0.75, ease: 'easeOut' },
   },
 };
 
@@ -65,27 +65,27 @@ export const photoAnimation = {
   show: {
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.75, ease: "easeOut" },
+    transition: { duration: 0.75, ease: 'easeOut' },
   },
 };
 
 export const lineAnimation = {
-  hidden: { width: "0%" },
-  show: { width: "100%", transition: { duration: 1.5 } },
+  hidden: { width: '0%' },
+  show: { width: '100%', transition: { duration: 1.5 } },
 };
 
 export const sliderAnimation = {
-  hidden: { x: "-130%", skew: "45deg" },
+  hidden: { x: '-130%', skew: '45deg' },
   show: {
-    x: "100%",
-    skew: "0deg",
-    transition: { duration: 0.75, ease: "easeOut" },
+    x: '100%',
+    skew: '0deg',
+    transition: { duration: 0.75, ease: 'easeOut' },
   },
 };
 
 export const sliderContainer = {
   hidden: { opacity: 1 },
-  show: { opacity: 1, transition: { staggerChildren: 0.15, ease: "easeOut" } },
+  show: { opacity: 1, transition: { staggerChildren: 0.15, ease: 'easeOut' } },
 };
 
 export const scrollRevealRight = {
@@ -93,7 +93,7 @@ export const scrollRevealRight = {
   show: {
     opacity: 1,
     x: 0,
-    transition: { duration: 1, ease: "easeOut" },
+    transition: { duration: 1, ease: 'easeOut' },
   },
 };
 
@@ -102,7 +102,7 @@ export const scrollRevealLeft = {
   show: {
     opacity: 1,
     x: 0,
-    transition: { duration: 1, ease: "easeOut" },
+    transition: { duration: 1, ease: 'easeOut' },
   },
 };
 
@@ -112,6 +112,6 @@ export const rotatingAnimation = {
     scale: 1,
     opacity: 1,
     rotate: 0,
-    transition: { duration: 1, ease: "easeOut" },
+    transition: { duration: 1, ease: 'easeOut' },
   },
 };
