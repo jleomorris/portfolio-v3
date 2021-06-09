@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { ProjectState } from "../projectState";
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { ProjectState } from '../projectState';
 // Animation
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 import {
   sliderAnimation,
   sliderContainer,
@@ -12,14 +12,14 @@ import {
   fade,
   photoAnimation,
   lineAnimation,
-} from "../animation";
+} from '../animation';
 // Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faReact } from '@fortawesome/free-brands-svg-icons';
 // Components
-import ScrollToTop from "../components/ScrollToTop";
-import Footer from "../components/Footer";
+import ScrollToTop from '../components/ScrollToTop';
+import Footer from '../components/Footer';
 
 const Projects = ({ isNavOpen }) => {
   const [projects, setProjects] = useState(ProjectState);
@@ -33,46 +33,46 @@ const Projects = ({ isNavOpen }) => {
     <>
       <StyledProjects
         variants={projectBannerAnimation}
-        initial="hidden"
-        animate="show"
-        exit="exit"
-        className={isNavOpen ? "blur" : ""}
+        initial='hidden'
+        animate='show'
+        exit='exit'
+        className={isNavOpen ? 'blur' : ''}
       >
-        <motion.div variants={sliderContainer}>
+        {/* <motion.div variants={sliderContainer}>
           <Frame1 variants={sliderAnimation}></Frame1>
           <Frame2 variants={sliderAnimation}></Frame2>
           <Frame3 variants={sliderAnimation}></Frame3>
           <Frame4 variants={sliderAnimation}></Frame4>
-        </motion.div>
+        </motion.div> */}
         {projects.map((project) => (
           <Project key={project.title}>
-            <div className="image-container">
-              <div className="title-container">
+            <div className='image-container'>
+              <div className='title-container'>
                 <Link to={`${process.env.PUBLIC_URL}${project.url}`}>
                   <ProjectTitle variants={fade}>{project.title}</ProjectTitle>
                 </Link>
               </div>
               <Hide>
                 {project.isReact && (
-                  <motion.div className="react-icon" variants={pageAnimation}>
+                  <motion.div className='react-icon' variants={pageAnimation}>
                     <FontAwesomeIcon icon={faReact} />
                   </motion.div>
                 )}
                 <motion.div
                   variants={pageAnimation}
-                  className="github-container"
+                  className='github-container'
                 >
                   <a
                     href={project.githubDirectoryUrl}
-                    target="_blank"
-                    rel="noreferrer"
+                    target='_blank'
+                    rel='noreferrer'
                   >
                     <FontAwesomeIcon icon={faCode} />
                   </a>
                   <a
                     href={project.githubPagesUrl}
-                    target="_blank"
-                    rel="noreferrer"
+                    target='_blank'
+                    rel='noreferrer'
                   >
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
@@ -90,7 +90,7 @@ const Projects = ({ isNavOpen }) => {
         ))}
         <motion.div
           variants={projectBannerAnimation}
-          className="flexible-message"
+          className='flexible-message'
         >
           <h2>Click on a project banner or Github link to view more.</h2>
         </motion.div>

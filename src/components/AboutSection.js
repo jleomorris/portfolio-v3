@@ -1,19 +1,19 @@
-import React from "react";
-import aboutImg from "../img/about.jpg";
-import bannerBackground from "../img/banner-full-size.jpg";
-import { About, Description, Image, Hide } from "../styles";
+import React from 'react';
+import aboutImg from '../img/about.jpg';
+import bannerBackground from '../img/banner-full-size.jpg';
+import { About, Description, Image, Hide } from '../styles';
 // Styled Components
-import styled from "styled-components";
+import styled from 'styled-components';
 // Framer Motion
-import { motion } from "framer-motion";
-import { titleAnimation, fade, photoAnimation } from "../animation";
+import { motion } from 'framer-motion';
+import { titleAnimation, fade, photoAnimation } from '../animation';
 // Components
-import Wave from "./Wave";
+import Wave from './Wave';
 
 const AboutSection = () => {
   return (
     <StyledAbout>
-      <div className="img-filter"></div>
+      <div className='img-filter'></div>
       <Description>
         <motion.div>
           <Hide>
@@ -31,9 +31,9 @@ const AboutSection = () => {
           </Hide>
         </motion.div>
         <motion.p variants={fade}>
-          Front End Developer and IT Technician at Saffron Interactive, London.
+          React Developer at IronmongeryDirect - Basildon, Essex.
         </motion.p>
-        <a href="mailTo:james-morris2010@hotmail.co.uk">
+        <a href='mailTo:james-morris2010@hotmail.co.uk'>
           <motion.button variants={fade}>Contact</motion.button>
         </a>
       </Description>
@@ -41,7 +41,7 @@ const AboutSection = () => {
       <Image>
         <motion.img
           src={aboutImg}
-          alt="personal photo"
+          alt='personal photo'
           variants={photoAnimation}
         />
       </Image>
