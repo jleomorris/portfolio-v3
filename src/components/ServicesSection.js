@@ -1,14 +1,14 @@
-import React from "react";
-import home2 from "../img/home2.png";
+import React from 'react';
+import home2 from '../img/home2.png';
 // Styles
-import { About, Description, Image, Hide } from "../styles";
-import styled from "styled-components";
-import { titleAnimation } from "../animation";
-import { useScroll } from "./useScroll";
+import { About, Description, Image, Hide } from '../styles';
+import styled from 'styled-components';
+import { titleAnimation } from '../animation';
+import { useScroll } from './useScroll';
 // Framer motion
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 // Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCode,
   faUserEdit,
@@ -18,7 +18,7 @@ import {
   faLanguage,
   faEdit,
   faUsers,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 import {
   faGit,
   faGithub,
@@ -32,7 +32,7 @@ import {
   faWordpress,
   faReact,
   faAws,
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 
 const ServicesSection = () => {
   const [element, controls] = useScroll();
@@ -45,15 +45,15 @@ const ServicesSection = () => {
         <h2>
           <span>Always improving</span>
         </h2>
-        <p className="skill-title">Soft skills</p>
+        <p className='skill-title'>Soft skills</p>
         <Cards
           variants={titleAnimation}
           animate={controls}
-          initial="hidden"
+          initial='hidden'
           ref={element}
         >
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faUsers} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>Experience collaborating with teams</h3>
@@ -61,7 +61,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <FontAwesomeIcon icon={faUserEdit} />
               <h3>Keen eye for UI and UX design</h3>
@@ -69,7 +69,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <FontAwesomeIcon icon={faLeanpub} />
               <h3>Always willing to learn new skills</h3>
@@ -77,7 +77,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               {/* <img src={teamwork} alt="teamwork icon" />
                */}
               <FontAwesomeIcon icon={faCompressAlt} />
@@ -86,7 +86,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <FontAwesomeIcon icon={faLowVision} />
               <h3>Knowledge of best accessibility practices</h3>
@@ -94,15 +94,15 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
         </Cards>
-        <p className="skill-title">Technical skills</p>
+        <p className='skill-title'>Technical skills</p>
         <Cards
           variants={titleAnimation}
           animate={controls2}
-          initial="hidden"
+          initial='hidden'
           ref={element2}
         >
           <Card>
-            <div className="icon">
+            <div className='icon'>
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <FontAwesomeIcon icon={faHtml5} />
               <h3>HTML</h3>
@@ -110,7 +110,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <FontAwesomeIcon icon={faCss3Alt} />
               <h3>CSS</h3>
@@ -118,7 +118,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <FontAwesomeIcon icon={faSass} />
               <h3>SASS</h3>
@@ -126,7 +126,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <FontAwesomeIcon icon={faJsSquare} />
               <h3>Javascript</h3>
@@ -134,7 +134,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faNpm} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>npm</h3>
@@ -142,7 +142,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faBootstrap} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>Bootstrap</h3>
@@ -150,7 +150,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faWordpress} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>Wordpress</h3>
@@ -158,7 +158,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faGit} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>Git</h3>
@@ -166,7 +166,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faGithub} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>Github</h3>
@@ -174,7 +174,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faReact} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>React</h3>
@@ -182,7 +182,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <FontAwesomeIcon icon={faCodeBranch} />
               <h3>SVN</h3>
@@ -190,7 +190,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <FontAwesomeIcon icon={faEdit} />
               <h3>Photoshop</h3>
@@ -198,7 +198,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <FontAwesomeIcon icon={faEdit} />
               <h3>Figma</h3>
@@ -206,7 +206,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faAws} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>AWS</h3>
@@ -214,7 +214,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faLanguage} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>APIs</h3>
@@ -222,15 +222,15 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
         </Cards>
-        <p className="skill-title">React skills</p>
+        <p className='skill-title'>React skills</p>
         <Cards
           variants={titleAnimation}
           animate={controls3}
-          initial="hidden"
+          initial='hidden'
           ref={element3}
         >
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faReact} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>Styled Components</h3>
@@ -238,7 +238,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faReact} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>Router</h3>
@@ -246,7 +246,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faReact} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>Redux</h3>
@@ -254,7 +254,7 @@ const ServicesSection = () => {
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
           <Card>
-            <div className="icon">
+            <div className='icon'>
               <FontAwesomeIcon icon={faReact} />
               {/* <img src={teamwork} alt="teamwork icon" /> */}
               <h3>Axios</h3>
@@ -320,7 +320,7 @@ const Card = styled.div`
     justify-content: center;
 
     svg {
-      color: #d9ce23;
+      color: ${(props) => props.theme.primaryColor};
       font-size: 6rem;
 
       @media (max-width: 800px) {
