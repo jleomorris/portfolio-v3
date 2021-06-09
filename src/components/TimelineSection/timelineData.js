@@ -1,4 +1,5 @@
 // Font Awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faReact,
   faBootstrap,
@@ -8,21 +9,18 @@ import {
   faFontAwesome,
 } from '@fortawesome/free-brands-svg-icons';
 import {
-  faPuzzlePiece,
-  faEdit,
-  faCode,
-  faHdd,
-  faImages,
-  faThumbsUp,
-  faCompressAlt,
-  faPalette,
-  faMusic,
-  faArrowsAlt,
+  faShoppingCart,
+  faGraduationCap,
+  faLaptopCode,
 } from '@fortawesome/free-solid-svg-icons';
 import { faSquare } from '@fortawesome/free-regular-svg-icons';
 import { theme } from '../Theme';
 
 export const timelineData = () => {
+  const developerIcon = () => <FontAwesomeIcon icon={faLaptopCode} />;
+  const educationIcon = () => <FontAwesomeIcon icon={faGraduationCap} />;
+  const asdaIcon = () => <FontAwesomeIcon icon={faShoppingCart} />;
+
   return [
     {
       contentStyle: {
@@ -34,7 +32,7 @@ export const timelineData = () => {
       },
       date: 'March 2021 - present',
       iconStyle: { background: theme.timeline.icon.jobColor, color: '#fff' },
-      icon: '',
+      icon: developerIcon(),
       title: 'React Developer',
       subtitle: 'IronmongeryDirect - Basildon, Essex',
       content: [
@@ -62,7 +60,7 @@ export const timelineData = () => {
       },
       date: 'Sept 2019 - March 2021',
       iconStyle: { background: theme.timeline.icon.jobColor, color: '#fff' },
-      icon: '',
+      icon: developerIcon(),
       title: 'Front End Developer and IT Technician',
       subtitle: 'Saffron Interactive, London',
       content: [
@@ -92,7 +90,7 @@ export const timelineData = () => {
         background: theme.timeline.icon.educationColor,
         color: '#fff',
       },
-      icon: '',
+      icon: educationIcon(),
       title: 'MSC Computer Science',
       subtitle: 'University Of Kent, Canterbury',
       content: [
@@ -113,7 +111,7 @@ export const timelineData = () => {
       },
       date: '2014 - 2018',
       iconStyle: { background: theme.timeline.icon.jobColor, color: '#fff' },
-      icon: '',
+      icon: asdaIcon(),
       title: 'Team Leader',
       subtitle: 'ASDA, Essex',
       content: [
@@ -136,7 +134,7 @@ export const timelineData = () => {
         background: theme.timeline.icon.educationColor,
         color: '#fff',
       },
-      icon: '',
+      icon: educationIcon(),
       title: 'Bsc Forensic Biology',
       subtitle: 'University of Portsmouth, Portsmouth',
       content: [

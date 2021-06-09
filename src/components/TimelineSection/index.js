@@ -23,7 +23,7 @@ const TimelineSection = () => {
             contentArrowStyle={data.contentArrowStyle}
             date={data.date}
             iconStyle={data.iconStyle}
-            // icon={<WorkIcon />}
+            icon={data.icon}
           >
             <h3 className='vertical-timeline-element-title'>{data.subtitle}</h3>
             <h4 className='vertical-timeline-element-subtitle'>{data.title}</h4>
