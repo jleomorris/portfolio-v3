@@ -1,5 +1,5 @@
 export const theme = {
-  primaryColor: '#acd923',
+  primaryColor: '#dbff6fb5',
   timeline: {
     background: '#ffffff',
     fontColor: '#223',
