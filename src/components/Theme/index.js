@@ -4,7 +4,7 @@ export const theme = {
     background: '#ffffff',
     fontColor: '#223',
     icon: {
-      jobColor: '#488447',
+      jobColor: '#a5c054',
       educationColor: '#63639a',
     },
   },
