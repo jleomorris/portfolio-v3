@@ -10,14 +10,14 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     /* background: #1b1b1b; */
-    background: radial-gradient(#525252, #131313);
+    background: radial-gradient(#525252,#000000);
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
   }
 
   button {
     font-weight: bold;
-    font-size: 1.1.rem;
+    font-size: 1.2rem;
     cursor: pointer;
     padding: 1rem 2rem;
     border: 3px solid ${(props) => props.theme.primaryColor};
@@ -98,6 +98,19 @@ html {
 
 .vertical-timeline-element-date {
     color: ${(props) => props.theme.timeline.background};
+}
+
+.vertical-timeline-element-icon {
+    svg {
+        display: block;
+        width: 24px !important;
+        height: 24px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        margin-left: -12px;
+        margin-top: -12px;
+    }
 }
 
 .timeline__skills {
