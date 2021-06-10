@@ -1,28 +1,28 @@
-import React from "react";
+import React from 'react';
 // Styled components
-import styled from "styled-components";
+import styled from 'styled-components';
 // Animation
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 import {
   pageAnimation,
   scrollRevealLeft,
   scrollRevealRight,
   titleAnimation,
   rotatingAnimation,
-} from "../animation";
+} from '../animation';
 // Images
-import kolink10 from "../img/custom-desktops/kolink10.png";
-import kolink6 from "../img/custom-desktops/kolink6.png";
-import kolink2 from "../img/custom-desktops/kolink2.png";
-import kolink1 from "../img/custom-desktops/kolink1.png";
-import kolink5 from "../img/custom-desktops/kolink5.png";
+import kolink10 from '../img/custom-desktops/kolink10.png';
+import kolink6 from '../img/custom-desktops/kolink6.png';
+import kolink2 from '../img/custom-desktops/kolink2.png';
+import kolink1 from '../img/custom-desktops/kolink1.png';
+import kolink5 from '../img/custom-desktops/kolink5.png';
 // Components
-import Footer from "../components/Footer";
-import { useScroll } from "../components/useScroll";
-import ScrollToTop from "../components/ScrollToTop";
+import Footer from '../components/Footer';
+import { useScroll } from '../components/useScroll';
+import ScrollToTop from '../components/ScrollToTop';
 // Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTools } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTools } from '@fortawesome/free-solid-svg-icons';
 
 const CustomDesktops = ({ isNavOpen }) => {
   const [element, controls] = useScroll();
@@ -43,14 +43,14 @@ const CustomDesktops = ({ isNavOpen }) => {
   return (
     <>
       <StyledCustomDesktops
-        className="intro"
+        className='intro'
         variants={pageAnimation}
-        initial="hidden"
-        animate="show"
-        exit="exit"
-        className={isNavOpen ? "blur" : ""}
+        initial='hidden'
+        animate='show'
+        exit='exit'
+        className={isNavOpen ? 'blur' : ''}
       >
-        <div className="title-container">
+        <div className='title-container'>
           <h1>Kolink Rocket v4</h1>
           <FontAwesomeIcon icon={faTools} />
         </div>
@@ -72,171 +72,171 @@ const CustomDesktops = ({ isNavOpen }) => {
           <motion.li>1 x 92mm, 2 x 120m BeQuiet fans, Deepcool</motion.li>
           <motion.li>4 hub fan controller</motion.li>
         </motion.ul>
-        <div className="features-card-default">
+        <div className='features-card-default'>
           <motion.img
             src={kolink10}
-            alt="kolink rocket"
-            className="features-card-image"
+            alt='kolink rocket'
+            className='features-card-image'
             variants={scrollRevealRight}
-            initial="hidden"
+            initial='hidden'
             animate={controls}
             ref={element}
           />
-          <div className="features-card-info">
+          <div className='features-card-info'>
             <h2>Custom handles</h2>
-            <motion.p
-              variants={titleAnimation}
-              initial="hidden"
-              animate={controls_1}
-              ref={element_1}
+            <p
+            //   variants={titleAnimation}
+            //   initial='hidden'
+            //   animate={controls_1}
+            //   ref={element_1}
             >
               At 12.5 x 32.5 x 32.8cm, 9.6 litre volume (shoebox size) and 5kg -
               this case is travel ready. The added handles increase portability
               and make it easier for those who travel and need their SFF to
               accompany them.
-            </motion.p>
+            </p>
             <hr></hr>
-            <motion.p
-              variants={titleAnimation}
-              initial="hidden"
-              animate={controls_2}
-              ref={element_2}
+            <p
+            //   variants={titleAnimation}
+            //   initial='hidden'
+            //   animate={controls_2}
+            //   ref={element_2}
             >
               Holes drilled through top panel with a drill press, brushed
               stainless steel 10cm D handles attached ~ 1 inch from the edges of
               the case.
-            </motion.p>
+            </p>
           </div>
         </div>
-        <div className="features-card-default">
+        <div className='features-card-default'>
           <motion.img
             src={kolink6}
-            alt="kolink rocket"
-            className="features-card-image-flipped"
+            alt='kolink rocket'
+            className='features-card-image-flipped'
             variants={scrollRevealLeft}
-            initial="hidden"
+            initial='hidden'
             animate={controls2}
             ref={element2}
           />
-          <div className="features-card-info-flipped">
+          <div className='features-card-info-flipped'>
             <h2>Custom legs</h2>
-            <motion.p
-              variants={titleAnimation}
-              initial="hidden"
-              animate={controls2_1}
-              ref={element2_1}
+            <p
+            //   variants={titleAnimation}
+            //   initial='hidden'
+            //   animate={controls2_1}
+            //   ref={element2_1}
             >
               Legs and tinted acrylic plexi side panels added to hide the
               exhaust fans, improve breathability of the case and provide a more
               stealth look.
-            </motion.p>
+            </p>
             <hr></hr>
-            <motion.p
-              variants={titleAnimation}
-              initial="hidden"
-              animate={controls2_2}
-              ref={element2_2}
+            <p
+            //   variants={titleAnimation}
+            //   initial='hidden'
+            //   animate={controls2_2}
+            //   ref={element2_2}
             >
               2mm thick aluminium square tubing (4cm x 2cm x 2cm), 18 x 18mm
               square plastic ends inserted at both ends, drilled on top and
               bolted through underside panel of case.
-            </motion.p>
+            </p>
             <hr></hr>
-            <motion.p
-              variants={titleAnimation}
-              initial="hidden"
-              animate={controls2_3}
-              ref={element2_3}
+            <p
+            //   variants={titleAnimation}
+            //   initial='hidden'
+            //   animate={controls2_3}
+            //   ref={element2_3}
             >
               3mm grey tinted Acrylic plexi (3mm rounded corners) cut to sizes:
               2 x (27.5cm x 3cm), 1 x (9cm x 3cm). Attached with 3M double
               coated tape.
-            </motion.p>
+            </p>
           </div>
         </div>
-        <div className="features-card-default">
+        <div className='features-card-default'>
           <motion.img
             src={kolink2}
-            alt="kolink rocket"
-            className="features-card-image"
+            alt='kolink rocket'
+            className='features-card-image'
             variants={scrollRevealRight}
-            initial="hidden"
+            initial='hidden'
             animate={controls3}
             ref={element3}
           />
-          <div className="features-card-info">
+          <div className='features-card-info'>
             <h2>Custom fans</h2>
-            <motion.p
-              variants={titleAnimation}
-              initial="hidden"
-              animate={controls3_1}
-              ref={element3_1}
+            <p
+            //   variants={titleAnimation}
+            //   initial='hidden'
+            //   animate={controls3_1}
+            //   ref={element3_1}
             >
               Exhaust options were limited in the original design so 80mm holes
               were added to the underside of the case to accomodate two 80mm
               BeQuiet! Pure wings fans.
-            </motion.p>
+            </p>
             <hr></hr>
-            <motion.p
-              variants={titleAnimation}
-              initial="hidden"
-              animate={controls3_2}
-              ref={element3_2}
+            <p
+            //   variants={titleAnimation}
+            //   initial='hidden'
+            //   animate={controls3_2}
+            //   ref={element3_2}
             >
               The fan exhausts were cut using a 80mm Draper holesaw and a
               further hole for cable management was cut using a coping saw.
-            </motion.p>
+            </p>
           </div>
         </div>
-        <div className="features-card-default">
+        <div className='features-card-default'>
           <motion.img
             src={kolink1}
-            alt="kolink rocket"
-            className="features-card-image-flipped"
-            style={{ maxWidth: "60%" }}
+            alt='kolink rocket'
+            className='features-card-image-flipped'
+            style={{ maxWidth: '60%' }}
             variants={scrollRevealLeft}
-            initial="hidden"
+            initial='hidden'
             animate={controls4}
             ref={element4}
           />
-          <div className="features-card-info-flipped">
+          <div className='features-card-info-flipped'>
             <h2>Solid construction</h2>
-            <motion.p
-              variants={titleAnimation}
-              initial="hidden"
-              animate={controls4_1}
-              ref={element4_1}
+            <p
+            //   variants={titleAnimation}
+            //   initial='hidden'
+            //   animate={controls4_1}
+            //   ref={element4_1}
             >
               The titanium-grey anodised aluminium panels and minimalist design
               give the case a premium feel and look. The 2mm thick panels ensure
               your case can handle the day to day wear and tear it may
               encounter. Perforated holes each side mean the CPU and GPU can
               constantly take in cool air.
-            </motion.p>
+            </p>
           </div>
         </div>
-        <div className="features-card-default">
+        <div className='features-card-default'>
           <motion.img
             src={kolink5}
-            alt="kolink rocket"
-            className="features-card-image"
+            alt='kolink rocket'
+            className='features-card-image'
             variants={scrollRevealRight}
-            initial="hidden"
+            initial='hidden'
             animate={controls5}
             ref={element5}
           />
-          <div className="features-card-info">
+          <div className='features-card-info'>
             <h2>Sandwich style layout</h2>
-            <motion.p
-              variants={titleAnimation}
-              initial="hidden"
-              animate={controls5_1}
-              ref={element5_1}
+            <p
+            //   variants={titleAnimation}
+            //   initial='hidden'
+            //   animate={controls5_1}
+            //   ref={element5_1}
             >
               This smart and optimised layout is the most efficient use of space
               and allows the case to support up to 31cm dual slot GPUS, mini-ITX
               motherboards, SFX/SFX-L PSUs and 2 x 2.5" SSDs
-            </motion.p>
+            </p>
           </div>
         </div>
       </StyledCustomDesktops>
@@ -367,7 +367,7 @@ const StyledCustomDesktops = styled(motion.div)`
         position: absolute;
         top: 0;
         right: 0;
-        border: 5px solid #d9ce23;
+        border: 5px solid ${(props) => props.theme.primaryColor};
         padding: 1rem 1.5rem;
         transform: translate(30px, -70px);
         letter-spacing: 1rem;
@@ -414,7 +414,7 @@ const StyledCustomDesktops = styled(motion.div)`
         position: absolute;
         top: 0;
         left: 0;
-        border: 5px solid #d9ce23;
+        border: 5px solid ${(props) => props.theme.primaryColor};
         padding: 1rem 1.5rem;
         transform: translate(-30px, -70px);
         letter-spacing: 1rem;
