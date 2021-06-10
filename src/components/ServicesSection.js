@@ -318,9 +318,10 @@ const Card = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     svg {
-      color: ${(props) => props.theme.primaryColor};
+      color: #dbff6f6b;
       font-size: 6rem;
 
       @media (max-width: 800px) {
@@ -329,12 +330,18 @@ const Card = styled.div`
     }
 
     h3 {
-      margin-left: -1rem;
-      margin-top: 3rem;
-      background: #000000bd;
+      /* margin-left: -1rem; */
+      /* margin-top: 3rem; */
+      /* background: #000000bd; */
+      width: 100%;
       color: white;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       padding: 1rem;
-      border-radius: 20px;
+      /* border-radius: 20px; */
 
       @media (max-width: 800px) {
         font-size: 0.8rem;
