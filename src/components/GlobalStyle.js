@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
+import { theme } from './Theme';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -9,17 +10,17 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     /* background: #1b1b1b; */
-    background: radial-gradient(#525252, #131313);
+    background: radial-gradient(#525252,#000000);
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
   }
 
   button {
     font-weight: bold;
-    font-size: 1.1.rem;
+    font-size: 1.2rem;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 3px solid #d9ce23;;
+    border: 3px solid ${(props) => props.theme.primaryColor};
     background: transparent;
     color: white;
     transition: all 0.5s ease;
@@ -27,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
 
 
     &:hover {
-      background-color: #d9ce23;
+      background-color: ${(props) => props.theme.primaryColor};
       color: white;
     }
   }
@@ -52,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
 
   span {
     font-weight: bold;
-    color: #d9ce23;
+    color: ${(props) => props.theme.primaryColor};
   }
 
   p {
@@ -63,7 +64,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   // Conditional classes
-
   .blur {
     filter: blur(8px) !important;
   }
@@ -82,6 +82,51 @@ html {
   @media (max-width: 1700px) {
     font-size: 75%;
   }
+
+  // Timeline
+.vertical-timeline-element-title {
+    color: ${(props) => props.theme.timeline.fontColor};
+    margin-bottom: 1rem;
+}
+
+.vertical-timeline-element-content {
+    p {
+        color: ${(props) => props.theme.timeline.fontColor};
+        padding: 0;
+    }
+}
+
+.vertical-timeline-element-date {
+    color: ${(props) => props.theme.timeline.background};
+}
+
+.vertical-timeline-element-icon {
+    svg {
+        display: block;
+        width: 24px !important;
+        height: 24px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        margin-left: -12px;
+        margin-top: -12px;
+    }
+}
+
+.timeline__skills {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    .timeline__skill {
+        padding: 0.5rem 1rem;
+        margin-right: 0.5rem;
+        background: #c5c5c587;
+        border-radius: 20px;
+    }
+}
+
 }
 `;
 

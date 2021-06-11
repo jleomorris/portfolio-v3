@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const About = styled(motion.div)`
   min-height: 90vh;
@@ -42,7 +42,7 @@ export const Description = styled.div`
     }
 
     button {
-      margin: 2rem 0rem 5rem 0rem;
+      margin: 2rem 0rem 2rem 0rem;
     }
   }
 `;

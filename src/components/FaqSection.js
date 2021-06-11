@@ -137,7 +137,7 @@ const Faq = styled(About)`
 
       a {
         text-decoration: none;
-        color: #d9ce23;
+        color: ${(props) => props.theme.primaryColor};
         font-size: 1.4rem;
       }
     }
