@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 // Images
 import aboutImg from '../img/about.jpg';
 import aboutImgMobile from '../img/about_mobile.jpg';
@@ -18,57 +18,8 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { ProjectState } from '../projectState';
 
-const GRAPHQL_KEY = process.env.REACT_APP_GITHUB_GRAPHQL_API_KEY;
-
 const AboutSection = () => {
   const { screenWidth } = useWindowSize();
-
-  useEffect(() => {
-    initalContributionsFetch();
-  }, [initalContributionsFetch]);
-
-  async function initalContributionsFetch() {
-    const data = await getContributions(GRAPHQL_KEY, 'jleomorris');
-    console.log(
-      'AboutSection.initialContributionsFetch.data.user',
-      data.data.user
-    );
-  }
-
-  async function getContributions(token, username) {
-    const headers = {
-      Authorization: `bearer ${token}`,
-    };
-    const body = {
-      query: `query {
-            user(login: "${username}") {
-              name
-              contributionsCollection {
-                contributionCalendar {
-                  colors
-                  totalContributions
-                  weeks {
-                    contributionDays {
-                      color
-                      contributionCount
-                      date
-                      weekday
-                    }
-                    firstDay
-                  }
-                }
-              }
-            }
-          }`,
-    };
-    const response = await fetch('https://api.github.com/graphql', {
-      method: 'POST',
-      body: JSON.stringify(body),
-      headers: headers,
-    });
-    const data = await response.json();
-    return data;
-  }
 
   return (
     <StyledAbout className='about'>
