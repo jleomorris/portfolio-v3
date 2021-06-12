@@ -13,6 +13,10 @@ import { About, Description, Image, Hide } from '../styles';
 import Wave from './Wave';
 // Hooks
 import useWindowSize from '../hooks/useWindowSize';
+// Alice Carousel
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import { ProjectState } from '../projectState';
 
 const AboutSection = () => {
   const { screenWidth } = useWindowSize();
@@ -66,32 +70,34 @@ const AboutSection = () => {
 
   return (
     <StyledAbout className='about'>
-      <div className='about__img-filter'></div>
-      <Description className='about__description'>
-        <motion.div>
-          <Hide>
-            <motion.h1 variants={titleAnimation}>James Morris,</motion.h1>
-          </Hide>
-          <Hide>
-            <motion.h2 variants={titleAnimation}>
-              <span>Front End</span> Developer
-            </motion.h2>
-          </Hide>
-          <Hide>
-            <motion.h2 variants={titleAnimation}>
-              MSc Comp Science graduate
-            </motion.h2>
-          </Hide>
-        </motion.div>
-        <motion.p variants={fade} className='about__job-title'>
-          React Developer at IronmongeryDirect - Basildon, Essex
-        </motion.p>
-        <a href='mailTo:james-morris2010@hotmail.co.uk'>
-          <motion.button variants={fade} className='about__contact-btn'>
-            Contact
-          </motion.button>
-        </a>
-      </Description>
+      <div className='about__img-filter' />
+      <div className='description-projects-container'>
+        <Description className='about__description'>
+          <motion.div>
+            <Hide>
+              <motion.h1 variants={titleAnimation}>James Morris,</motion.h1>
+            </Hide>
+            <Hide>
+              <motion.h2 variants={titleAnimation}>
+                <span>Front End</span> Developer
+              </motion.h2>
+            </Hide>
+            <Hide>
+              <motion.h2 variants={titleAnimation}>
+                MSc Comp Science graduate
+              </motion.h2>
+            </Hide>
+          </motion.div>
+          <motion.p variants={fade} className='about__job-title'>
+            React Developer at IronmongeryDirect - Basildon, Essex
+          </motion.p>
+          <a href='mailTo:james-morris2010@hotmail.co.uk'>
+            <motion.button variants={fade} className='about__contact-btn'>
+              Contact
+            </motion.button>
+          </a>
+        </Description>
+      </div>
       <Wave />
       <Image>
         {screenWidth > 1300 ? (
@@ -130,6 +136,12 @@ const StyledAbout = styled(About)`
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
+  }
+
+  .description-projects-container {
+    @media (min-width: 1300px) {
+      max-width: 50%;
+    }
   }
 
   .about {

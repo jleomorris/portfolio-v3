@@ -1,6 +1,7 @@
 import React from 'react';
 //Page components
 import AboutSection from '../components/AboutSection';
+import ProjectsSection from '../components/ProjectsSection';
 import ServicesSection from '../components/ServicesSection';
 import FaqSection from '../components/FaqSection';
 import TimelineSection from '../components/TimelineSection';
@@ -24,6 +25,7 @@ const AboutUs = ({ isNavOpen }) => {
       <ServicesSection />
       <TimelineSection />
       <FaqSection />
+      <ProjectsSection />
       <Footer />
       <ScrollToTop />
     </motion.div>
