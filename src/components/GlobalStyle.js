@@ -63,6 +63,14 @@ const GlobalStyle = createGlobalStyle`
     line-height: 150%;
   }
 
+  .section-title {
+    padding-bottom: 5rem;
+
+    @media (max-width: 1300px) {
+      text-align: center;
+    }
+  }
+
   // Conditional classes
   .blur {
     filter: blur(8px) !important;
