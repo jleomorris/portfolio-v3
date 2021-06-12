@@ -73,7 +73,7 @@ const StyledProjects = styled(motion.div)`
     &__title {
       position: absolute;
       width: 95%;
-      background: black;
+      background: #000000bf;
       color: white;
       padding: 0.5rem 0;
       text-align: center;
