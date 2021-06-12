@@ -51,6 +51,7 @@ const ServicesSection = () => {
           animate={controls}
           initial='hidden'
           ref={element}
+          className='cards'
         >
           <Card>
             <div className='icon'>
@@ -279,7 +280,7 @@ const Services = styled(About)`
 
   .skill-title {
     padding: 0 !important;
-    padding-bottom: 2rem !important;
+    padding-top: 2rem !important;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
 
@@ -294,14 +295,17 @@ const Cards = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin: 2rem 0rem;
 
   @media (max-width: 1300px) {
     justify-content: space-evenly;
+    /* border: 2px solid red; */
   }
 
   @media (max-width: 800px) {
     opacity: 1 !important;
     transform: none !important;
+    /* border: 2px solid orange; */
   }
 `;
 
@@ -330,9 +334,6 @@ const Card = styled.div`
     }
 
     h3 {
-      /* margin-left: -1rem; */
-      /* margin-top: 3rem; */
-      /* background: #000000bd; */
       width: 100%;
       color: white;
       text-align: center;
@@ -341,11 +342,9 @@ const Card = styled.div`
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 1rem;
-      /* border-radius: 20px; */
 
       @media (max-width: 800px) {
         font-size: 0.8rem;
-        margin-top: 2rem;
       }
     }
   }
