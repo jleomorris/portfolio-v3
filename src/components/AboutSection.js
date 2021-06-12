@@ -18,19 +18,21 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { ProjectState } from '../projectState';
 
+const GRAPHQL_KEY = process.env.REACT_APP_GITHUB_GRAPHQL_API_KEY;
+
 const AboutSection = () => {
   const { screenWidth } = useWindowSize();
 
   useEffect(() => {
-    testResponse();
-  }, []);
+    initalContributionsFetch();
+  }, [initalContributionsFetch]);
 
-  async function testResponse() {
-    const data = await getContributions(
-      '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',
-      'jleomorris'
+  async function initalContributionsFetch() {
+    const data = await getContributions(GRAPHQL_KEY, 'jleomorris');
+    console.log(
+      'AboutSection.initialContributionsFetch.data.user',
+      data.data.user
     );
-    console.log('AboutSection.testResponse', data);
   }
 
   async function getContributions(token, username) {
