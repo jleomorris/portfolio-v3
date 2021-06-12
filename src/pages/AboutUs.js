@@ -3,6 +3,7 @@ import React from 'react';
 import AboutSection from '../components/AboutSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ServicesSection from '../components/ServicesSection';
+import GithubSection from '../components/GithubSection';
 import FaqSection from '../components/FaqSection';
 import TimelineSection from '../components/TimelineSection';
 // Animation
@@ -23,6 +24,7 @@ const AboutUs = ({ isNavOpen }) => {
     >
       <AboutSection />
       <ServicesSection />
+      <GithubSection />
       <TimelineSection />
       <FaqSection />
       <ProjectsSection />
