@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // Images
 import aboutImg from '../img/about.jpg';
 import aboutImgMobile from '../img/about_mobile.jpg';
@@ -17,7 +17,52 @@ import useWindowSize from '../hooks/useWindowSize';
 const AboutSection = () => {
   const { screenWidth } = useWindowSize();
 
-  //   if (screenWidth < 1800) alert('less than 1800px');
+  useEffect(() => {
+    testResponse();
+  }, []);
+
+  async function testResponse() {
+    const data = await getContributions(
+      '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',
+      'jleomorris'
+    );
+    console.log('AboutSection.testResponse', data);
+  }
+
+  async function getContributions(token, username) {
+    const headers = {
+      Authorization: `bearer ${token}`,
+    };
+    const body = {
+      query: `query {
+            user(login: "${username}") {
+              name
+              contributionsCollection {
+                contributionCalendar {
+                  colors
+                  totalContributions
+                  weeks {
+                    contributionDays {
+                      color
+                      contributionCount
+                      date
+                      weekday
+                    }
+                    firstDay
+                  }
+                }
+              }
+            }
+          }`,
+    };
+    const response = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      body: JSON.stringify(body),
+      headers: headers,
+    });
+    const data = await response.json();
+    return data;
+  }
 
   return (
     <StyledAbout className='about'>
