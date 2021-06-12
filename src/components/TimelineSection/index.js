@@ -53,6 +53,8 @@ const StyledTimelineSection = styled.div`
   }
 
   .vertical-timeline-element-content {
+    border-radius: 20px !important;
+
     p {
       color: ${(props) => props.theme.timeline.fontColor};
       padding: 0;
