@@ -1,16 +1,24 @@
 import React from 'react';
+// Images
 import aboutImg from '../img/about.jpg';
+import aboutImgMobile from '../img/about_mobile.jpg';
 import bannerBackground from '../img/banner-full-size.jpg';
-import { About, Description, Image, Hide } from '../styles';
 // Styled Components
 import styled from 'styled-components';
 // Framer Motion
 import { motion } from 'framer-motion';
 import { titleAnimation, fade, photoAnimation } from '../animation';
 // Components
+import { About, Description, Image, Hide } from '../styles';
 import Wave from './Wave';
+// Hooks
+import useWindowSize from '../hooks/useWindowSize';
 
 const AboutSection = () => {
+  const { screenWidth } = useWindowSize();
+
+  //   if (screenWidth < 1800) alert('less than 1800px');
+
   return (
     <StyledAbout className='about'>
       <div className='about__img-filter'></div>
@@ -41,11 +49,21 @@ const AboutSection = () => {
       </Description>
       <Wave />
       <Image>
-        <motion.img
-          src={aboutImg}
-          alt='personal photo'
-          variants={photoAnimation}
-        />
+        {screenWidth > 1300 ? (
+          <motion.img
+            src={aboutImg}
+            alt='personal photo'
+            variants={photoAnimation}
+            className='about__img'
+          />
+        ) : (
+          <motion.img
+            src={aboutImgMobile}
+            alt='personal photo'
+            variants={photoAnimation}
+            className='about__img about__img--mobile'
+          />
+        )}
       </Image>
     </StyledAbout>
   );
@@ -69,15 +87,6 @@ const StyledAbout = styled(About)`
     z-index: -1;
   }
 
-  .about__description {
-    @media (max-width: 1300px) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-
   .about {
     &__job-title {
       padding: 1rem 2rem;
@@ -91,6 +100,19 @@ const StyledAbout = styled(About)`
       border-radius: 30px;
       background: #dbff6fb5;
       border: none;
+    }
+
+    &__description {
+      @media (max-width: 1300px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &__img--mobile {
+      border-radius: 50%;
     }
   }
 `;

@@ -43,8 +43,56 @@ const TimelineSection = () => {
 // Styled components
 const StyledTimelineSection = styled.div`
   /* border: 10px solid red; */
-  margin: 3rem 0rem;
+  margin-bottom: 5rem;
   padding: 2rem 4rem;
+
+  // Timeline
+  .vertical-timeline-element-title {
+    color: ${(props) => props.theme.timeline.fontColor};
+    margin-bottom: 1rem;
+  }
+
+  .vertical-timeline-element-content {
+    p {
+      color: ${(props) => props.theme.timeline.fontColor};
+      padding: 0;
+    }
+  }
+
+  .vertical-timeline-element-date {
+    color: ${(props) => props.theme.timeline.background};
+
+    @media only screen and (max-width: 1169px) {
+      color: black;
+    }
+  }
+
+  .vertical-timeline-element-icon {
+    svg {
+      display: block;
+      width: 24px !important;
+      height: 24px;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      margin-left: -12px;
+      margin-top: -12px;
+    }
+  }
+
+  .timeline__skills {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    .timeline__skill {
+      padding: 0.5rem 1rem;
+      margin-right: 0.5rem;
+      background: #c5c5c587;
+      border-radius: 20px;
+    }
+  }
 `;
 
 export default TimelineSection;

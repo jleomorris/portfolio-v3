@@ -10,14 +10,20 @@ export const About = styled(motion.div)`
   color: white;
 
   @media (max-width: 1300px) {
-    display: block;
-    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 
     .answer,
     .title-container {
       text-align: left;
     }
+  }
+
+  @media (max-width: 800px) {
+    padding: 2rem 2rem;
   }
 `;
 
@@ -34,7 +40,7 @@ export const Description = styled.div`
     padding: 0;
 
     h2 {
-      margin-top: 4rem;
+      margin-top: 1rem;
     }
 
     h1 {
@@ -42,20 +48,26 @@ export const Description = styled.div`
     }
 
     button {
-      margin: 2rem 0rem 2rem 0rem;
+      margin: 1rem 0rem 2rem 0rem;
     }
   }
 `;
 
 export const Image = styled.div`
   z-index: 2;
-  flex: 1;
+  border-radius: 40px;
+  width: fit-content;
   overflow: hidden;
 
   img {
-    width: 100%;
     height: 70vh;
     object-fit: contain;
+
+    @media (max-width: 1300px) {
+      width: 90%;
+      height: auto;
+      margin: 2rem 0rem;
+    }
   }
 `;
 
