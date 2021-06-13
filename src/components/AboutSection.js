@@ -44,10 +44,12 @@ const AboutSection = () => {
           <motion.p variants={fade} className='about__job-title'>
             React Developer at IronmongeryDirect - Basildon, Essex
           </motion.p>
-          <a href='mailTo:james-morris2010@hotmail.co.uk'>
-            <motion.button variants={fade} className='about__contact-btn'>
-              Contact
-            </motion.button>
+          <a
+            variants={fade}
+            href='mailTo:james-morris2010@hotmail.co.uk'
+            className='cta-btn'
+          >
+            Contact
           </a>
         </Description>
       </div>
