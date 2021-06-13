@@ -4,8 +4,8 @@ const GraphQL = (props) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      height='120'
-      width='120'
+      //   height='120'
+      //   width='120'
       viewBox='0 0 29.999 30'
       fill={props.fill}
     >

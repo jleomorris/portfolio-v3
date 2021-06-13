@@ -335,10 +335,11 @@ const Card = styled.div`
 
     svg {
       color: #dbff6f6b;
-      font-size: 6rem;
+      width: 100px;
+      height: auto;
 
       @media (max-width: 800px) {
-        font-size: 3rem;
+        height: 60px;
       }
     }
 
