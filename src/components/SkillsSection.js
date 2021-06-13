@@ -33,8 +33,9 @@ import {
   faReact,
   faAws,
 } from '@fortawesome/free-brands-svg-icons';
+import GraphQL from '../components/GraphQL';
 
-const ServicesSection = () => {
+const SkillsSection = () => {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
   const [element3, controls3] = useScroll();
@@ -222,6 +223,14 @@ const ServicesSection = () => {
             </div>
             {/* <p>Lorem ipsum dolor sit amet.</p> */}
           </Card>
+          <Card>
+            <div className='icon'>
+              <GraphQL fill='#dbff6f6b' />
+              {/* <img src={teamwork} alt="teamwork icon" /> */}
+              <h3>GraphQL</h3>
+            </div>
+            {/* <p>Lorem ipsum dolor sit amet.</p> */}
+          </Card>
         </Cards>
         <p className='skill-title'>React skills</p>
         <Cards
@@ -350,4 +359,4 @@ const Card = styled.div`
   }
 `;
 
-export default ServicesSection;
+export default SkillsSection;
