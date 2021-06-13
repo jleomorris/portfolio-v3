@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // Images
 import aboutImg from '../img/about.jpg';
 import aboutImgMobile from '../img/about_mobile.jpg';
@@ -20,19 +20,6 @@ import { ProjectState } from '../projectState';
 
 const AboutSection = () => {
   const { screenWidth } = useWindowSize();
-
-  const items = ProjectState().map((proj) => (
-    <img src={proj.images[0].src} className='sliderimg' />
-  ));
-
-  const responsive = {
-    0: {
-      items: 1,
-    },
-    1024: {
-      items: 3,
-    },
-  };
 
   return (
     <StyledAbout className='about'>
@@ -57,10 +44,12 @@ const AboutSection = () => {
           <motion.p variants={fade} className='about__job-title'>
             React Developer at IronmongeryDirect - Basildon, Essex
           </motion.p>
-          <a href='mailTo:james-morris2010@hotmail.co.uk'>
-            <motion.button variants={fade} className='about__contact-btn'>
-              Contact
-            </motion.button>
+          <a
+            variants={fade}
+            href='mailTo:james-morris2010@hotmail.co.uk'
+            className='cta-btn'
+          >
+            Contact
           </a>
         </Description>
       </div>

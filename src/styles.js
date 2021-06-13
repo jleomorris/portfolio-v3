@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const About = styled(motion.div)`
   min-height: 90vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 5rem 10rem;
   color: white;
@@ -63,10 +63,14 @@ export const Image = styled.div`
     height: 70vh;
     object-fit: contain;
 
-    @media (max-width: 1300px) {
-      width: 90%;
+    @media (min-width: 0) {
+      width: 70%;
       height: auto;
       margin: 2rem 0rem;
+    }
+    @media (min-width: 1300px) {
+      width: 100%;
+      margin: 0;
     }
   }
 `;

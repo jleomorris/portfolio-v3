@@ -83,6 +83,25 @@ const GlobalStyle = createGlobalStyle`
   .height100 {
     height: 100vh !important;
   }
+
+  // Buttons
+  .cta-btn {
+      background: ${(props) => props.theme.primaryButtonColor};
+      border-radius: 30px;
+      padding: 15px 30px;
+      text-decoration: none;
+      color: black;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      margin: 1rem 0;
+      display:block;
+      width: fit-content;
+      z-index: 999;
+
+      &:hover {
+          background: ${(props) => props.theme.primaryButtonHoverColor};
+      }
+  }
   
 // Media Queries
 

@@ -1,28 +1,28 @@
-import React from "react";
-import { Link, BrowserRouter, useLocation } from "react-router-dom";
+import React from 'react';
+import { Link, BrowserRouter, useLocation } from 'react-router-dom';
 // Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 // Styled components
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Nav = ({ isNavOpen, setIsNavOpen }) => {
   const { pathname } = useLocation();
 
   return (
     // <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <StyledNav className={isNavOpen ? "height100" : ""}>
+    <StyledNav className={isNavOpen ? 'height100' : ''}>
       {/* <Link id="logo" to="/"> */}
-      <Link id="logo" to={`${process.env.PUBLIC_URL}/`}>
-        <h1 className={isNavOpen ? "rotate90" : ""}>Jleo</h1>
+      <Link id='logo' to={`${process.env.PUBLIC_URL}/`}>
+        <h1 className={isNavOpen ? 'rotate90' : ''}>Jleo</h1>
       </Link>
       <StyledFontAwesomeIcon
         icon={isNavOpen ? faTimes : faBars}
         onClick={() => setIsNavOpen(!isNavOpen)}
       />
       {isNavOpen && (
-        <div className="nav-links">
+        <div className='nav-links'>
           <ul>
             <li>
               <Link to={`${process.env.PUBLIC_URL}/`}>
@@ -30,10 +30,10 @@ const Nav = ({ isNavOpen, setIsNavOpen }) => {
               </Link>
               <StyledLine
                 transition={{ duration: 0.74 }}
-                initial={{ width: "0%" }}
+                initial={{ width: '0%' }}
                 animate={{
                   width:
-                    pathname === `${process.env.PUBLIC_URL}/` ? "100%" : "0%",
+                    pathname === `${process.env.PUBLIC_URL}/` ? '100%' : '0%',
                 }}
               />
             </li>
@@ -43,12 +43,12 @@ const Nav = ({ isNavOpen, setIsNavOpen }) => {
               </Link>
               <StyledLine
                 transition={{ duration: 0.74 }}
-                initial={{ width: "0%" }}
+                initial={{ width: '0%' }}
                 animate={{
                   width:
                     pathname === `${process.env.PUBLIC_URL}/projects`
-                      ? "100%"
-                      : "0%",
+                      ? '100%'
+                      : '0%',
                 }}
               />
             </li>
@@ -58,12 +58,12 @@ const Nav = ({ isNavOpen, setIsNavOpen }) => {
               </Link>
               <StyledLine
                 transition={{ duration: 0.74 }}
-                initial={{ width: "0%" }}
+                initial={{ width: '0%' }}
                 animate={{
                   width:
                     pathname === `${process.env.PUBLIC_URL}/custom-desktops`
-                      ? "100%"
-                      : "0%",
+                      ? '100%'
+                      : '0%',
                 }}
               />
             </li>
@@ -73,12 +73,12 @@ const Nav = ({ isNavOpen, setIsNavOpen }) => {
               </Link>
               <StyledLine
                 transition={{ duration: 0.74 }}
-                initial={{ width: "0%" }}
+                initial={{ width: '0%' }}
                 animate={{
                   width:
                     pathname === `${process.env.PUBLIC_URL}/contact`
-                      ? "100%"
-                      : "0%",
+                      ? '100%'
+                      : '0%',
                 }}
               />
             </li>
@@ -102,6 +102,10 @@ const StyledNav = styled.nav`
   z-index: 10;
   transition: all 0.5s ease;
 
+  @media (max-width: 800px) {
+    height: 15vh;
+  }
+
   a {
     text-decoration: none;
     color: #888c91;
@@ -116,7 +120,7 @@ const StyledNav = styled.nav`
     color: white;
     letter-spacing: 0.2rem;
     font-size: 4rem;
-    font-family: "Lobster", cursive;
+    font-family: 'Lobster', cursive;
     font-weight: lighter;
     margin-right: 2rem;
     transition: 0.5s all ease;
@@ -124,7 +128,7 @@ const StyledNav = styled.nav`
 
   #logo {
     font-size: 1.5rem;
-    font-family: "Lobster", cursive;
+    font-family: 'Lobster', cursive;
     font-weight: lighter;
   }
 
@@ -167,7 +171,7 @@ const StyledNav = styled.nav`
 
     #logo {
       font-size: 1.5rem;
-      font-family: "Lobster", cursive;
+      font-family: 'Lobster', cursive;
       font-weight: lighter;
     }
 
