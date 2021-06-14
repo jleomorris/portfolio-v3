@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 // Styled components
 import styled from 'styled-components';
 import GitHubCalendar from 'react-github-calendar';
@@ -6,8 +7,6 @@ import ReactTooltip from 'react-tooltip';
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-
-const GRAPHQL_KEY = process.env.REACT_APP_GITHUB_GRAPHQL_API_KEY;
 
 const GithubSection = () => {
   const [githubData, setGithubData] = useState({});
@@ -18,14 +17,16 @@ const GithubSection = () => {
   }, []);
 
   async function initalContributionsFetch() {
-    const data = await getContributions(GRAPHQL_KEY, 'jleomorris');
+    axios('/api/keys').then(async (response) => {
+      const data = await getContributions(response.data.graphQL, 'jleomorris');
 
-    console.table(
-      'GithubSection.initialContributionsFetch.data.user',
-      data?.data?.user
-    );
+      console.log(
+        'GithubSection.initialContributionsFetch.data.user',
+        data?.data?.user
+      );
 
-    setGithubData(data?.data?.user);
+      setGithubData(data?.data?.user);
+    });
   }
 
   async function getContributions(token, username) {
