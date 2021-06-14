@@ -44,13 +44,13 @@ const AboutSection = () => {
           <motion.p variants={fade} className='about__job-title'>
             React Developer at IronmongeryDirect - Basildon, Essex
           </motion.p>
-          <a
+          <motion.a
             variants={fade}
             href='mailTo:james-morris2010@hotmail.co.uk'
             className='cta-btn'
           >
             Contact
-          </a>
+          </motion.a>
         </Description>
       </div>
       <Wave />
