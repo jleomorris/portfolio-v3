@@ -27,16 +27,16 @@ const GithubSection = () => {
   }, []);
 
   async function initalContributionsFetch(token) {
-    axios('/api/keys').then(async (response) => {
-      const data = await getContributions(token, 'jleomorris');
+    // axios('/api/v1/api-keys').then(async (response) => {
+    const data = await getContributions(token, 'jleomorris');
 
-      console.log(
-        'GithubSection.initialContributionsFetch.data.user',
-        data?.data?.user
-      );
+    console.log(
+      'GithubSection.initialContributionsFetch.data.user',
+      data?.data?.user
+    );
 
-      setGithubData(data?.data?.user);
-    });
+    setGithubData(data?.data?.user);
+    // });
   }
 
   async function getContributions(token, username) {
