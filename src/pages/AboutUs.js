@@ -4,6 +4,7 @@ import AboutSection from '../components/AboutSection';
 import ProjectsSection from '../components/ProjectsSection';
 import SkillsSection from '../components/SkillsSection';
 import GithubSection from '../components/GithubSection';
+import GithubSectionSpoof from '../components/GithubSection/Spoof';
 import FaqSection from '../components/FaqSection';
 import TimelineSection from '../components/TimelineSection';
 // Animation
@@ -25,6 +26,7 @@ const AboutUs = ({ isNavOpen }) => {
       <AboutSection />
       <SkillsSection />
       <GithubSection />
+      {/* <GithubSectionSpoof /> */}
       <TimelineSection />
       <FaqSection />
       <ProjectsSection />

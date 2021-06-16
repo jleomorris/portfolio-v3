@@ -11,14 +11,24 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 const GithubSection = () => {
   const [githubData, setGithubData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [testResponse, setTestResponse] = useState({});
 
   useEffect(() => {
     initalContributionsFetch();
   }, []);
 
-  async function initalContributionsFetch() {
+  useEffect(() => {
+    // axios.get('/api/v1/say-something').then((res) => {
+    axios.get('/api/v1/api-keys').then((res) => {
+      const response = res.data;
+      //   setTestResponse(response.graphQL);
+      initalContributionsFetch(response.graphQL);
+    });
+  }, []);
+
+  async function initalContributionsFetch(token) {
     axios('/api/keys').then(async (response) => {
-      const data = await getContributions(response.data.graphQL, 'jleomorris');
+      const data = await getContributions(token, 'jleomorris');
 
       console.log(
         'GithubSection.initialContributionsFetch.data.user',
@@ -97,6 +107,9 @@ const GithubSection = () => {
 
   return (
     <StyledGithubSection className='github-section'>
+      <p className='test-response'>
+        {testResponse ? testResponse.graphQL : ''}
+      </p>
       <div className='github-section__header'>
         <div className='accolades'>
           {githubData?.contributionsCollection && (
