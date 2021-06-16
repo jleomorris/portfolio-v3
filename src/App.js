@@ -34,23 +34,23 @@ function App() {
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.pathname}>
             {/* <Route path="/" exact> */}
-            <Route path={`${process.env.PUBLIC_URL}/`} exact>
+            <Route path={`/`} exact>
               <AboutUs isNavOpen={isNavOpen} />
             </Route>
             {/* <Route path="/projects" exact> */}
-            <Route path={`${process.env.PUBLIC_URL}/projects`} exact>
+            <Route path={`/projects`} exact>
               <Projects isNavOpen={isNavOpen} />
             </Route>
             {/* <Route path="/projects/:id"> */}
-            <Route path={`${process.env.PUBLIC_URL}/projects/:id`}>
+            <Route path={`/projects/:id`}>
               <ProjectDetail isNavOpen={isNavOpen} />
             </Route>
             {/* <Route path="/custom-desktops"> */}
-            <Route path={`${process.env.PUBLIC_URL}/custom-desktops`}>
+            <Route path={`/custom-desktops`}>
               <CustomDesktops isNavOpen={isNavOpen} />
             </Route>
             {/* <Route path="/contact"> */}
-            <Route path={`${process.env.PUBLIC_URL}/contact`}>
+            <Route path={`/contact`}>
               <Contact isNavOpen={isNavOpen} />
             </Route>
           </Switch>
