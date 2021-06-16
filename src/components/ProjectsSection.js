@@ -25,7 +25,7 @@ const ProjectsSection = () => {
   const items = ProjectState().map((proj) => (
     <div className='carousel-item'>
       <p className='carousel-item__title'>{proj.title}</p>
-      <Link to={`${process.env.PUBLIC_URL}${proj.url}`}>
+      <Link to={`${proj.url}`}>
         <img src={proj.images[0].src} className='sliderimg' />
       </Link>
     </div>

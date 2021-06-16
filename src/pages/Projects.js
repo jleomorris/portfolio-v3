@@ -48,7 +48,7 @@ const Projects = ({ isNavOpen }) => {
           <Project key={project.title}>
             <div className='image-container'>
               <div className='title-container'>
-                <Link to={`${process.env.PUBLIC_URL}${project.url}`}>
+                <Link to={`${project.url}`}>
                   <ProjectTitle variants={fade}>{project.title}</ProjectTitle>
                 </Link>
               </div>
@@ -77,7 +77,7 @@ const Projects = ({ isNavOpen }) => {
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </motion.div>
-                <Link to={`${process.env.PUBLIC_URL}${project.url}`}>
+                <Link to={`${project.url}`}>
                   <motion.img
                     variants={photoAnimation}
                     src={project.banner.src}

@@ -11,10 +11,9 @@ const Nav = ({ isNavOpen, setIsNavOpen }) => {
   const { pathname } = useLocation();
 
   return (
-    // <BrowserRouter basename={process.env.PUBLIC_URL}>
     <StyledNav className={isNavOpen ? 'height100' : ''}>
       {/* <Link id="logo" to="/"> */}
-      <Link id='logo' to={`${process.env.PUBLIC_URL}/`}>
+      <Link id='logo' to={`/`}>
         <h1 className={isNavOpen ? 'rotate90' : ''}>Jleo</h1>
       </Link>
       <StyledFontAwesomeIcon
@@ -25,60 +24,50 @@ const Nav = ({ isNavOpen, setIsNavOpen }) => {
         <div className='nav-links'>
           <ul>
             <li>
-              <Link to={`${process.env.PUBLIC_URL}/`}>
+              <Link to={`/`}>
                 <p>About</p>
               </Link>
               <StyledLine
                 transition={{ duration: 0.74 }}
                 initial={{ width: '0%' }}
                 animate={{
-                  width:
-                    pathname === `${process.env.PUBLIC_URL}/` ? '100%' : '0%',
+                  width: pathname === `/` ? '100%' : '0%',
                 }}
               />
             </li>
             <li>
-              <Link to={`${process.env.PUBLIC_URL}/projects`}>
+              <Link to={`/projects`}>
                 <p>Projects</p>
               </Link>
               <StyledLine
                 transition={{ duration: 0.74 }}
                 initial={{ width: '0%' }}
                 animate={{
-                  width:
-                    pathname === `${process.env.PUBLIC_URL}/projects`
-                      ? '100%'
-                      : '0%',
+                  width: pathname === `/projects` ? '100%' : '0%',
                 }}
               />
             </li>
             <li>
-              <Link to={`${process.env.PUBLIC_URL}/custom-desktops`}>
+              <Link to={`/custom-desktops`}>
                 <p>Custom desktops</p>
               </Link>
               <StyledLine
                 transition={{ duration: 0.74 }}
                 initial={{ width: '0%' }}
                 animate={{
-                  width:
-                    pathname === `${process.env.PUBLIC_URL}/custom-desktops`
-                      ? '100%'
-                      : '0%',
+                  width: pathname === `/custom-desktops` ? '100%' : '0%',
                 }}
               />
             </li>
             <li>
-              <Link to={`${process.env.PUBLIC_URL}/contact`}>
+              <Link to={`/contact`}>
                 <p>Contact</p>
               </Link>
               <StyledLine
                 transition={{ duration: 0.74 }}
                 initial={{ width: '0%' }}
                 animate={{
-                  width:
-                    pathname === `${process.env.PUBLIC_URL}/contact`
-                      ? '100%'
-                      : '0%',
+                  width: pathname === `/contact` ? '100%' : '0%',
                 }}
               />
             </li>
@@ -87,7 +76,6 @@ const Nav = ({ isNavOpen, setIsNavOpen }) => {
       )}
     </StyledNav>
     //{" "}
-    // </BrowserRouter>
   );
 };
 

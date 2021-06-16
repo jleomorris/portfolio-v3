@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import { useHistory, Link, Redirect } from "react-router-dom";
-import { ProjectState } from "../projectState";
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { useHistory, Link, Redirect } from 'react-router-dom';
+import { ProjectState } from '../projectState';
 // Animation
-import { motion } from "framer-motion";
-import { pageAnimation } from "../animation";
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 // Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faUndoAlt } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faUndoAlt } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 // Components
-import Footer from "../components/Footer";
+import Footer from '../components/Footer';
 
 const ProjectDetail = ({ isNavOpen }) => {
   const history = useHistory();
@@ -32,46 +32,46 @@ const ProjectDetail = ({ isNavOpen }) => {
       {project && (
         <Details
           variants={pageAnimation}
-          initial="hidden"
-          animate="show"
-          exit="exit"
-          className={isNavOpen ? "blur" : ""}
+          initial='hidden'
+          animate='show'
+          exit='exit'
+          className={isNavOpen ? 'blur' : ''}
         >
           <Headline>
-            <div className="github-container">
-              <Link to={`${process.env.PUBLIC_URL}/projects`}>
+            <div className='github-container'>
+              <Link to={`/projects`}>
                 <button>
                   <FontAwesomeIcon icon={faUndoAlt} />
-                  <span className="button-name">Projects</span>
+                  <span className='button-name'>Projects</span>
                 </button>
               </Link>
               <a
                 href={project.githubDirectoryUrl}
-                target="_blank"
-                rel="noreferrer"
+                target='_blank'
+                rel='noreferrer'
               >
                 <button>
                   <FontAwesomeIcon icon={faCode} />
-                  <span className="button-name">Code</span>
+                  <span className='button-name'>Code</span>
                 </button>
               </a>
-              <a href={project.githubPagesUrl} target="_blank" rel="noreferrer">
+              <a href={project.githubPagesUrl} target='_blank' rel='noreferrer'>
                 <button>
                   <FontAwesomeIcon icon={faGithub} />
-                  <span className="button-name">Demo</span>
+                  <span className='button-name'>Demo</span>
                 </button>
               </a>
             </div>
             <h2>{project.title}</h2>
-            <div className="description-skills-container">
-              <div className="description-container">
+            <div className='description-skills-container'>
+              <div className='description-container'>
                 <h3>Description</h3>
                 <p>{project.description}</p>
               </div>
-              <div className="skills-container">
+              <div className='skills-container'>
                 <h3>Skills developed</h3>
                 {project.skillsDeveloped.map((skill) => (
-                  <div className="skill" key={skill.name}>
+                  <div className='skill' key={skill.name}>
                     <FontAwesomeIcon icon={skill.icon} />
                     <p style={{ color: project.skillIconColor }}>
                       {skill.name}
@@ -353,7 +353,7 @@ const Feature = ({ title, description, lineColor }) => {
   return (
     <StyledFeature>
       <h3>{title}</h3>
-      <div style={{ background: lineColor }} className="line"></div>
+      <div style={{ background: lineColor }} className='line'></div>
       <p>{description}</p>
     </StyledFeature>
   );

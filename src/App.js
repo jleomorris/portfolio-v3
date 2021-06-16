@@ -27,7 +27,6 @@ function App() {
 
   return (
     <div className='App'>
-      {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Nav isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
@@ -55,7 +54,6 @@ function App() {
             </Route>
           </Switch>
         </AnimatePresence>
-        {/* </BrowserRouter> */}
       </ThemeProvider>
     </div>
   );
