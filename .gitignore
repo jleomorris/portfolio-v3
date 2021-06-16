@@ -30,4 +30,4 @@ yarn-error.log*
 # server/*
 
 # Spoof Github section
-/src/components/GithubSection/Spoof/index.js
+# /src/components/GithubSection/Spoof/index.js
