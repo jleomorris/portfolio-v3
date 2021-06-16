@@ -19,7 +19,7 @@ const GithubSection = () => {
 
   useEffect(() => {
     // axios.get('/api/v1/say-something').then((res) => {
-    axios.get('/api/v1/api-keys').then((res) => {
+    axios.get(`{{process.env.API_URI}api/v1/api-keys`).then((res) => {
       console.log('GithubSection.res', res);
       const response = res.data;
       //   setTestResponse(response.graphQL);
