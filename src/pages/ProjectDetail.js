@@ -21,7 +21,7 @@ const ProjectDetail = ({ isNavOpen }) => {
   // useEffect
   useEffect(() => {
     const currentProject = projects.filter(
-      (project) => `/${project.url}` === currentUrl
+      (project) => `${project.url}` === currentUrl
     );
     // debugger;
     setProject(currentProject[0]);
