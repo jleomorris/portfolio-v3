@@ -40,7 +40,7 @@ app.use(cors());
 const api = require('../routes/routes');
 
 // Configure app to use route
-app.use('portfolio-v3/api/v1/', api);
+app.use('/api/v1/', api);
 
 // This middleware informs the express application to serve our compiled React files
 if (
