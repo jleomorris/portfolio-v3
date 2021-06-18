@@ -6,7 +6,7 @@ const saySomething = (req, res, next) => {
 
 const apiKeys = (req, res, next) => {
   res.status(200).json({
-    graphQL: 'process.env.GRAPH_QL_KEY',
+    graphQL: process.env.GRAPH_QL_KEY,
   });
 };
 
